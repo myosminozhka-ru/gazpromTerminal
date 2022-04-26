@@ -16,7 +16,10 @@
         </ul>
     </nav>
     <div class="header__button">
-        <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+        @@include('../../components/button/button.html', {
+            "text" : "Оставить заявку",
+            "type" : "feedback"
+        })
     </div>
     @@include('../../components/burger/burger.html', {})
 </div>

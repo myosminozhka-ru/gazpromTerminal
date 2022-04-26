@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 2;
+    background: #fff;
     &__logo {
         flex: 0 0 vw(333);
         a {
@@ -37,7 +40,7 @@
         }
     }
     &__button {
-        flex: 0 0 vw(206);
+        flex: 0 0 vw(212);
     }
 }
 .isTablet, .isMobile {
@@ -51,8 +54,8 @@
         &__menu {
             display: none;
         }
-    }
-    &__button {
-        display: none;
+        &__button {
+            display: none;
+        }
     }
 }

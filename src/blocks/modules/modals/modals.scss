@@ -106,7 +106,39 @@
         }
     }
     &__button {
-        max-width: vw(196);
-        width: 100%;
+        display: inline-block;
+    }
+}
+.isTablet, .isMobile {
+    .modal {
+        padding: 15px;
+        &__in {
+            max-width: 345px;
+            padding: 30px 20px;
+        }
+        &__title {
+            padding-right: 35px;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        &__closer {
+            top: 30px;
+            right: 20px;
+            width: 29px;
+            height: 29px;
+        }
+        input[type="text"], input[type="tel"], input[type="email"] {
+            min-height: 60px;
+            margin-bottom: 10px;
+            padding: 18px 20px;
+            font-size: 16px;
+        }
+        .custom-checkbox {
+            & + label {
+                max-width: 220px;
+                margin: 20px 0;
+                font-size: 14px;
+            }
+        }
     }
 }
