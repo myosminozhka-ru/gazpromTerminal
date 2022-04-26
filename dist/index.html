@@ -4,35 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220426115409">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css?_v=20220426172416">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        <header class="header"></header>
+        <div class="header">
+    <div class="header__logo">
+        <a href="/">
+            <img src="../img/svg/logo.svg" alt="">
+        </a>
+    </div>
+    <nav class="header__menu">
+        <ul>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Как работает Terminal</a></li>
+            <li><a href="#">Технологии</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Кейсы</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Экосистема Isource</a></li>
+        </ul>
+    </nav>
+    <div class="header__button">
+        <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+    </div>
+    <!-- <div class="menu_burger" v-if="window.width <=1023" :class="{'isOpened': burger.isMobileMenuOpened}">
+    <div class="menu_burger__icon"></div>
+    <div class="menu_burger__body">
+        <div class="menu_burger__close"></div>
+    </div>
+</div> -->
+</div>
         <main>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, soluta.</span>
-            <button data-modal-id="1">Modal1 Opener</button>
-            <button data-modal-id="2">Modal2 Opener</button>
-            <img src="img/icons/icons.svg#benefit_1" alt="benefit_1"/>
-            <picture><source srcset="img/download.webp" type="image/webp"><img src="img/download.png" width="100" alt=""></picture>
-            {{ isMounted }}
+            
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+    <div class="footer__top">
+        <div class="footer__l-side">
+            <a href="#" class="footer__logo"><img src="../img/svg/logo__footer.svg" alt=""></a>
+            <div class="footer__soc">
+                <span>Для связи в месседжерах:</span>
+                <div class="footer__socs">
+                    <a href="#" target="_blank"><img src="../img/svg/tg_icon.svg" alt=""></a>
+                    <a href="#" target="_blank"><img src="../img/svg/wp_icon.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <nav class="footer__menu">
+            <ul>
+                <li><a href="#">Наши услуги</a></li>
+                <li><a href="#">Как работает Terminal</a></li>
+                <li><a href="#">Технологии</a></li>
+                <li><a href="#">Часто задаваемые вопросы</a></li>
+                <li><a href="#">Кейсы</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Экосистема Isource</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__menu">
+            <ul>
+                <li><a href="#">Isource</a></li>
+                <li><a href="#">Processor</a></li>
+                <li><a href="#">Academy</a></li>
+                <li><a href="#">Logotech</a></li>
+                <li><a href="#">Arctic</a></li>
+                <li><a href="#">Engine</a></li>
+            </ul>
+        </nav>
+        <div class="footer__r-side">
+            <a href="tel:70000000000" class="footer__tel">+7(000)000-00-00</a>
+            <a href="mailto:infoemail@mail.ru" class="footer__mail">infoemail@mail.ru</a>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <a href="#" class="footer__link">Пользовательское соглашение</a>
+        <a href="#" class="footer__link">Согласие на обработку персональных данных</a>
+        <div class="footer__copy">© 2022 Все права защищены</div>
+    </div>
+</footer>
         <div class="modal" data-modal="1">
     <div class="modal__in">
         <div class="modal__closer"></div>
-        modal 1
+        <div class="modal__title">Чтобы мы смогли вам ответить, пожалуйста, оставьте ваши контакты</div>
+        <form action="" class="modal__form">
+            <input type="text" placeholder="Ваше ФИО">
+            <input type="tel" placeholder="Телефон">
+            <input type="email" placeholder="E-mail">
+            <input class="custom-checkbox" type="checkbox" name="personal" checked>
+            <label for="personal">Даю согласие на обработку персональных данных</label>
+            <button class="button modal__button">Отправить</button>
+        </form>
     </div>
 </div>
-
-<div class="modal" data-modal="2">
-    <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 2
     </div>
-</div>
-    </div>
-    <script src="js/app.min.js?_v=20220426115409"></script>
+    <script src="js/app.min.js?_v=20220426172416"></script>
 </body>
 </html>

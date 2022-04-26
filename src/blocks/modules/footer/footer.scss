@@ -1,0 +1,43 @@
+.footer {
+    margin-top: vw(100);
+    padding: 0 vw(60);
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__l-side {
+        
+    }
+    &__logo {
+        margin-bottom: vw(112);
+        display: block;
+    }
+    &__bottom {
+        padding: vw(60) 0;
+        margin-top: vw(100);
+        border-top: 1px solid #CFCFCF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link {
+        font-family: 'PT', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: vw(16);
+        line-height: 110%;
+        color: #535353;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__copy {
+        font-family: 'PT', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 110%;
+        color: #535353;
+    }
+}
