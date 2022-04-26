@@ -4,35 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220426115409">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css?_v=20220427015906">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        <header class="header"></header>
+        <div class="header">
+    <div class="header__logo">
+        <a href="/">
+            <img src="../img/svg/logo.svg" alt="">
+        </a>
+    </div>
+    <nav class="header__menu">
+        <ul>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Как работает Terminal</a></li>
+            <li><a href="#">Технологии</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Кейсы</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Экосистема Isource</a></li>
+        </ul>
+    </nav>
+    <div class="header__button">
+        <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+    </div>
+    <div class="menu_burger" v-if="isTablet || isMobile" :class="{'isOpened': burger.isMobileMenuOpened}">
+    <div class="menu_burger__icon" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+        <svg width="30" height="19" viewBox="0 0 30 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="3" fill="black"/>
+            <rect y="7.8623" width="30" height="3" fill="black"/>
+            <rect y="15.7256" width="30" height="3" fill="black"/>
+        </svg>
+    </div>
+    <div class="menu_burger__body">
+        <div class="menu_burger__top">
+            <div class="header__logo">
+                <a href="/">
+                    <img src="../img/svg/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="menu_burger__close" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.953717 3.07485L15.5516 17.2848L17.6442 15.1352L3.04628 0.925155L0.953717 3.07485ZM29.6487 0.942905L15.5337 15.1529L17.6621 17.2671L31.7771 3.05709L29.6487 0.942905ZM3.36511 32.0431L17.6759 17.2531L15.5199 15.1669L1.20915 29.9569L3.36511 32.0431ZM15.5233 17.2565L29.9253 32.0465L32.0747 29.9535L17.6726 15.1635L15.5233 17.2565Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+        <div class="menu_burger__bottom">
+            <nav class="menu_burger__menu">
+                <ul>
+                    <li><a href="#">Наши услуги</a></li>
+                    <li><a href="#">Как работает Terminal</a></li>
+                    <li><a href="#">Технологии</a></li>
+                    <li><a href="#">Часто задаваемые вопросы</a></li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Экосистема Isource</a></li>
+                </ul>
+            </nav>
+            <div class="menu_burger__button" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+                <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
         <main>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, soluta.</span>
-            <button data-modal-id="1">Modal1 Opener</button>
-            <button data-modal-id="2">Modal2 Opener</button>
-            <img src="img/icons/icons.svg#benefit_1" alt="benefit_1"/>
-            <picture><source srcset="img/download.webp" type="image/webp"><img src="img/download.png" width="100" alt=""></picture>
-            {{ isMounted }}
+            
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+    <div class="footer__top">
+        <div class="footer__l-side">
+            <a href="#" class="footer__logo"><img src="../img/svg/logo__footer.svg" alt=""></a>
+            <div class="footer__soc">
+                <span>Для связи в месседжерах:</span>
+                <div class="footer__socs">
+                    <a href="#" target="_blank"><img src="../img/svg/tg_icon.svg" alt=""></a>
+                    <a href="#" target="_blank"><img src="../img/svg/wp_icon.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <nav class="footer__menu lang_ru">
+            <ul>
+                <li><a href="#">Наши услуги</a></li>
+                <li><a href="#">Как работает Terminal</a></li>
+                <li><a href="#">Технологии</a></li>
+                <li><a href="#">Часто задаваемые вопросы</a></li>
+                <li><a href="#">Кейсы</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Экосистема Isource</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__menu lang_en">
+            <ul>
+                <li><a href="#">Isource</a></li>
+                <li><a href="#">Processor</a></li>
+                <li><a href="#">Academy</a></li>
+                <li><a href="#">Logotech</a></li>
+                <li><a href="#">Arctic</a></li>
+                <li><a href="#">Engine</a></li>
+            </ul>
+        </nav>
+        <div class="footer__r-side">
+            <a href="tel:70000000000" class="footer__tel">+7(000)000-00-00</a>
+            <a href="mailto:infoemail@mail.ru" class="footer__mail">infoemail@mail.ru</a>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <a href="#" class="footer__link">Пользовательское соглашение</a>
+        <a href="#" class="footer__link">Согласие на обработку персональных данных</a>
+        <div class="footer__copy">© 2022 Все права защищены</div>
+    </div>
+</footer>
         <div class="modal" data-modal="1">
     <div class="modal__in">
         <div class="modal__closer"></div>
-        modal 1
+        <div class="modal__title">Чтобы мы смогли вам ответить, пожалуйста, оставьте ваши контакты</div>
+        <form action="" class="modal__form">
+            <input type="text" placeholder="Ваше ФИО">
+            <input type="tel" placeholder="Телефон">
+            <input type="email" placeholder="E-mail">
+            <input class="custom-checkbox" type="checkbox" name="personal" checked>
+            <label for="personal">Даю согласие на обработку персональных данных</label>
+            <button class="button modal__button">Отправить</button>
+        </form>
     </div>
 </div>
-
-<div class="modal" data-modal="2">
-    <div class="modal__in">
-        <div class="modal__closer"></div>
-        modal 2
     </div>
-</div>
-    </div>
-    <script src="js/app.min.js?_v=20220426115409"></script>
+    <script src="js/app.min.js?_v=20220427015906"></script>
 </body>
 </html>

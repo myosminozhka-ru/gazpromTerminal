@@ -1,0 +1,61 @@
+.header {
+    padding: vw(42) vw(60) vw(38) vw(60);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    &__logo {
+        flex: 0 0 vw(333);
+        a {
+            display: block;
+            text-decoration: none;
+        }
+    }
+    &__menu {
+        width: 100%;
+        padding: 0 vw(20);
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                a {
+                    display: inline-block;
+                    padding-left: vw(15);
+                    padding-right: vw(15);
+                    font-family: 'PT', Helvetica, sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: vw(16);
+                    line-height: 110%;
+                    color: #535353;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &__button {
+        flex: 0 0 vw(212);
+    }
+}
+.isTablet, .isMobile {
+    .header {
+        padding: 25px 15px;
+        &__logo {
+            max-width: 178px;
+            width: 100%;
+            flex: none;
+        }
+        &__menu {
+            display: none;
+        }
+        &__button {
+            display: none;
+        }
+    }
+}

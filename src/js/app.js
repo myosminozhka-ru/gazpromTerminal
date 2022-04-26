@@ -2,9 +2,8 @@ import * as globalFunctions from './modules/functions.js';
 globalFunctions.isWebp();
 
 import Vue from 'vue/dist/vue.js';
-import $ from 'jquery';
 
-import Header from '../blocks/modules/header/header.js';
+import Burger from '../blocks/components/burger/burger.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
 window.app = new Vue({
@@ -16,14 +15,14 @@ window.app = new Vue({
             mobile: 768,
             window: window.innerWidth
         },
-        header: new Header({
-            someVareible: 'someVareible'
+        burger: new Burger({
+            isMobileMenuOpened: false,
         }),
         modals: new Modals({
             modalsSelector: "data-modal",
             modalsOpenerSelector: "data-modal-id",
             openedClass: "isOpened"
-        })
+        }),
     }),
     beforeCreate() {        
         window.addEventListener('resize', () => {
@@ -32,7 +31,7 @@ window.app = new Vue({
     },
     beforeMount() {
         this.isMounted = true;
-        this.header.init();
+        this.burger.init();
         this.modals.init();
     },
     computed: {
@@ -41,6 +40,6 @@ window.app = new Vue({
         },
         isTablet: function () {
             return this.sizes.window < this.sizes.tablet && this.sizes.window > this.sizes.mobile;
-        }
+        },
     },
 });

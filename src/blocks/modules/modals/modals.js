@@ -21,6 +21,9 @@ const Modals = class Modals {
             if (!event.target.dataset.modalId && event.target.dataset.modal) {
                 this.closeModal(document.querySelector(`[${this.modalsSelector}].isOpened`).dataset.modal);
             }
+            if (event.target.closest('.modal__closer')) {
+                this.closeModal(document.querySelector(`[${this.modalsSelector}].isOpened`).dataset.modal);
+            }
         })
     }
     addKeyupListener() {

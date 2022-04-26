@@ -1,1 +1,25 @@
-<header class="header"></header>
+<div class="header">
+    <div class="header__logo">
+        <a href="/">
+            <img src="../img/svg/logo.svg" alt="">
+        </a>
+    </div>
+    <nav class="header__menu">
+        <ul>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Как работает Terminal</a></li>
+            <li><a href="#">Технологии</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Кейсы</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Экосистема Isource</a></li>
+        </ul>
+    </nav>
+    <div class="header__button">
+        @@include('../../components/button/button.html', {
+            "text" : "Оставить заявку",
+            "type" : "feedback"
+        })
+    </div>
+    @@include('../../components/burger/burger.html', {})
+</div>
