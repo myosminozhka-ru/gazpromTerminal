@@ -13,7 +13,7 @@
                     <img src="../img/svg/logo.svg" alt="">
                 </a>
             </div>
-            <div class="menu_burger__close" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+            <div class="menu_burger__close" @click.prevent="burger.closeMobileMenu.apply(burger)">
                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.953717 3.07485L15.5516 17.2848L17.6442 15.1352L3.04628 0.925155L0.953717 3.07485ZM29.6487 0.942905L15.5337 15.1529L17.6621 17.2671L31.7771 3.05709L29.6487 0.942905ZM3.36511 32.0431L17.6759 17.2531L15.5199 15.1669L1.20915 29.9569L3.36511 32.0431ZM15.5233 17.2565L29.9253 32.0465L32.0747 29.9535L17.6726 15.1635L15.5233 17.2565Z" fill="black"/>
                 </svg>
@@ -31,7 +31,7 @@
                     <li><a href="#">Экосистема Isource</a></li>
                 </ul>
             </nav>
-            <div class="menu_burger__button" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+            <div class="menu_burger__button" @click.prevent="burger.closeMobileMenu.apply(burger)">
                 @@include('../../components/button/button.html', {
                     "text" : "Оставить заявку",
                     "type" : "feedback"

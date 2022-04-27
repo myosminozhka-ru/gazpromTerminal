@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220427015906">
+    <link rel="stylesheet" href="css/style.css?_v=20220427021305">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -13,6 +13,10 @@
     <div class="header__logo">
         <a href="/">
             <img src="../img/svg/logo.svg" alt="">
+            <!-- <object type="image/svg+xml" data="SvgImg.svg" width="200" height="200">
+              <picture><source srcset="SvgImg.webp" type="image/webp"><img src="SvgImg.png" width="200" height="200" alt="image format png" /></picture>
+            </object> -->
+            <!-- TODO object svg -->
         </a>
     </div>
     <nav class="header__menu">
@@ -44,7 +48,7 @@
                     <img src="../img/svg/logo.svg" alt="">
                 </a>
             </div>
-            <div class="menu_burger__close" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+            <div class="menu_burger__close" @click.prevent="burger.closeMobileMenu.apply(burger)">
                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.953717 3.07485L15.5516 17.2848L17.6442 15.1352L3.04628 0.925155L0.953717 3.07485ZM29.6487 0.942905L15.5337 15.1529L17.6621 17.2671L31.7771 3.05709L29.6487 0.942905ZM3.36511 32.0431L17.6759 17.2531L15.5199 15.1669L1.20915 29.9569L3.36511 32.0431ZM15.5233 17.2565L29.9253 32.0465L32.0747 29.9535L17.6726 15.1635L15.5233 17.2565Z" fill="black"/>
                 </svg>
@@ -62,7 +66,7 @@
                     <li><a href="#">Экосистема Isource</a></li>
                 </ul>
             </nav>
-            <div class="menu_burger__button" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+            <div class="menu_burger__button" @click.prevent="burger.closeMobileMenu.apply(burger)">
                 <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
             </div>
         </div>
@@ -131,6 +135,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20220427015906"></script>
+    <script src="js/app.min.js?_v=20220427021305"></script>
 </body>
 </html>
