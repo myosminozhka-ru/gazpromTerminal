@@ -1,0 +1,149 @@
+.main_first {
+    width: calc(100% - #{vw(120)});
+    margin: 0 vw(60);
+    padding: vw(20) vw(152);
+    height: calc(100vh - #{vw(140)});
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__info {
+        padding: vw(110) vw(90);
+        max-width: vw(700);
+        width: 100%;
+        background: #FFFFFF;
+        position: relative;
+        z-index: 1;
+    }
+    &__title {
+        margin-bottom: vw(20);
+        font-family: 'texgyreheros', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: vw(100);
+        line-height: 100%;
+        color: #000000;
+    }
+    &__text {
+        font-family: 'PT', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: vw(25);
+        line-height: 150%;
+        color: #535353;
+        margin-bottom: vw(30);
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        .button {
+            width: max-content;
+        }
+    }
+    &__download {
+        position: relative; 
+        text-decoration: none;
+        font-family: 'texgyreheros', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: vw(20);
+        line-height: 110%;
+        color: #535353;
+        margin-left: vw(30);
+        display: flex;
+        align-items: center;
+        span {
+            position: relative;
+            display: inline-block;
+            margin-right: vw(10);
+            width: vw(30);
+            height: vw(30);
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: vw(30);
+                height: vw(30);
+                margin-top: vw(-15);
+                left: 0;
+                background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_80_1101)'%3E%3Cpath d='M0.681641 23.9812V29.3182H29.6001V23.9812M4.90925 13.0207L14.897 23.0084M14.897 23.0084L24.8847 13.0207M14.897 23.0084L14.8971 0' stroke='%231400DC' stroke-width='2'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_80_1101'%3E%3Crect width='30' height='30' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+                transition: all .3s ease-out;
+                z-index: 2;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #1400DC;
+                z-index: 1;
+                transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+                transform: scale(0.01);
+            }
+        }
+        &:hover {
+            span {
+                &:after {
+                    transform: scale(1);
+                }
+                &:before {
+                    transform: scale(0.5);
+                    background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_80_1101)'%3E%3Cpath d='M0.681641 23.9812V29.3182H29.6001V23.9812M4.90925 13.0207L14.897 23.0084M14.897 23.0084L24.8847 13.0207M14.897 23.0084L14.8971 0' stroke='%23fff' stroke-width='2'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_80_1101'%3E%3Crect width='30' height='30' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+                }
+            }
+        }
+    }
+}
+.isTablet, .isMobile {
+    .main_first {
+        margin: 0 15px;
+        padding: 60px 15px;
+        width: calc(100% - 30px);
+        &__info {
+            padding: 30px 20px;
+            max-width: 315px;
+        }
+        &__title {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        &__buttons {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__download {
+            margin-top: 25px;
+            font-size: 18px;
+            margin-left: 0;
+            span {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+                &:before {
+                    margin-top: -15px;
+                    width: 30px;
+                    height: 30px;
+                    
+                }
+            }
+        }
+    }
+}

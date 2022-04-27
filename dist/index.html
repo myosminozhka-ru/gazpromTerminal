@@ -5,18 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220427021305">
+    <link rel="stylesheet" href="css/style.css?_v=20220427172436">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         <div class="header">
     <div class="header__logo">
         <a href="/">
-            <img src="../img/svg/logo.svg" alt="">
-            <!-- <object type="image/svg+xml" data="SvgImg.svg" width="200" height="200">
-              <picture><source srcset="SvgImg.webp" type="image/webp"><img src="SvgImg.png" width="200" height="200" alt="image format png" /></picture>
-            </object> -->
-            <!-- TODO object svg -->
+            <object type="image/svg+xml" data="../img/svg/logo.svg">
+              <picture><source srcset="../img/logo.webp" type="image/webp"><img src="../img/logo.png" alt="" /></picture>
+            </object>
         </a>
     </div>
     <nav class="header__menu">
@@ -74,17 +72,53 @@
 </div>
 </div>
         <main>
-            
+            <div class="main_first">
+    <picture><source srcset="../img/bg_first.webp" type="image/webp"><img class="main_first__bg" src="../img/bg_first.png" alt=""></picture>
+    <div class="main_first__info">
+        <div class="main_first__title">Terminal</div>
+        <div class="main_first__text">Сервис модернизации складской инфраструктуры и оптимизации складских  процессов</div>
+        <div class="main_first__buttons">
+            <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+            <a href="#" class="main_first__download"><span></span>Скачать презентацию</a>  
+        </div>
+    </div>
+</div>
+            <div class="main_numbers">
+    <div class="main_numbers__block">
+        <div class="main_numbers__number">до <span class="counter" data-count="40">40</span>%</div>
+        <div class="main_numbers__text">оптимизация площадей хранения</div>
+    </div>
+    <div class="main_numbers__block">
+        <div class="main_numbers__number">до <span class="counter" data-count="50">50</span>%</div>
+        <div class="main_numbers__text">увеличения скорости доступа к товару</div>
+    </div>
+    <div class="main_numbers__block">
+        <div class="main_numbers__number">на <span class="counter" data-count="30">30</span>%</div>
+        <div class="main_numbers__text">сокращения операционных затрат</div>
+    </div>
+</div>
         </main>
         <footer class="footer">
     <div class="footer__top">
         <div class="footer__l-side">
-            <a href="#" class="footer__logo"><img src="../img/svg/logo__footer.svg" alt=""></a>
+            <a href="#" class="footer__logo">
+                <object type="image/svg+xml" data="../img/svg/logo__footer.svg">
+                    <picture><source srcset="../img/logo__footer.webp" type="image/webp"><img src="../img/logo__footer.png" alt="" /></picture>
+                </object>
+            </a>
             <div class="footer__soc">
                 <span>Для связи в месседжерах:</span>
                 <div class="footer__socs">
-                    <a href="#" target="_blank"><img src="../img/svg/tg_icon.svg" alt=""></a>
-                    <a href="#" target="_blank"><img src="../img/svg/wp_icon.svg" alt=""></a>
+                    <a href="#" target="_blank">
+                        <object type="image/svg+xml" data="../img/svg/tg_icon.svg">
+                            <picture><source srcset="../img/tg_icon.webp" type="image/webp"><img src="../img/tg_icon.png" alt="" /></picture>
+                        </object>
+                    </a>
+                    <a href="#" target="_blank">
+                        <object type="image/svg+xml" data="../img/svg/wp_icon.svg">
+                            <picture><source srcset="../img/wp_icon.webp" type="image/webp"><img src="../img/wp_icon.png" alt="" /></picture>
+                        </object>
+                    </a>
                 </div>
             </div>
         </div>
@@ -135,6 +169,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20220427021305"></script>
+    <script src="js/app.min.js?_v=20220427172436"></script>
 </body>
 </html>

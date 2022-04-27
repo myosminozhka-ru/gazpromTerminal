@@ -11,7 +11,8 @@
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         @@include('blocks/modules/header/header.html', {})
         <main>
-            
+            @@include('blocks/modules/main_first/main_first.html', {})
+            @@include('blocks/modules/main_numbers/main_numbers.html', {})
         </main>
         @@include('blocks/modules/footer/footer.html', {})
         @@include('blocks/modules/modals/main.modal.html', {})
