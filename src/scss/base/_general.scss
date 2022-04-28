@@ -37,74 +37,9 @@ ul {
     margin: 0;
     padding: 0;
 }
-// checkbox
-.custom-checkbox {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-    & + label {
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-        position: relative; 
-        cursor: pointer;
-        font-family: 'PT', Helvetica, sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: vw(18);
-        line-height: 130%;
-        color: #535353;
-        &:before {
-            content: '';
-            display: inline-block;
-            width: vw(25);
-            height: vw(25);
-            flex-shrink: 0;
-            flex-grow: 0;
-            border: 1px solid #CFCFCF;
-            margin-right: vw(20);
-        }
-    }
-    &:checked {
-        & + label {
-            &:before {
-                background: #fff;
-            }
-            &:after {
-                position: absolute;
-                content: '';
-                width: vw(15);
-                height: vw(15);
-                background: #1400DC;
-                top: 50%;
-                left: vw(5);
-                margin-top: vw(-7.5);
-            }
-        }
-    }
+textarea {
+    resize: none;
 }
-.isTablet, .isMobile {
-    .custom-checkbox {
-        & + label {
-            &:before {
-                width: 20px;
-                height: 20px;
-                margin-right: 10px;
-            }
-        }
-        &:checked {
-            & + label {
-                &:after {
-                    width: 12px;
-                    height: 12px;
-                    left: 4px;
-                    margin-top: -6px;
-                }
-            }
-        }
-    }
-}
-// checkbox end
 // scrollbar
 /* width */
 ::-webkit-scrollbar {

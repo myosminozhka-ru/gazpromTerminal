@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220427213329">
+    <link rel="stylesheet" href="css/style.css?_v=20220428121448">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -97,6 +97,22 @@
         <div class="main_numbers__text">сокращения операционных затрат</div>
     </div>
 </div>
+            <div class="main_form">
+    <div class="main_form__l-side">
+        <div class="main_form__title">Остались вопросы?</div>
+        <div class="main_form__subtitle">Оставьте заявку на консультацию и наш менеджер свяжется с вами</div>
+    </div>
+    <div class="main_form__r-side">
+        <form action="">
+            <textarea name="ques" placeholder="Ваш вопрос"></textarea>
+            <div class="main_form__buttons">
+                <button class="button modal__button">Отправить</button>
+                <input class="custom-checkbox" type="checkbox" name="personal2" id="personal2" checked>
+<label for="personal2">Даю согласие на обработку персональных данных</label>
+            </div>
+        </form>
+    </div>
+</div>
         </main>
         <footer class="footer">
     <div class="footer__top">
@@ -162,13 +178,13 @@
             <input type="text" placeholder="Ваше ФИО">
             <input type="tel" placeholder="Телефон">
             <input type="email" placeholder="E-mail">
-            <input class="custom-checkbox" type="checkbox" name="personal" checked>
-            <label for="personal">Даю согласие на обработку персональных данных</label>
+            <input class="custom-checkbox" type="checkbox" name="personal1" id="personal1" checked>
+<label for="personal1">Даю согласие на обработку персональных данных</label>
             <button class="button modal__button">Отправить</button>
         </form>
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20220427213329"></script>
+    <script src="js/app.min.js?_v=20220428121448"></script>
 </body>
 </html>

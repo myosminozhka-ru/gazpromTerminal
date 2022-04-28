@@ -6,9 +6,13 @@
             <input type="text" placeholder="Ваше ФИО">
             <input type="tel" placeholder="Телефон">
             <input type="email" placeholder="E-mail">
-            <input class="custom-checkbox" type="checkbox" name="personal" checked>
-            <label for="personal">Даю согласие на обработку персональных данных</label>
-            <button class="button modal__button">Отправить</button>
+            @@include('../../components/checkbox/checkbox.html', {
+                "text": "1"
+            })
+            @@include('../../components/button/button.html', {
+                "text" : "Отправить",
+                "type" : "modal"
+            })
         </form>
     </div>
 </div>

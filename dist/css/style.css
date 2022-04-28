@@ -450,68 +450,8 @@ ul {
   padding: 0;
 }
 
-.custom-checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.custom-checkbox + label {
-  display: inline-flex;
-  align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: relative;
-  cursor: pointer;
-  font-family: "PT", Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.9375vw;
-  line-height: 130%;
-  color: #535353;
-}
-
-.custom-checkbox + label:before {
-  content: "";
-  display: inline-block;
-  width: 1.3020833333vw;
-  height: 1.3020833333vw;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid #CFCFCF;
-  margin-right: 1.0416666667vw;
-}
-
-.custom-checkbox:checked + label:before {
-  background: #fff;
-}
-
-.custom-checkbox:checked + label:after {
-  position: absolute;
-  content: "";
-  width: 0.78125vw;
-  height: 0.78125vw;
-  background: #1400DC;
-  top: 50%;
-  left: 0.2604166667vw;
-  margin-top: -0.390625vw;
-}
-
-.isTablet .custom-checkbox + label:before,
-.isMobile .custom-checkbox + label:before {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.isTablet .custom-checkbox:checked + label:after,
-.isMobile .custom-checkbox:checked + label:after {
-  width: 12px;
-  height: 12px;
-  left: 4px;
-  margin-top: -6px;
+textarea {
+  resize: none;
 }
 
 /* width */
@@ -670,6 +610,86 @@ ul {
   padding: 18px 27px;
 }
 
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  cursor: pointer;
+  font-family: "PT", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375vw;
+  line-height: 130%;
+  color: #535353;
+  max-width: 15.625vw;
+  width: 100%;
+}
+
+.custom-checkbox + label:before {
+  pointer-events: none;
+  content: "";
+  display: inline-block;
+  width: 1.3020833333vw;
+  height: 1.3020833333vw;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #CFCFCF;
+  margin-right: 1.0416666667vw;
+}
+
+.custom-checkbox + label:after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 0.78125vw;
+  height: 0.78125vw;
+  background: #1400DC;
+  top: 50%;
+  left: 0.2604166667vw;
+  margin-top: -0.390625vw;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.custom-checkbox:checked + label:before {
+  background: #fff;
+}
+
+.custom-checkbox:checked + label:after {
+  opacity: 1;
+}
+
+.isTablet .custom-checkbox + label,
+.isMobile .custom-checkbox + label {
+  max-width: 220px;
+  font-size: 14px;
+}
+
+.isTablet .custom-checkbox + label:before,
+.isMobile .custom-checkbox + label:before {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.isTablet .custom-checkbox:checked + label:after,
+.isMobile .custom-checkbox:checked + label:after {
+  width: 12px;
+  height: 12px;
+  left: 4px;
+  margin-top: -6px;
+}
+
 .header {
   padding: 2.1875vw 3.125vw 1.9791666667vw 3.125vw;
   display: flex;
@@ -722,7 +742,8 @@ ul {
 }
 
 .header__button {
-  flex: 0 0 11.0416666667vw;
+  flex: 0 0 11.7708333333vw;
+  width: 100%;
 }
 
 .isTablet .header,
@@ -996,6 +1017,134 @@ ul {
   font-size: 18px;
   margin-top: 10px;
   max-width: 234px;
+}
+
+.main_form {
+  margin-left: 3.125vw;
+  margin-right: 3.125vw;
+  background: #EEEEEE;
+  width: calc(100% - 6.25vw);
+  padding: 5.2083333333vw 7.8125vw;
+  margin-top: 7.0833333333vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_form__l-side {
+  max-width: 16.40625vw;
+  width: 100%;
+  padding-top: 5.2083333333vw;
+}
+
+.main_form__title {
+  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.125vw;
+  line-height: 120%;
+  color: #000000;
+  margin-bottom: 1.0416666667vw;
+}
+
+.main_form__subtitle {
+  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375vw;
+  line-height: 150%;
+  color: #000000;
+}
+
+.main_form__r-side {
+  max-width: 48.1770833333vw;
+  width: 100%;
+  padding: 5.2083333333vw 4.8958333333vw;
+  background: #FFFFFF;
+}
+
+.main_form__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.main_form textarea {
+  padding: 2.0833333333vw;
+  border: 1px solid #CFCFCF;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 1.5625vw;
+  min-height: 20.8333333333vw;
+  font-family: "PT", Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375vw;
+  line-height: 150%;
+  color: #535353;
+}
+
+.main_form .button {
+  max-width: 10.2083333333vw;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.isTablet .main_form,
+.isMobile .main_form {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  margin-top: 20px;
+  padding: 50px 15px;
+  flex-direction: column;
+}
+
+.isTablet .main_form__l-side,
+.isMobile .main_form__l-side {
+  padding-top: 0;
+  max-width: 100%;
+}
+
+.isTablet .main_form__title,
+.isMobile .main_form__title {
+  margin-bottom: 10px;
+  font-size: 30px;
+  max-width: 205px;
+}
+
+.isTablet .main_form__subtitle,
+.isMobile .main_form__subtitle {
+  max-width: 280px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.isTablet .main_form__r-side,
+.isMobile .main_form__r-side {
+  max-width: 100%;
+  padding: 20px 15px;
+}
+
+.isTablet .main_form textarea,
+.isMobile .main_form textarea {
+  padding: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  min-height: 277px;
+}
+
+.isTablet .main_form__buttons,
+.isMobile .main_form__buttons {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.isTablet .main_form .button,
+.isMobile .main_form .button {
+  margin-top: 20px;
+  margin-right: 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 .footer {
@@ -1384,8 +1533,6 @@ ul {
 }
 
 .modal .custom-checkbox + label {
-  max-width: 15.625vw;
-  width: 100%;
   margin-bottom: 1.5625vw;
   margin-top: 0.5208333333vw;
 }
@@ -1434,9 +1581,7 @@ ul {
 
 .isTablet .modal .custom-checkbox + label,
 .isMobile .modal .custom-checkbox + label {
-  max-width: 220px;
   margin: 20px 0;
-  font-size: 14px;
 }
 
 @media all and (max-width: 350px) {
