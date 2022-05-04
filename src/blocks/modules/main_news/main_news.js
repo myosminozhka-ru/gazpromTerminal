@@ -1,12 +1,12 @@
 import Glide from '@glidejs/glide';
 
-const MainTerminal = class MainTerminal {
+const MainNews = class MainNews {
     constructor({sliderOptions}){
         this.sliderOptions = sliderOptions;
     }
     initialSlider() {
         setTimeout(() => {
-            new Glide('.terminal-glide-js', this.sliderOptions).mount();
+            new Glide('.news-glide-js', this.sliderOptions).mount();
         }, 500)
     }
     init() {
@@ -14,4 +14,4 @@ const MainTerminal = class MainTerminal {
     }
 }
 
-export default MainTerminal;
+export default MainNews;

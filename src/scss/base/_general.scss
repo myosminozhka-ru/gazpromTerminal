@@ -100,7 +100,7 @@ textarea {
             height: vw(30);
             position: relative;
             z-index: 2;
-            background: #fff url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.2286 14.7668L19.5318 15.4668L7.22168 27.6986L8.51805 29.001L22.7781 14.6746L9.16624 0.999332L7.86987 2.30174L19.5318 14.0668L20.2286 14.7668Z' fill='%231400DC'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+            background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.2286 14.7668L19.5318 15.4668L7.22168 27.6986L8.51805 29.001L22.7781 14.6746L9.16624 0.999332L7.86987 2.30174L19.5318 14.0668L20.2286 14.7668Z' fill='%231400DC'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
             opacity: .2;
             transition: all .3s ease-out;
             &:nth-child(1) {
