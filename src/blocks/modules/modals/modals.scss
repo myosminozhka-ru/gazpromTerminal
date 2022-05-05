@@ -99,8 +99,6 @@
     }
     .custom-checkbox {
         & + label {
-            max-width: vw(300);
-            width: 100%;
             margin-bottom: vw(30);
             margin-top: vw(10);
         }
@@ -135,9 +133,7 @@
         }
         .custom-checkbox {
             & + label {
-                max-width: 220px;
                 margin: 20px 0;
-                font-size: 14px;
             }
         }
     }

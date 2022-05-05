@@ -37,74 +37,9 @@ ul {
     margin: 0;
     padding: 0;
 }
-// checkbox
-.custom-checkbox {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-    & + label {
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-        position: relative; 
-        cursor: pointer;
-        font-family: 'PT', Helvetica, sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: vw(18);
-        line-height: 130%;
-        color: #535353;
-        &:before {
-            content: '';
-            display: inline-block;
-            width: vw(25);
-            height: vw(25);
-            flex-shrink: 0;
-            flex-grow: 0;
-            border: 1px solid #CFCFCF;
-            margin-right: vw(20);
-        }
-    }
-    &:checked {
-        & + label {
-            &:before {
-                background: #fff;
-            }
-            &:after {
-                position: absolute;
-                content: '';
-                width: vw(15);
-                height: vw(15);
-                background: #1400DC;
-                top: 50%;
-                left: vw(5);
-                margin-top: vw(-7.5);
-            }
-        }
-    }
+textarea {
+    resize: none;
 }
-.isTablet, .isMobile {
-    .custom-checkbox {
-        & + label {
-            &:before {
-                width: 20px;
-                height: 20px;
-                margin-right: 10px;
-            }
-        }
-        &:checked {
-            & + label {
-                &:after {
-                    width: 12px;
-                    height: 12px;
-                    left: 4px;
-                    margin-top: -6px;
-                }
-            }
-        }
-    }
-}
-// checkbox end
 // scrollbar
 /* width */
 ::-webkit-scrollbar {
@@ -126,3 +61,88 @@ ul {
     background: #1400DC;
 }
 // scrollbar end
+// glidejs
+
+.glide {
+    &__bullets {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: vw(30);
+        padding-right: vw(30);
+        transform: unset;
+        bottom: unset;
+        height: vw(30);
+    }
+    &__bullet {
+        width: vw(10);
+        height: vw(10);
+        border-radius: 0;
+        background: #1400DC !important;
+        opacity: 0.2;
+        transition: all .3s ease-out;
+        margin: 0 vw(10);
+        &--active {
+            opacity: 1;
+        }
+    }
+    &__controls {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        div {
+            width: vw(30);
+            height: vw(30);
+            position: relative;
+            z-index: 2;
+            background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.2286 14.7668L19.5318 15.4668L7.22168 27.6986L8.51805 29.001L22.7781 14.6746L9.16624 0.999332L7.86987 2.30174L19.5318 14.0668L20.2286 14.7668Z' fill='%231400DC'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+            opacity: .2;
+            transition: all .3s ease-out;
+            &:nth-child(1) {
+                transform: rotate(180deg);
+            }
+            &:hover, &:active {
+                opacity: 1;
+            }
+        }
+    }
+}
+.isTablet, .isMobile {
+    .glide {
+        &__controls {
+            div {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &__bullets {
+            height: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__bullet {
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 5px;
+            height: 5px;
+        }
+    }
+}
+.isMobile {
+    .glide {
+        &__controls {
+            width: 205px;
+        }
+        &__bullets {
+            width: 205px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+// glidejs end

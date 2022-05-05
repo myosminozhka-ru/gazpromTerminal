@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css?_v=20220505223433">
+</head>
+<body>
+    <div class="wrapper" id="app">
+        <div class="wrapper__in" :class="{isMobile, isTablet}">
+            <div class="header">
+    <div class="header__logo">
+        <a href="/">
+            <object type="image/svg+xml" data="../img/svg/logo.svg">
+              <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="" /></picture>
+            </object>
+        </a>
+    </div>
+    <nav class="header__menu">
+        <ul>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Как работает Terminal</a></li>
+            <li><a href="#">Технологии</a></li>
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Кейсы</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Экосистема Isource</a></li>
+        </ul>
+    </nav>
+    <div class="header__button">
+        <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+    </div>
+    <div class="menu_burger" v-if="isTablet || isMobile" :class="{'isOpened': burger.isMobileMenuOpened}">
+    <div class="menu_burger__icon" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+        <svg width="30" height="19" viewBox="0 0 30 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="3" fill="black"/>
+            <rect y="7.8623" width="30" height="3" fill="black"/>
+            <rect y="15.7256" width="30" height="3" fill="black"/>
+        </svg>
+    </div>
+    <div class="menu_burger__body">
+        <div class="menu_burger__top">
+            <div class="header__logo">
+                <a href="/">
+                    <img src="../img/svg/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="menu_burger__close" @click.prevent="burger.closeMobileMenu.apply(burger)">
+                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.953717 3.07485L15.5516 17.2848L17.6442 15.1352L3.04628 0.925155L0.953717 3.07485ZM29.6487 0.942905L15.5337 15.1529L17.6621 17.2671L31.7771 3.05709L29.6487 0.942905ZM3.36511 32.0431L17.6759 17.2531L15.5199 15.1669L1.20915 29.9569L3.36511 32.0431ZM15.5233 17.2565L29.9253 32.0465L32.0747 29.9535L17.6726 15.1635L15.5233 17.2565Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+        <div class="menu_burger__bottom">
+            <nav class="menu_burger__menu">
+                <ul>
+                    <li><a href="#">Наши услуги</a></li>
+                    <li><a href="#">Как работает Terminal</a></li>
+                    <li><a href="#">Технологии</a></li>
+                    <li><a href="#">Часто задаваемые вопросы</a></li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Экосистема Isource</a></li>
+                </ul>
+            </nav>
+            <div class="menu_burger__button" @click.prevent="burger.closeMobileMenu.apply(burger)">
+                <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+            <main>
+                <div class="page_cases">
+    <a onclick="javascript:history.back();" class="wrapper__back"><span></span>Назад</a>
+    <div class="wrapper__h1">Реализованные проекты</div>
+    <div class="page_cases__slider glide cases-glide-js">
+        <div data-glide-el="track" class="glide__track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                  <div class="page_cases__blocks">
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Повышение емкости хранения материалов на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Повышение емкости хранения материалов на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Повышение емкости хранения материалов на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                  </div>
+              </li>
+              <li class="glide__slide">
+                  <div class="page_cases__blocks">
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Повышение емкости хранения материалов на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Повышение емкости хранения материалов на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Повышение емкости хранения материалов на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                      <a href="#" class="page_cases__block">
+                          <div class="page_cases__img">
+                              <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                          </div>
+                          <div class="page_cases__info">
+                              <div class="page_cases__date">12.12.2022</div>
+                              <div class="page_cases__title">Сокращение издержек, связанных с внутризаводской транспортировкой на 30%</div>
+                          </div>
+                      </a>
+                  </div>
+              </li>
+            </ul>
+        </div>
+        <div class="page_cases__controls">
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <div class="glide__bullet" data-glide-dir="=0"></div>
+                <div class="glide__bullet" data-glide-dir="=1"></div>
+            </div>
+            <div class="glide__controls" data-glide-el="controls">
+                <div data-glide-dir="<"></div>
+                <div data-glide-dir=">"></div>
+            </div>
+        </div>
+    </div>
+    <button class="page_cases__more"><span></span>Еще кейсы</button>
+</div>
+                <div class="main_form">
+    <div class="main_form__l-side">
+        <div class="main_form__title">Остались вопросы?</div>
+        <div class="main_form__subtitle">Оставьте заявку на консультацию и наш менеджер свяжется с вами</div>
+    </div>
+    <div class="main_form__r-side">
+        <form action="">
+            <textarea name="ques" placeholder="Ваш вопрос"></textarea>
+            <div class="main_form__buttons">
+                <button class="button modal__button">Отправить</button>
+                <input class="custom-checkbox" type="checkbox" name="personal2" id="personal2" checked>
+<label for="personal2">Даю согласие на обработку персональных данных</label>
+            </div>
+        </form>
+    </div>
+</div>
+            </main>
+            <footer class="footer">
+    <div class="footer__top">
+        <div class="footer__l-side">
+            <a href="#" class="footer__logo">
+                <object type="image/svg+xml" data="../img/svg/logo__footer.svg">
+                    <picture><source srcset="./img/logo__footer.webp" type="image/webp"><img src="./img/logo__footer.png" alt="" /></picture>
+                </object>
+            </a>
+            <div class="footer__soc">
+                <span>Для связи в месседжерах:</span>
+                <div class="footer__socs">
+                    <a href="#" target="_blank">
+                        <object type="image/svg+xml" data="../img/svg/tg_icon.svg">
+                            <picture><source srcset="./img/tg_icon.webp" type="image/webp"><img src="./img/tg_icon.png" alt="" /></picture>
+                        </object>
+                    </a>
+                    <a href="#" target="_blank">
+                        <object type="image/svg+xml" data="../img/svg/wp_icon.svg">
+                            <picture><source srcset="./img/wp_icon.webp" type="image/webp"><img src="./img/wp_icon.png" alt="" /></picture>
+                        </object>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="footer__menu lang_ru">
+            <ul>
+                <li><a href="#">Наши услуги</a></li>
+                <li><a href="#">Как работает Terminal</a></li>
+                <li><a href="#">Технологии</a></li>
+                <li><a href="#">Часто задаваемые вопросы</a></li>
+                <li><a href="#">Кейсы</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Экосистема Isource</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__menu lang_en">
+            <ul>
+                <li><a href="#">Isource</a></li>
+                <li><a href="#">Processor</a></li>
+                <li><a href="#">Academy</a></li>
+                <li><a href="#">Logotech</a></li>
+                <li><a href="#">Arctic</a></li>
+                <li><a href="#">Engine</a></li>
+            </ul>
+        </nav>
+        <div class="footer__r-side">
+            <a href="tel:70000000000" class="footer__tel">+7(000)000-00-00</a>
+            <a href="mailto:infoemail@mail.ru" class="footer__mail">infoemail@mail.ru</a>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <a href="#" class="footer__link">Пользовательское соглашение</a>
+        <a href="#" class="footer__link">Согласие на обработку персональных данных</a>
+        <div class="footer__copy">© 2022 Все права защищены</div>
+    </div>
+</footer>
+            <div class="modal" data-modal="1">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+        <div class="modal__title">Чтобы мы смогли вам ответить, пожалуйста, оставьте ваши контакты</div>
+        <form action="" class="modal__form">
+            <input type="text" placeholder="Ваше ФИО">
+            <input type="tel" placeholder="Телефон">
+            <input type="email" placeholder="E-mail">
+            <input class="custom-checkbox" type="checkbox" name="personal1" id="personal1" checked>
+<label for="personal1">Даю согласие на обработку персональных данных</label>
+            <button class="button modal__button">Отправить</button>
+        </form>
+    </div>
+</div>
+        </div>
+    </div>
+    <script src="js/app.min.js?_v=20220505223433"></script>
+</body>
+</html>

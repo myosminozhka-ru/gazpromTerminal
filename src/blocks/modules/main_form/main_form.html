@@ -1,0 +1,20 @@
+<div class="main_form">
+    <div class="main_form__l-side">
+        <div class="main_form__title">Остались вопросы?</div>
+        <div class="main_form__subtitle">Оставьте заявку на консультацию и наш менеджер свяжется с вами</div>
+    </div>
+    <div class="main_form__r-side">
+        <form action="">
+            <textarea name="ques" placeholder="Ваш вопрос"></textarea>
+            <div class="main_form__buttons">
+                @@include('../../components/button/button.html', {
+                    "text" : "Отправить",
+                    "type" : "modal"
+                })
+                @@include('../../components/checkbox/checkbox.html', {
+                    "text": "2"
+                })
+            </div>
+        </form>
+    </div>
+</div>

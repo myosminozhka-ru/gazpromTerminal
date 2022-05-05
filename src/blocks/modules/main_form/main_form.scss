@@ -1,0 +1,102 @@
+.main_form {
+    margin-left: vw(60);
+    margin-right: vw(60);
+    background: #EEEEEE;
+    width: calc(100% - #{vw(120)});
+    padding: vw(100) vw(150);
+    margin-top: vw(60);
+    display: flex;
+    justify-content: space-between;
+    &__l-side {
+        max-width: vw(315);
+        width: 100%;
+        padding-top: vw(100);
+    }
+    &__title {
+        font-family: 'texgyreheros', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: vw(60);
+        line-height: 120%;
+        color: #000000;
+        margin-bottom: vw(20);
+    }
+    &__subtitle {
+        font-family: 'texgyreheros', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: vw(18);
+        line-height: 150%;
+        color: #000000;
+    }
+    &__r-side {
+        max-width: vw(925);
+        width: 100%;
+        padding: vw(100) vw(94);
+        background: #FFFFFF;
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+    textarea {
+        padding: vw(40);
+        border: 1px solid #CFCFCF;
+        background: #fff;
+        width: 100%;
+        margin-bottom: vw(30);
+        min-height: vw(400);
+        font-family: 'PT', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: vw(18);
+        line-height: 150%;
+        color: #535353;
+    }
+    .button {
+        margin-right: 30px;
+    }
+}
+.isTablet, .isMobile {
+    .main_form {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px 15px;
+        flex-direction: column;
+        &__l-side {
+            padding-top: 0;
+            max-width: 100%;
+        }
+        &__title {
+            margin-bottom: 10px;
+            font-size: 30px;
+            max-width: 205px;
+        }
+        &__subtitle {
+            max-width: 280px;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        &__r-side {
+            max-width: 100%;
+            padding: 20px 15px;
+        }
+        textarea {
+            padding: 20px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            min-height: 277px;
+        }
+        &__buttons {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+        .button {
+            margin-top: 20px;
+            margin-right: 0;
+            max-width: max-content;
+        }        
+    }
+}

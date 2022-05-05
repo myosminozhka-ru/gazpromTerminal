@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220427015906">
+    <link rel="stylesheet" href="css/style.css?_v=20220505223433">
 </head>
 <body>
-    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        <div class="header">
+    <div class="wrapper" id="app">
+        <div class="wrapper__in" :class="{isMobile, isTablet}">
+            <div class="header">
     <div class="header__logo">
         <a href="/">
-            <img src="../img/svg/logo.svg" alt="">
+            <object type="image/svg+xml" data="../img/svg/logo.svg">
+              <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="" /></picture>
+            </object>
         </a>
     </div>
     <nav class="header__menu">
@@ -44,7 +47,7 @@
                     <img src="../img/svg/logo.svg" alt="">
                 </a>
             </div>
-            <div class="menu_burger__close" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+            <div class="menu_burger__close" @click.prevent="burger.closeMobileMenu.apply(burger)">
                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.953717 3.07485L15.5516 17.2848L17.6442 15.1352L3.04628 0.925155L0.953717 3.07485ZM29.6487 0.942905L15.5337 15.1529L17.6621 17.2671L31.7771 3.05709L29.6487 0.942905ZM3.36511 32.0431L17.6759 17.2531L15.5199 15.1669L1.20915 29.9569L3.36511 32.0431ZM15.5233 17.2565L29.9253 32.0465L32.0747 29.9535L17.6726 15.1635L15.5233 17.2565Z" fill="black"/>
                 </svg>
@@ -62,25 +65,318 @@
                     <li><a href="#">Экосистема Isource</a></li>
                 </ul>
             </nav>
-            <div class="menu_burger__button" @click.prevent="burger.toogleMobileMenu.apply(burger)">
+            <div class="menu_burger__button" @click.prevent="burger.closeMobileMenu.apply(burger)">
                 <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
             </div>
         </div>
     </div>
 </div>
 </div>
-        <main>
-            
-        </main>
-        <footer class="footer">
+            <main>
+                <div class="main_first">
+    <picture><source srcset="./img/bg_first.webp" type="image/webp"><img class="main_first__bg" src="./img/bg_first.png" alt=""></picture>
+    <div class="main_first__info">
+        <div class="main_first__title">Terminal</div>
+        <div class="main_first__text">Сервис модернизации складской инфраструктуры и оптимизации складских  процессов</div>
+        <div class="main_first__buttons">
+            <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+            <a href="#" class="main_first__download"><span></span>Скачать презентацию</a>  
+        </div>
+    </div>
+</div>
+                <div class="main_numbers">
+    <div class="main_numbers__block">
+        <div class="main_numbers__number">до <span class="counter" data-count="40">40</span>%</div>
+        <div class="main_numbers__text">оптимизация площадей хранения</div>
+    </div>
+    <div class="main_numbers__block">
+        <div class="main_numbers__number">до <span class="counter" data-count="50">50</span>%</div>
+        <div class="main_numbers__text">увеличения скорости доступа к товару</div>
+    </div>
+    <div class="main_numbers__block">
+        <div class="main_numbers__number">на <span class="counter" data-count="30">30</span>%</div>
+        <div class="main_numbers__text">сокращения операционных затрат</div>
+    </div>
+</div>
+                <div class="main_video">
+    <video playsinline controls="controls" class="video-js">
+        <source src="./files/pv.mp4" type="video/mp4">
+    </video>
+</div>
+                <div class="main_red-block">
+    <div class="main_red-block__title">Технологии</div>
+    <div class="main_red-block__img">
+        <picture><source srcset="./img/bg_first.webp" type="image/webp"><img src="./img/bg_first.png" alt=""></picture>
+    </div>
+</div>
+                <div class="main_ques">
+    <div class="main_ques__title"><span>Часто задаваеммые вопросы</span></div>
+    <div class="main_ques__blocks">
+        <div class="main_ques__block">
+            <div class="main_ques__tit">Что такое Терминал?</div>
+            <div class="main_ques__text">
+                <p>Терминал входит в экосистему цифровых продуктов и сервисов для управления процессом снабжения промышленных предприятий Isource.</p>
+                <p>Терминал – сервис оптимизации складских логистических процессов и модернизации складской инфраструктуры, который включает в себя полный комплекс услуг от аудита до строительства новых комплексов. </p>
+                <p>В рамках одного сервиса сосредоточены все компетенции - от простой диагностики, включая 
+                    не только складские, но и смежные процессы (бухгалтерия, закупщики, управление запасами, планирование тактическое и стратегическое, риск-менеджмент и т.д.), до полной модернизации инфраструктуры и передачи складской логистики "под ключ".</p>
+                <p>Терминалы – это также объекты складской инфраструктуры, которые строятся в соответствии 
+                    с современными подходами к организации складского хозяйства и актуальными методиками дизайн-проектирования промышленных объектов. Комплекс решений для каждого складского комплекса подбирается с учетом запроса заказчика — в зависимости от специфики бизнеса предприятия, особенностей производственного процесса или проекта, который обеспечивает склад.</p>
+                <p>Для повышения качества, скорости и безопасности складской логистики на территории Терминалов применяется широкий спектр современных технологий: роботизированная и беспилотная техника, система электронной очереди, RFID-идентификация грузов, машинное зрение для контроля опасных зон, дополненная реальность для упрощения поиска товаров и обучения сотрудников 
+                    и другие решения.</p>
+            </div>
+        </div>
+        <div class="main_ques__block">
+            <div class="main_ques__tit">Кому подходит Терминал?</div>
+            <div class="main_ques__text">
+                <p>Терминал входит в экосистему цифровых продуктов и сервисов для управления процессом снабжения промышленных предприятий Isource.</p>
+                <p>Терминал – сервис оптимизации складских логистических процессов и модернизации складской инфраструктуры, который включает в себя полный комплекс услуг от аудита до строительства новых комплексов. </p>
+                <p>В рамках одного сервиса сосредоточены все компетенции - от простой диагностики, включая 
+                    не только складские, но и смежные процессы (бухгалтерия, закупщики, управление запасами, планирование тактическое и стратегическое, риск-менеджмент и т.д.), до полной модернизации инфраструктуры и передачи складской логистики "под ключ".</p>
+                <p>Терминалы – это также объекты складской инфраструктуры, которые строятся в соответствии 
+                    с современными подходами к организации складского хозяйства и актуальными методиками дизайн-проектирования промышленных объектов. Комплекс решений для каждого складского комплекса подбирается с учетом запроса заказчика — в зависимости от специфики бизнеса предприятия, особенностей производственного процесса или проекта, который обеспечивает склад.</p>
+                <p>Для повышения качества, скорости и безопасности складской логистики на территории Терминалов применяется широкий спектр современных технологий: роботизированная и беспилотная техника, система электронной очереди, RFID-идентификация грузов, машинное зрение для контроля опасных зон, дополненная реальность для упрощения поиска товаров и обучения сотрудников 
+                    и другие решения.</p>
+            </div>
+        </div>
+        <div class="main_ques__block">
+            <div class="main_ques__tit">Преимущества сервиса Терминал?</div>
+            <div class="main_ques__text">
+                <p>Терминал входит в экосистему цифровых продуктов и сервисов для управления процессом снабжения промышленных предприятий Isource.</p>
+                <p>Терминал – сервис оптимизации складских логистических процессов и модернизации складской инфраструктуры, который включает в себя полный комплекс услуг от аудита до строительства новых комплексов. </p>
+                <p>В рамках одного сервиса сосредоточены все компетенции - от простой диагностики, включая 
+                    не только складские, но и смежные процессы (бухгалтерия, закупщики, управление запасами, планирование тактическое и стратегическое, риск-менеджмент и т.д.), до полной модернизации инфраструктуры и передачи складской логистики "под ключ".</p>
+                <p>Терминалы – это также объекты складской инфраструктуры, которые строятся в соответствии 
+                    с современными подходами к организации складского хозяйства и актуальными методиками дизайн-проектирования промышленных объектов. Комплекс решений для каждого складского комплекса подбирается с учетом запроса заказчика — в зависимости от специфики бизнеса предприятия, особенностей производственного процесса или проекта, который обеспечивает склад.</p>
+                <p>Для повышения качества, скорости и безопасности складской логистики на территории Терминалов применяется широкий спектр современных технологий: роботизированная и беспилотная техника, система электронной очереди, RFID-идентификация грузов, машинное зрение для контроля опасных зон, дополненная реальность для упрощения поиска товаров и обучения сотрудников 
+                    и другие решения.</p>
+            </div>
+        </div>
+        <div class="main_ques__block">
+            <div class="main_ques__tit">Что такое Терминал?</div>
+            <div class="main_ques__text">
+                <p>Терминал входит в экосистему цифровых продуктов и сервисов для управления процессом снабжения промышленных предприятий Isource.</p>
+                <p>Терминал – сервис оптимизации складских логистических процессов и модернизации складской инфраструктуры, который включает в себя полный комплекс услуг от аудита до строительства новых комплексов. </p>
+                <p>В рамках одного сервиса сосредоточены все компетенции - от простой диагностики, включая 
+                    не только складские, но и смежные процессы (бухгалтерия, закупщики, управление запасами, планирование тактическое и стратегическое, риск-менеджмент и т.д.), до полной модернизации инфраструктуры и передачи складской логистики "под ключ".</p>
+                <p>Терминалы – это также объекты складской инфраструктуры, которые строятся в соответствии 
+                    с современными подходами к организации складского хозяйства и актуальными методиками дизайн-проектирования промышленных объектов. Комплекс решений для каждого складского комплекса подбирается с учетом запроса заказчика — в зависимости от специфики бизнеса предприятия, особенностей производственного процесса или проекта, который обеспечивает склад.</p>
+                <p>Для повышения качества, скорости и безопасности складской логистики на территории Терминалов применяется широкий спектр современных технологий: роботизированная и беспилотная техника, система электронной очереди, RFID-идентификация грузов, машинное зрение для контроля опасных зон, дополненная реальность для упрощения поиска товаров и обучения сотрудников 
+                    и другие решения.</p>
+            </div>
+        </div>
+        <a href="#" class="main_ques__more">Все вопросы</a>
+    </div>
+</div>
+                <div class="main_projects">
+    <div class="main_projects__title">Нами реализовано более 9 проектов</div>
+    <div class="main_projects__sliders glide projects-glide-js">
+        <div class="main_projects__controls">
+            <a href="#" class="main_projects__more main_projects__more--mob"><span></span>Все проекты</a>
+            <div class="glide__controls" data-glide-el="controls">
+                <div data-glide-dir="<"></div>
+                <div data-glide-dir=">"></div>
+            </div>
+        </div>
+        <div data-glide-el="track" class="glide__track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="main_projects__block">
+                    <div class="main_projects__img">
+                        <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                    </div>
+                    <div class="main_projects__info">
+                        <div class="main_projects__date">12.12.2022</div>
+                        <div class="main_projects__tit">Повышение емкости хранения материалов на 30%</div>
+                    </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="main_projects__block">
+                    <div class="main_projects__img">
+                        <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                    </div>
+                    <div class="main_projects__info">
+                        <div class="main_projects__date">12.12.2022</div>
+                        <div class="main_projects__tit">Повышение емкости хранения материалов на 30%</div>
+                    </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="main_projects__block">
+                    <div class="main_projects__img">
+                        <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                    </div>
+                    <div class="main_projects__info">
+                        <div class="main_projects__date">12.12.2022</div>
+                        <div class="main_projects__tit">Повышение емкости хранения материалов на 30%</div>
+                    </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="main_projects__block">
+                    <div class="main_projects__img">
+                        <picture><source srcset="./img/test_img.webp" type="image/webp"><img src="./img/test_img.jpg" alt=""></picture>
+                    </div>
+                    <div class="main_projects__info">
+                        <div class="main_projects__date">12.12.2022</div>
+                        <div class="main_projects__tit">Повышение емкости хранения материалов на 30%</div>
+                    </div>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main_projects__buttons">
+        <button class="button button__feedback" data-modal-id="1">Заказать экскурсию</button>
+        <a href="#" class="main_projects__more"><span></span>Все проекты</a>
+    </div>
+</div>
+                <div class="main_news">
+    <div class="main_news__title">Новости</div>
+    <div class="main_news__slider glide news-glide-js">
+        <div data-glide-el="track" class="glide__track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <div class="main_news__block">
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__date">12.12.2022</div>
+                        <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="main_news__block">
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__date">12.12.2022</div>
+                        <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="main_news__block">
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__date">12.12.2022</div>
+                        <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="main_news__block">
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__date">12.12.2022</div>
+                        <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="main_news__block">
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__date">12.12.2022</div>
+                        <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="main_news__block">
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__date">12.12.2022</div>
+                        <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="main_news__block">
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__date">12.12.2022</div>
+                        <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
+                    </div>
+                </li>
+                <li class="glide__slide">
+                    <div class="main_news__block">
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__date">12.12.2022</div>
+                        <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
+                    </div>
+                </li> 
+            </ul>
+        </div>
+        <div class="main_news__controls">
+            <div class="glide__controls" data-glide-el="controls">
+                <div data-glide-dir="<"></div>
+                <div data-glide-dir=">"></div>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="main_terminal">
+    <div class="main_terminal__l-side">Terminal входит <br> в экосистему Isource</div>
+    <div class="main_terminal__c-side"><picture><source srcset="./img/anim_img.webp" type="image/webp"><img src="./img/anim_img.jpg" alt=""></picture></div>
+    <div class="main_terminal__r-side">
+        <a href="#" class="main_terminal__logo"><img src="./img/svg/logo2.svg" alt=""></a>
+        <div class="main_terminal__slider glide terminal-glide-js">
+            <div data-glide-el="track" class="glide__track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <div class="main_terminal__title">Терминал айсорс</div>
+                    <div class="main_terminal__text">Строительство новых объектов или модернизация существующей инфраструктуры в соответствии со спецификой бизнеса, его потребностями и задачами, а также производственными процессами, которые обеспечивает склад</div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="main_terminal__title">Терминал айсорс2</div>
+                    <div class="main_terminal__text">Строительство новых объектов или модернизация существующей инфраструктуры в соответствии со спецификой бизнеса, его потребностями и задачами, а также производственными процессами, которые обеспечивает склад</div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="main_terminal__title">Терминал айсорс3</div>
+                    <div class="main_terminal__text">Строительство новых объектов или модернизация существующей инфраструктуры в соответствии со спецификой бизнеса, его потребностями и задачами, а также производственными процессами, которые обеспечивает склад</div>
+                  </li>
+                </ul>
+            </div>
+            <div class="main_terminal__controls">
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <div class="glide__bullet" data-glide-dir="=0"></div>
+                    <div class="glide__bullet" data-glide-dir="=1"></div>
+                    <div class="glide__bullet" data-glide-dir="=2"></div>
+                </div>
+                <div class="glide__controls" data-glide-el="controls">
+                    <div data-glide-dir="<"></div>
+                    <div data-glide-dir=">"></div>
+                </div>
+            </div>
+        </div>
+        <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+    </div>
+</div>
+                <div class="main_form">
+    <div class="main_form__l-side">
+        <div class="main_form__title">Остались вопросы?</div>
+        <div class="main_form__subtitle">Оставьте заявку на консультацию и наш менеджер свяжется с вами</div>
+    </div>
+    <div class="main_form__r-side">
+        <form action="">
+            <textarea name="ques" placeholder="Ваш вопрос"></textarea>
+            <div class="main_form__buttons">
+                <button class="button modal__button">Отправить</button>
+                <input class="custom-checkbox" type="checkbox" name="personal2" id="personal2" checked>
+<label for="personal2">Даю согласие на обработку персональных данных</label>
+            </div>
+        </form>
+    </div>
+</div>
+            </main>
+            <footer class="footer">
     <div class="footer__top">
         <div class="footer__l-side">
-            <a href="#" class="footer__logo"><img src="../img/svg/logo__footer.svg" alt=""></a>
+            <a href="#" class="footer__logo">
+                <object type="image/svg+xml" data="../img/svg/logo__footer.svg">
+                    <picture><source srcset="./img/logo__footer.webp" type="image/webp"><img src="./img/logo__footer.png" alt="" /></picture>
+                </object>
+            </a>
             <div class="footer__soc">
                 <span>Для связи в месседжерах:</span>
                 <div class="footer__socs">
-                    <a href="#" target="_blank"><img src="../img/svg/tg_icon.svg" alt=""></a>
-                    <a href="#" target="_blank"><img src="../img/svg/wp_icon.svg" alt=""></a>
+                    <a href="#" target="_blank">
+                        <object type="image/svg+xml" data="../img/svg/tg_icon.svg">
+                            <picture><source srcset="./img/tg_icon.webp" type="image/webp"><img src="./img/tg_icon.png" alt="" /></picture>
+                        </object>
+                    </a>
+                    <a href="#" target="_blank">
+                        <object type="image/svg+xml" data="../img/svg/wp_icon.svg">
+                            <picture><source srcset="./img/wp_icon.webp" type="image/webp"><img src="./img/wp_icon.png" alt="" /></picture>
+                        </object>
+                    </a>
                 </div>
             </div>
         </div>
@@ -116,7 +412,7 @@
         <div class="footer__copy">© 2022 Все права защищены</div>
     </div>
 </footer>
-        <div class="modal" data-modal="1">
+            <div class="modal" data-modal="1">
     <div class="modal__in">
         <div class="modal__closer"></div>
         <div class="modal__title">Чтобы мы смогли вам ответить, пожалуйста, оставьте ваши контакты</div>
@@ -124,13 +420,14 @@
             <input type="text" placeholder="Ваше ФИО">
             <input type="tel" placeholder="Телефон">
             <input type="email" placeholder="E-mail">
-            <input class="custom-checkbox" type="checkbox" name="personal" checked>
-            <label for="personal">Даю согласие на обработку персональных данных</label>
+            <input class="custom-checkbox" type="checkbox" name="personal1" id="personal1" checked>
+<label for="personal1">Даю согласие на обработку персональных данных</label>
             <button class="button modal__button">Отправить</button>
         </form>
     </div>
 </div>
+        </div>
     </div>
-    <script src="js/app.min.js?_v=20220427015906"></script>
+    <script src="js/app.min.js?_v=20220505223433"></script>
 </body>
 </html>

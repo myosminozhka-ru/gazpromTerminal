@@ -11,6 +11,9 @@
         a {
             display: block;
             text-decoration: none;
+            object {
+                width: 100%;
+            }
         }
     }
     &__menu {
@@ -40,7 +43,8 @@
         }
     }
     &__button {
-        flex: 0 0 vw(212);
+        flex: 0 0 vw(207);
+        width: 100%;
     }
 }
 .isTablet, .isMobile {

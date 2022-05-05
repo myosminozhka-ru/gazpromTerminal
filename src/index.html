@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        @@include('blocks/modules/header/header.html', {})
-        <main>
-            
-        </main>
-        @@include('blocks/modules/footer/footer.html', {})
-        @@include('blocks/modules/modals/main.modal.html', {})
+    <div class="wrapper" id="app">
+        <div class="wrapper__in" :class="{isMobile, isTablet}">
+            @@include('blocks/modules/header/header.html', {})
+            <main>
+                @@include('blocks/modules/main_first/main_first.html', {})
+                @@include('blocks/modules/main_numbers/main_numbers.html', {})
+                @@include('blocks/modules/main_video/main_video.html', {})
+                @@include('blocks/modules/main_red-block/main_red-block.html', {})
+                @@include('blocks/modules/main_ques/main_ques.html', {})
+                @@include('blocks/modules/main_projects/main_projects.html', {})
+                @@include('blocks/modules/main_news/main_news.html', {})
+                @@include('blocks/modules/main_terminal/main_terminal.html', {})
+                @@include('blocks/modules/main_form/main_form.html', {})
+            </main>
+            @@include('blocks/modules/footer/footer.html', {})
+            @@include('blocks/modules/modals/main.modal.html', {})
+        </div>
     </div>
     <script src="js/app.min.js"></script>
 </body>

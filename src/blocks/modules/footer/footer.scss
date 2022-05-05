@@ -12,6 +12,9 @@
         display: block;
         max-width: vw(209);
         width: 100%;
+        object {
+            width: 100%;
+        }
     }
     &__soc {
         span {
@@ -41,7 +44,7 @@
             &:hover {
                 opacity: .7;
             }
-            img {
+            img, object {
                 max-width: vw(40);
                 width: 100%;
             }
@@ -91,7 +94,7 @@
     }
     &__bottom {
         padding: vw(60) 0;
-        margin-top: vw(100);
+        margin-top: vw(69);
         border-top: 1px solid #CFCFCF;
         display: flex;
         align-items: center;
@@ -158,7 +161,7 @@
                 width: 50px;
                 height: 50px;
                 margin-right: 10px;
-                img {
+                img, object {
                     max-width: 33px;
                 }
             }
