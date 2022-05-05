@@ -6,6 +6,7 @@ const MainTerminal = class MainTerminal {
     }
     initialSlider() {
         setTimeout(() => {
+            if (!document.querySelector('.terminal-glide-js')) return;
             new Glide('.terminal-glide-js', this.sliderOptions).mount();
         }, 500)
     }

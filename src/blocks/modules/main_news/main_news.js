@@ -6,6 +6,7 @@ const MainNews = class MainNews {
     }
     initialSlider() {
         setTimeout(() => {
+            if (!document.querySelector('.news-glide-js')) return;
             new Glide('.news-glide-js', this.sliderOptions).mount();
         }, 500)
     }

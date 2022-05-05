@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220504192827">
+    <link rel="stylesheet" href="css/style.css?_v=20220505153149">
 </head>
 <body>
-    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        <div class="header">
+    <div class="wrapper" id="app">
+        <div class="wrapper__in" :class="{isMobile, isTablet}">
+            <div class="header">
     <div class="header__logo">
         <a href="/">
             <object type="image/svg+xml" data="../img/svg/logo.svg">
-              <picture><source srcset="../img/logo.webp" type="image/webp"><img src="../img/logo.png" alt="" /></picture>
+              <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="" /></picture>
             </object>
         </a>
     </div>
@@ -71,9 +72,9 @@
     </div>
 </div>
 </div>
-        <main>
-            <div class="main_first">
-    <picture><source srcset="../img/bg_first.webp" type="image/webp"><img class="main_first__bg" src="../img/bg_first.png" alt=""></picture>
+            <main>
+                <div class="main_first">
+    <picture><source srcset="./img/bg_first.webp" type="image/webp"><img class="main_first__bg" src="./img/bg_first.png" alt=""></picture>
     <div class="main_first__info">
         <div class="main_first__title">Terminal</div>
         <div class="main_first__text">Сервис модернизации складской инфраструктуры и оптимизации складских  процессов</div>
@@ -83,7 +84,7 @@
         </div>
     </div>
 </div>
-            <div class="main_numbers">
+                <div class="main_numbers">
     <div class="main_numbers__block">
         <div class="main_numbers__number">до <span class="counter" data-count="40">40</span>%</div>
         <div class="main_numbers__text">оптимизация площадей хранения</div>
@@ -97,63 +98,74 @@
         <div class="main_numbers__text">сокращения операционных затрат</div>
     </div>
 </div>
-            <div class="main_news">
+                <div class="main_video">
+    <video playsinline controls="controls" class="video-js">
+        <source src="./files/pv.mp4" type="video/mp4">
+    </video>
+</div>
+                <div class="main_red-block">
+    <div class="main_red-block__title">Технологии</div>
+    <div class="main_red-block__img">
+        <picture><source srcset="./img/bg_first.webp" type="image/webp"><img src="./img/bg_first.png" alt=""></picture>
+    </div>
+</div>
+                <div class="main_news">
     <div class="main_news__title">Новости</div>
     <div class="main_news__slider glide news-glide-js">
         <div data-glide-el="track" class="glide__track">
             <ul class="glide__slides">
                 <li class="glide__slide">
                     <div class="main_news__block">
-                        <div class="main_news__img"><picture><source srcset="../img/news_img.webp" type="image/webp"><img src="../img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
                         <div class="main_news__date">12.12.2022</div>
                         <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
                     </div>
                 </li>
                 <li class="glide__slide">
                     <div class="main_news__block">
-                        <div class="main_news__img"><picture><source srcset="../img/news_img.webp" type="image/webp"><img src="../img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
                         <div class="main_news__date">12.12.2022</div>
                         <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
                     </div>
                 </li>
                 <li class="glide__slide">
                     <div class="main_news__block">
-                        <div class="main_news__img"><picture><source srcset="../img/news_img.webp" type="image/webp"><img src="../img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
                         <div class="main_news__date">12.12.2022</div>
                         <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
                     </div>
                 </li>
                 <li class="glide__slide">
                     <div class="main_news__block">
-                        <div class="main_news__img"><picture><source srcset="../img/news_img.webp" type="image/webp"><img src="../img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
                         <div class="main_news__date">12.12.2022</div>
                         <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
                     </div>
                 </li>
                 <li class="glide__slide">
                     <div class="main_news__block">
-                        <div class="main_news__img"><picture><source srcset="../img/news_img.webp" type="image/webp"><img src="../img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
                         <div class="main_news__date">12.12.2022</div>
                         <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
                     </div>
                 </li>
                 <li class="glide__slide">
                     <div class="main_news__block">
-                        <div class="main_news__img"><picture><source srcset="../img/news_img.webp" type="image/webp"><img src="../img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
                         <div class="main_news__date">12.12.2022</div>
                         <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
                     </div>
                 </li>
                 <li class="glide__slide">
                     <div class="main_news__block">
-                        <div class="main_news__img"><picture><source srcset="../img/news_img.webp" type="image/webp"><img src="../img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
                         <div class="main_news__date">12.12.2022</div>
                         <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
                     </div>
                 </li>
                 <li class="glide__slide">
                     <div class="main_news__block">
-                        <div class="main_news__img"><picture><source srcset="../img/news_img.webp" type="image/webp"><img src="../img/news_img.jpg" alt=""></picture></div>
+                        <div class="main_news__img"><picture><source srcset="./img/news_img.webp" type="image/webp"><img src="./img/news_img.jpg" alt=""></picture></div>
                         <div class="main_news__date">12.12.2022</div>
                         <div class="main_news__text">Таким образом, постоянное информационно-пропагандистское </div>
                     </div>
@@ -168,11 +180,11 @@
         </div>
     </div>
 </div>
-            <div class="main_terminal">
+                <div class="main_terminal">
     <div class="main_terminal__l-side">Terminal входит <br> в экосистему Isource</div>
-    <div class="main_terminal__c-side"><picture><source srcset="../img/anim_img.webp" type="image/webp"><img src="../img/anim_img.jpg" alt=""></picture></div>
+    <div class="main_terminal__c-side"><picture><source srcset="./img/anim_img.webp" type="image/webp"><img src="./img/anim_img.jpg" alt=""></picture></div>
     <div class="main_terminal__r-side">
-        <a href="#" class="main_terminal__logo"><img src="../img/svg/logo2.svg" alt=""></a>
+        <a href="#" class="main_terminal__logo"><img src="./img/svg/logo2.svg" alt=""></a>
         <div class="main_terminal__slider glide terminal-glide-js">
             <div data-glide-el="track" class="glide__track">
                 <ul class="glide__slides">
@@ -205,7 +217,7 @@
         <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
     </div>
 </div>
-            <div class="main_form">
+                <div class="main_form">
     <div class="main_form__l-side">
         <div class="main_form__title">Остались вопросы?</div>
         <div class="main_form__subtitle">Оставьте заявку на консультацию и наш менеджер свяжется с вами</div>
@@ -221,13 +233,13 @@
         </form>
     </div>
 </div>
-        </main>
-        <footer class="footer">
+            </main>
+            <footer class="footer">
     <div class="footer__top">
         <div class="footer__l-side">
             <a href="#" class="footer__logo">
                 <object type="image/svg+xml" data="../img/svg/logo__footer.svg">
-                    <picture><source srcset="../img/logo__footer.webp" type="image/webp"><img src="../img/logo__footer.png" alt="" /></picture>
+                    <picture><source srcset="./img/logo__footer.webp" type="image/webp"><img src="./img/logo__footer.png" alt="" /></picture>
                 </object>
             </a>
             <div class="footer__soc">
@@ -235,12 +247,12 @@
                 <div class="footer__socs">
                     <a href="#" target="_blank">
                         <object type="image/svg+xml" data="../img/svg/tg_icon.svg">
-                            <picture><source srcset="../img/tg_icon.webp" type="image/webp"><img src="../img/tg_icon.png" alt="" /></picture>
+                            <picture><source srcset="./img/tg_icon.webp" type="image/webp"><img src="./img/tg_icon.png" alt="" /></picture>
                         </object>
                     </a>
                     <a href="#" target="_blank">
                         <object type="image/svg+xml" data="../img/svg/wp_icon.svg">
-                            <picture><source srcset="../img/wp_icon.webp" type="image/webp"><img src="../img/wp_icon.png" alt="" /></picture>
+                            <picture><source srcset="./img/wp_icon.webp" type="image/webp"><img src="./img/wp_icon.png" alt="" /></picture>
                         </object>
                     </a>
                 </div>
@@ -278,7 +290,7 @@
         <div class="footer__copy">© 2022 Все права защищены</div>
     </div>
 </footer>
-        <div class="modal" data-modal="1">
+            <div class="modal" data-modal="1">
     <div class="modal__in">
         <div class="modal__closer"></div>
         <div class="modal__title">Чтобы мы смогли вам ответить, пожалуйста, оставьте ваши контакты</div>
@@ -292,7 +304,8 @@
         </form>
     </div>
 </div>
+        </div>
     </div>
-    <script src="js/app.min.js?_v=20220504192827"></script>
+    <script src="js/app.min.js?_v=20220505153149"></script>
 </body>
 </html>
