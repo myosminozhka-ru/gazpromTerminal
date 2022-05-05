@@ -5,6 +5,8 @@ import Vue from 'vue/dist/vue.js';
 
 import Burger from '../blocks/components/burger/burger.js';
 import MainNumber from '../blocks/modules/main_numbers/main_numbers.js';
+import MainProjects from '../blocks/modules/main_projects/main_projects.js';
+import MainQuestion from '../blocks/modules/main_ques/main_ques.js';
 import MainNews from '../blocks/modules/main_news/main_news.js';
 import MainTerminal from '../blocks/modules/main_terminal/main_terminal.js';
 import PageCases from '../blocks/modules/page_cases/page_cases.js';
@@ -43,6 +45,20 @@ window.app = new Vue({
                 }
             }
         }),
+        mainQuestion: new MainQuestion(),
+        mainProjects: new MainProjects({
+            sliderOptions: {
+                type: 'carousel',
+                startAt: 0,
+                gap: 40,
+                perView: 2,
+                breakpoints: {
+                    1023: {
+                        perView: 1
+                    },
+                }
+            }
+        }),
         mainTerminal: new MainTerminal({
             sliderOptions: {
                 type: 'carousel',
@@ -72,6 +88,8 @@ window.app = new Vue({
         this.isMounted = true;
         this.burger.init();
         this.mainNumber.init();
+        this.mainQuestion.init();
+        this.mainProjects.init();
         this.mainNews.init();
         this.mainTerminal.init();
         this.pageCases.init();
