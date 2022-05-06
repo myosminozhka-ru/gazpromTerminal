@@ -121,8 +121,7 @@ window.app = new Vue({
     },
     mounted() {
         setTimeout(() => {
-            this.headerHeight = document.querySelector('.header').offsetHeight
-            console.log(this.headerHeight);
+            this.headerHeight = document.querySelector('.header').offsetHeight;
         }, 500)
     },
     computed: {
