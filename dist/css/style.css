@@ -1369,6 +1369,7 @@ textarea {
   left: 0;
   right: 0;
   width: 100%;
+  transition: height 0.2s ease;
 }
 
 .main_value__scheme--progress span {
@@ -1395,6 +1396,8 @@ textarea {
   border-right: 1px solid #CFCFCF;
   border-bottom: 1px solid #CFCFCF;
   border-top: 1px solid #CFCFCF;
+  display: flex;
+  flex-direction: column;
 }
 
 .main_value__tit {
@@ -1430,7 +1433,7 @@ textarea {
   transition: all 0.3s ease-out;
 }
 
-.main_value__block:not(:last-child) {
+.main_value__block:not(:first-child) {
   border-bottom: 1px solid #CFCFCF;
 }
 
@@ -1456,6 +1459,22 @@ textarea {
 
 .main_value__block:hover {
   background: #F9F9F9;
+}
+
+.main_value__block:hover ~ .main_value__block {
+  background: #F9F9F9;
+}
+
+.main_value__block:nth-child(1) {
+  order: 3;
+}
+
+.main_value__block:nth-child(2) {
+  order: 2;
+}
+
+.main_value__block:nth-child(1) {
+  order: 3;
 }
 
 .isTablet .main_value,

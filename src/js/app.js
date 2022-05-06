@@ -14,6 +14,7 @@ import MainFooter from '../blocks/modules/footer/footer.js';
 import PageCases from '../blocks/modules/page_cases/page_cases.js';
 import CasePage from '../blocks/modules/case_page/case_page.js';
 import Modals from '../blocks/modules/modals/modals.js';
+import Value from '../blocks/modules/main__value/main__value.js';
 
 window.app = new Vue({
     el: '#app',
@@ -95,6 +96,7 @@ window.app = new Vue({
                 perView: 1
             }
         }),
+        value: new Value(),
     }),
     beforeCreate() {        
         window.addEventListener('resize', () => {
@@ -114,6 +116,7 @@ window.app = new Vue({
         this.pageCases.init();
         this.casePage.init();
         this.modals.init();
+        this.value.init();
     },
     computed: {
         isMobile: function () {

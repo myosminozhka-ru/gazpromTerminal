@@ -8,24 +8,24 @@
                     <div class="main_value__scheme--block">
                         <div class="main_value__scheme--title">Оптимизация площадей хранения</div>
                         <div class="main_value__scheme--scale">
-                            <div class="main_value__scheme--progress" style="height: 32%">
-                                <span style="height: 33%">+ 10%</span>
+                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[0] * 37 / 100}vw`">
+                                <span style="height: 40%">+ {{ value.percents[0] }}%</span>
                             </div>
                         </div>
                     </div>
                     <div class="main_value__scheme--block">
                         <div class="main_value__scheme--title">Увеличение скорости доступа к товару</div>
                         <div class="main_value__scheme--scale">
-                            <div class="main_value__scheme--progress" style="height: 53%">
-                                <span style="height: 40%">+ 20%</span>
+                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[1] * 37 / 100}vw`">
+                                <span style="height: 40%">+ {{ value.percents[1] }}%</span>
                             </div>
                         </div>
                     </div>
                     <div class="main_value__scheme--block">
                         <div class="main_value__scheme--title">Сокращение операционных затрат </div>
                         <div class="main_value__scheme--scale">
-                            <div class="main_value__scheme--progress" style="height: 32%">
-                                <span style="height: 33%">+ 10%</span>
+                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[2] * 37 / 100}vw`">
+                                <span style="height: 40%">+ {{ value.percents[2] }}%</span>
                             </div>
                         </div>
                     </div>
@@ -33,20 +33,20 @@
             </div>
         </div>
         <div class="main_value__r-side">
-            <div class="main_value__block">
+            <div class="main_value__block" @mouseenter="value.setPercents([80,90,70])">
                 <div class="main_value__block--l">
-                    <img src="./img/svg/val1.svg" alt="Диагностика">
+                    <img src="./img/svg/val3.svg" alt="Модернизация инфраструктуры">
                 </div>
                 <div class="main_value__block--r">
-                    <div class="main_value__tit">Диагностика</div>
-                    <div class="main_value__text">Аудит существующих складских и смежных процессов, по итогам которого формируется отчёт и рекомендации по оптимизации</div>
+                    <div class="main_value__tit">Модернизация инфраструктуры</div>
+                    <div class="main_value__text">Строительство новых объектов или модернизация существующей инфраструктуры в соответствии со спецификой бизнеса, его потребностями и задачами, а также производственными процессами, которые обеспечивает склад</div>
                     @@include('../../components/button/button.html', {
                         "text" : "Оставить заявку",
                         "type" : "feedback"
                     })
                 </div>
             </div>
-            <div class="main_value__block">
+            <div class="main_value__block" @mouseenter="value.setPercents([30,40,50])">
                 <div class="main_value__block--l">
                     <img src="./img/svg/val2.svg" alt="Рекомендации по управлению складом">
                 </div>
@@ -58,14 +58,14 @@
                         "type" : "feedback"
                     })
                 </div>
-            </div>
-            <div class="main_value__block">
+            </div>            
+            <div class="main_value__block" @mouseenter="value.setPercents([20,30,20])">
                 <div class="main_value__block--l">
-                    <img src="./img/svg/val3.svg" alt="Модернизация инфраструктуры">
+                    <img src="./img/svg/val1.svg" alt="Диагностика">
                 </div>
                 <div class="main_value__block--r">
-                    <div class="main_value__tit">Модернизация инфраструктуры</div>
-                    <div class="main_value__text">Строительство новых объектов или модернизация существующей инфраструктуры в соответствии со спецификой бизнеса, его потребностями и задачами, а также производственными процессами, которые обеспечивает склад</div>
+                    <div class="main_value__tit">Диагностика</div>
+                    <div class="main_value__text">Аудит существующих складских и смежных процессов, по итогам которого формируется отчёт и рекомендации по оптимизации</div>
                     @@include('../../components/button/button.html', {
                         "text" : "Оставить заявку",
                         "type" : "feedback"

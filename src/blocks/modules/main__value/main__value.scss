@@ -65,6 +65,7 @@
             left: 0;
             right: 0;
             width: 100%;
+            transition: height 0.2s ease;
             span {
                 top: 0;
                 left: 0;
@@ -90,6 +91,8 @@
         border-right: 1px solid #CFCFCF;
         border-bottom: 1px solid #CFCFCF;
         border-top: 1px solid #CFCFCF;
+        display: flex;
+        flex-direction: column;
     }
     &__tit {
         font-family: 'texgyreheros', Helvetica, sans-serif;
@@ -119,7 +122,7 @@
         display: flex;
         align-items: flex-start;
         transition: all .3s ease-out;
-        &:not(:last-child) {
+        &:not(:first-child) {
             border-bottom: 1px solid #CFCFCF;
         }
         &--l {
@@ -141,6 +144,18 @@
         }
         &:hover {
             background: #F9F9F9;
+            & ~ .main_value__block {
+                background: #F9F9F9;
+            }
+        }
+        &:nth-child(1) {
+            order: 3;
+        }
+        &:nth-child(2) {
+            order: 2;
+        }
+        &:nth-child(1) {
+            order: 3;
         }
     }
 }
