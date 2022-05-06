@@ -8,15 +8,14 @@
     cursor: pointer;
     background: #1400DC;
     padding: vw(17) vw(19);
-    border: 2px solid #1400DC;
     transition: all .3s ease-out;
     text-align: center;
     width: max-content;
     min-width: vw(196);
     text-decoration: none;
+    border: 0;
     &:hover {
-        background: #fff;
-        color: #1400DC;
+        background: #FF5F05;
     }
 }
 .isTablet, .isMobile {
