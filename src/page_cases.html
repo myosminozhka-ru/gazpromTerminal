@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper" id="app">
-        <div class="wrapper__in" :class="{isMobile, isTablet}" :style="`padding-top: ${headerHeight}px`">
+        <div class="wrapper__in" :class="{isMobile, isTablet}">
             @@include('blocks/modules/header/header.html', {})
             <main>
                 @@include('blocks/modules/page_cases/page_cases.html', {})
