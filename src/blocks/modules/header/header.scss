@@ -13,6 +13,7 @@
             text-decoration: none;
             object {
                 width: 100%;
+                pointer-events: none;
             }
         }
     }
@@ -45,6 +46,9 @@
     &__button {
         flex: 0 0 vw(207);
         width: 100%;
+        > * {
+            width: 100%;
+        }
     }
 }
 .isTablet, .isMobile {

@@ -10,6 +10,7 @@ import MainQuestion from '../blocks/modules/main_ques/main_ques.js';
 import MainNews from '../blocks/modules/main_news/main_news.js';
 import MainTerminal from '../blocks/modules/main_terminal/main_terminal.js';
 import PageCases from '../blocks/modules/page_cases/page_cases.js';
+import CasePage from '../blocks/modules/case_page/case_page.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
 window.app = new Vue({
@@ -59,6 +60,13 @@ window.app = new Vue({
                 }
             }
         }),
+        casePage: new CasePage({
+            sliderOptions: {
+                type: 'carousel',
+                startAt: 0,
+                perView: 1
+            }
+        }),
         mainTerminal: new MainTerminal({
             sliderOptions: {
                 type: 'carousel',
@@ -93,6 +101,7 @@ window.app = new Vue({
         this.mainNews.init();
         this.mainTerminal.init();
         this.pageCases.init();
+        this.casePage.init();
         this.modals.init();
     },
     computed: {
