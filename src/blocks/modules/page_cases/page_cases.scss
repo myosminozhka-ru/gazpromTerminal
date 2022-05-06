@@ -164,15 +164,15 @@
                 transform: scale(0.01);
             }
         }
-    }
-    &:hover {
-        span {
-            &:after {
-                transform: scale(1);
-            }
-            &:before {
-                transform: scale(0.5);
-                background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.2287 14.7668L19.5319 15.4669L7.2218 27.6986L8.51817 29.001L22.7783 14.6746L9.16636 0.999338L7.86999 2.30174L19.5319 14.0668L20.2287 14.7668Z' fill='%23fff'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+        &:hover {
+            span {
+                &:after {
+                    transform: scale(1);
+                }
+                &:before {
+                    transform: scale(0.5);
+                    background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.2287 14.7668L19.5319 15.4669L7.2218 27.6986L8.51817 29.001L22.7783 14.6746L9.16636 0.999338L7.86999 2.30174L19.5319 14.0668L20.2287 14.7668Z' fill='%23fff'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+                }
             }
         }
     }

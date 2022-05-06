@@ -64,6 +64,10 @@ textarea {
 // glidejs
 
 .glide {
+    cursor: auto;
+    &__track {
+        cursor: auto;
+    }
     &__bullets {
         position: absolute;
         left: 0;
@@ -78,6 +82,7 @@ textarea {
         transform: unset;
         bottom: unset;
         height: vw(30);
+        cursor: auto;
     }
     &__bullet {
         width: vw(10);
@@ -87,6 +92,7 @@ textarea {
         opacity: 0.2;
         transition: all .3s ease-out;
         margin: 0 vw(10);
+        cursor: pointer;
         &--active {
             opacity: 1;
         }
@@ -95,7 +101,9 @@ textarea {
         display: flex;
         width: 100%;
         justify-content: space-between;
+        cursor: auto;
         div {
+            cursor: pointer;
             width: vw(30);
             height: vw(30);
             position: relative;

@@ -31,7 +31,7 @@ window.app = new Vue({
                 type: 'carousel',
                 perView: 4,
                 gap: 40,
-                focusAt: '1',
+                watchOverflow: true,
                 startAt: 1,
                 breakpoints: {
                     1023: {
@@ -84,7 +84,12 @@ window.app = new Vue({
         modals: new Modals({
             modalsSelector: "data-modal",
             modalsOpenerSelector: "data-modal-id",
-            openedClass: "isOpened"
+            openedClass: "isOpened",
+            sliderOptions: {
+                type: 'carousel',
+                startAt: 0,
+                perView: 1
+            }
         }),
     }),
     beforeCreate() {        
