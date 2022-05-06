@@ -97,6 +97,7 @@ window.app = new Vue({
             }
         }),
         value: new Value(),
+        headerHeight: 0
     }),
     beforeCreate() {        
         window.addEventListener('resize', () => {
@@ -116,7 +117,13 @@ window.app = new Vue({
         this.pageCases.init();
         this.casePage.init();
         this.modals.init();
-        this.value.init();
+        this.value.init();        
+    },
+    mounted() {
+        setTimeout(() => {
+            this.headerHeight = document.querySelector('.header').offsetHeight
+            console.log(this.headerHeight);
+        }, 500)
     },
     computed: {
         isMobile: function () {

@@ -56,6 +56,7 @@ const MainNumber = class MainNumber {
         });
     }
     init() {
+        if (!document.getElementById("counter")) return;
         this.animationNumbers();
         this.animationNumbers2();
         this.animationNumbers3();
