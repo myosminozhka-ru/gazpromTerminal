@@ -8,22 +8,57 @@ const MainNumber = class MainNumber {
         })
     }
     animationNumbers() {
-        // var Cont = { val: 0 },
+        var Cont = { val: 0 },
         // NewVal = number;
+        NewVal = 40;
 
-        // TweenLite.to(Cont, 5, {
-        //     val: NewVal,
-        //     roundProps: "val",
-        //     onUpdate: function () {
-        //         // document.getElementById("counter").innerHTML = Cont.val;
-        //         document.querySelectorAll('.counter').forEach(item => {
-        //             item.innerHTML = Cont.val;
-        //         })
-        //     }
-        // });
+        TweenLite.to(Cont, 5, {
+            val: NewVal,
+            roundProps: "val",
+            onUpdate: function () {
+                document.getElementById("counter").innerHTML = Cont.val;
+                // document.querySelectorAll('.counter').forEach(item => {
+                //     item.innerHTML = Cont.val;
+                // })
+            }
+        });
+    }
+    animationNumbers2() {
+        var Cont = { val: 0 },
+        // NewVal = number;
+        NewVal = 50;
+
+        TweenLite.to(Cont, 5, {
+            val: NewVal,
+            roundProps: "val",
+            onUpdate: function () {
+                document.getElementById("counter2").innerHTML = Cont.val;
+                // document.querySelectorAll('.counter').forEach(item => {
+                //     item.innerHTML = Cont.val;
+                // })
+            }
+        });
+    }
+    animationNumbers3() {
+        var Cont = { val: 0 },
+        // NewVal = number;
+        NewVal = 30;
+
+        TweenLite.to(Cont, 5, {
+            val: NewVal,
+            roundProps: "val",
+            onUpdate: function () {
+                document.getElementById("counter3").innerHTML = Cont.val;
+                // document.querySelectorAll('.counter').forEach(item => {
+                //     item.innerHTML = Cont.val;
+                // })
+            }
+        });
     }
     init() {
         this.animationNumbers();
+        this.animationNumbers2();
+        this.animationNumbers3();
     }
 }
 
