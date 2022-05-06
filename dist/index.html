@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.css?_v=20220506153035">
+    <link rel="stylesheet" href="css/style.css?_v=20220506162423">
 </head>
 <body>
     <div class="wrapper" id="app">
         <div class="wrapper__in" :class="{isMobile, isTablet}">
             <div class="header">
     <div class="header__logo">
-        <a href="/">
+        <a href="/gazpromTerminal/dist/">
             <object type="image/svg+xml" data="./img/svg/logo.svg">
               <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="" /></picture>
             </object>
@@ -20,13 +20,13 @@
     </div>
     <nav class="header__menu">
         <ul>
-            <li><a href="#">Наши услуги</a></li>
-            <li><a href="#">Как работает Terminal</a></li>
-            <li><a href="#">Технологии</a></li>
-            <li><a href="#">Часто задаваемые вопросы</a></li>
-            <li><a href="#">Кейсы</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Экосистема Isource</a></li>
+            <li><a href="#link1">Наши услуги</a></li>
+            <li><a href="#link2">Как работает Terminal</a></li>
+            <li><a href="#link3">Технологии</a></li>
+            <li><a href="#link4">Часто задаваемые вопросы</a></li>
+            <li><a href="#link5">Кейсы</a></li>
+            <li><a href="#link6">Новости</a></li>
+            <li><a href="#link7">Экосистема Isource</a></li>
         </ul>
     </nav>
     <div class="header__button">
@@ -43,7 +43,7 @@
     <div class="menu_burger__body">
         <div class="menu_burger__top">
             <div class="header__logo">
-                <a href="/">
+                <a href="/gazpromTerminal/dist/">
                     <img src="./img/svg/logo.svg" alt="">
                 </a>
             </div>
@@ -73,7 +73,7 @@
 </div>
 </div>
             <main>
-                <div class="main_first">
+                <div class="main_first" id="link1">
     <picture><source srcset="./img/bg_first.webp" type="image/webp"><img class="main_first__bg" src="./img/bg_first.png" alt=""></picture>
     <div class="main_first__info">
         <div class="main_first__title">Terminal</div>
@@ -86,19 +86,19 @@
 </div>
                 <div class="main_numbers">
     <div class="main_numbers__block">
-        <div class="main_numbers__number">до <span class="counter" data-count="40">40</span>%</div>
+        <div class="main_numbers__number">до <span class="counter" id="counter" data-count="40">40</span>%</div>
         <div class="main_numbers__text">оптимизация площадей хранения</div>
     </div>
     <div class="main_numbers__block">
-        <div class="main_numbers__number">до <span class="counter" data-count="50">50</span>%</div>
+        <div class="main_numbers__number">до <span class="counter" id="counter2" data-count="50">50</span>%</div>
         <div class="main_numbers__text">увеличения скорости доступа к товару</div>
     </div>
     <div class="main_numbers__block">
-        <div class="main_numbers__number">на <span class="counter" data-count="30">30</span>%</div>
+        <div class="main_numbers__number">на <span class="counter" id="counter3" data-count="30">30</span>%</div>
         <div class="main_numbers__text">сокращения операционных затрат</div>
     </div>
 </div>
-                <div class="main_value">
+                <div class="main_value" id="link2">
     <div class="main_value__title">Ценность для клиента</div>
     <div class="main_value__blocks">
         <div class="main_value__l-side">
@@ -171,13 +171,13 @@
         <source src="./files/pv.mp4" type="video/mp4">
     </video>
 </div>
-                <div class="main_red-block">
+                <div class="main_red-block" id="link3">
     <div class="main_red-block__title">Технологии</div>
     <div class="main_red-block__img">
         <picture><source srcset="./img/bg_first.webp" type="image/webp"><img src="./img/bg_first.png" alt=""></picture>
     </div>
 </div>
-                <div class="main_ques">
+                <div class="main_ques" id="link4">
     <div class="main_ques__title"><span>Часто задаваеммые вопросы</span></div>
     <div class="main_ques__blocks">
         <div class="main_ques__block">
@@ -235,7 +235,7 @@
         <a href="#" class="main_ques__more">Все вопросы</a>
     </div>
 </div>
-                <div class="main_projects">
+                <div class="main_projects" id="link5">
     <div class="main_projects__title">Нами реализовано более 9 проектов</div>
     <div class="main_projects__sliders glide projects-glide-js">
         <div class="main_projects__controls">
@@ -299,7 +299,7 @@
         <a href="#" class="main_projects__more"><span></span>Все проекты</a>
     </div>
 </div>
-                <div class="main_news">
+                <div class="main_news" id="link6">
     <div class="main_news__in">
         <div class="main_news__title">Новости</div>
         <div class="main_news__slider glide news-glide-js">
@@ -372,23 +372,25 @@
         </div>
     </div>
 </div>
-                <div class="main_terminal">
+                <div class="main_terminal" id="link7">
     <div class="main_terminal__l-side">Terminal входит <br> в экосистему Isource</div>
     <div class="main_terminal__c-side"><picture><source srcset="./img/anim_img.webp" type="image/webp"><img src="./img/anim_img.jpg" alt=""></picture></div>
     <div class="main_terminal__r-side">
-        <a href="#" class="main_terminal__logo"><img src="./img/svg/logo2.svg" alt=""></a>
         <div class="main_terminal__slider glide terminal-glide-js">
             <div data-glide-el="track" class="glide__track">
                 <ul class="glide__slides">
                   <li class="glide__slide">
+                    <a href="#" class="main_terminal__logo"><img src="./img/svg/logo2.svg" alt=""></a>
                     <div class="main_terminal__title">Терминал айсорс</div>
                     <div class="main_terminal__text">Строительство новых объектов или модернизация существующей инфраструктуры в соответствии со спецификой бизнеса, его потребностями и задачами, а также производственными процессами, которые обеспечивает склад</div>
                   </li>
                   <li class="glide__slide">
+                    <a href="#" class="main_terminal__logo"><img src="./img/svg/logo2.svg" alt=""></a>
                     <div class="main_terminal__title">Терминал айсорс2</div>
                     <div class="main_terminal__text">Строительство новых объектов или модернизация существующей инфраструктуры в соответствии со спецификой бизнеса, его потребностями и задачами, а также производственными процессами, которые обеспечивает склад</div>
                   </li>
                   <li class="glide__slide">
+                    <a href="#" class="main_terminal__logo"><img src="./img/svg/logo2.svg" alt=""></a>
                     <div class="main_terminal__title">Терминал айсорс3</div>
                     <div class="main_terminal__text">Строительство новых объектов или модернизация существующей инфраструктуры в соответствии со спецификой бизнеса, его потребностями и задачами, а также производственными процессами, которые обеспечивает склад</div>
                   </li>
@@ -418,7 +420,7 @@
         <form action="">
             <textarea name="ques" placeholder="Ваш вопрос"></textarea>
             <div class="main_form__buttons">
-                <button class="button modal__button">Отправить</button>
+                <button class="button button__feedback" data-modal-id="1">Отправить</button>
                 <input class="custom-checkbox" type="checkbox" name="personal2" id="personal2" checked>
 <label for="personal2">Даю согласие на обработку персональных данных</label>
             </div>
@@ -429,7 +431,7 @@
             <footer class="footer">
     <div class="footer__top">
         <div class="footer__l-side">
-            <a href="#" class="footer__logo">
+            <a href="/gazpromTerminal/dist/" class="footer__logo">
                 <object type="image/svg+xml" data="../img/svg/logo__footer.svg">
                     <picture><source srcset="./img/logo__footer.webp" type="image/webp"><img src="./img/logo__footer.png" alt="" /></picture>
                 </object>
@@ -452,13 +454,13 @@
         </div>
         <nav class="footer__menu lang_ru">
             <ul>
-                <li><a href="#">Наши услуги</a></li>
-                <li><a href="#">Как работает Terminal</a></li>
-                <li><a href="#">Технологии</a></li>
-                <li><a href="#">Часто задаваемые вопросы</a></li>
-                <li><a href="#">Кейсы</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Экосистема Isource</a></li>
+                <li><a href="#link1">Наши услуги</a></li>
+                <li><a href="#link2">Как работает Terminal</a></li>
+                <li><a href="#link3">Технологии</a></li>
+                <li><a href="#link4">Часто задаваемые вопросы</a></li>
+                <li><a href="#link5">Кейсы</a></li>
+                <li><a href="#link6">Новости</a></li>
+                <li><a href="#link7">Экосистема Isource</a></li>
             </ul>
         </nav>
         <nav class="footer__menu lang_en">
@@ -477,8 +479,8 @@
         </div>
     </div>
     <div class="footer__bottom">
-        <a href="#" class="footer__link">Пользовательское соглашение</a>
-        <a href="#" class="footer__link">Согласие на обработку персональных данных</a>
+        <a href="/gazpromTerminal/dist/text.html" class="footer__link">Пользовательское соглашение</a>
+        <a href="/gazpromTerminal/dist/text.html" class="footer__link">Согласие на обработку персональных данных</a>
         <div class="footer__copy">© 2022 Все права защищены</div>
     </div>
 </footer>
@@ -587,6 +589,6 @@
 </div>
         </div>
     </div>
-    <script src="js/app.min.js?_v=20220506153035"></script>
+    <script src="js/app.min.js?_v=20220506162423"></script>
 </body>
 </html>

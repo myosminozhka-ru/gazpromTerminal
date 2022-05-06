@@ -4,11 +4,13 @@ globalFunctions.isWebp();
 import Vue from 'vue/dist/vue.js';
 
 import Burger from '../blocks/components/burger/burger.js';
+import MainHeader from '../blocks/modules/header/header.js';
 import MainNumber from '../blocks/modules/main_numbers/main_numbers.js';
 import MainProjects from '../blocks/modules/main_projects/main_projects.js';
 import MainQuestion from '../blocks/modules/main_ques/main_ques.js';
 import MainNews from '../blocks/modules/main_news/main_news.js';
 import MainTerminal from '../blocks/modules/main_terminal/main_terminal.js';
+import MainFooter from '../blocks/modules/footer/footer.js';
 import PageCases from '../blocks/modules/page_cases/page_cases.js';
 import CasePage from '../blocks/modules/case_page/case_page.js';
 import Modals from '../blocks/modules/modals/modals.js';
@@ -25,6 +27,8 @@ window.app = new Vue({
         burger: new Burger({
             isMobileMenuOpened: false,
         }),
+        mainHeader: new MainHeader(),
+        mainFooter: new MainFooter(),
         mainNumber: new MainNumber(),
         mainNews: new MainNews({
             sliderOptions: {
@@ -100,6 +104,8 @@ window.app = new Vue({
     beforeMount() {
         this.isMounted = true;
         this.burger.init();
+        this.mainHeader.init();
+        this.mainFooter.init();
         this.mainNumber.init();
         this.mainQuestion.init();
         this.mainProjects.init();
