@@ -1,6 +1,17 @@
 .main_news {
-    padding: vw(100) vw(60);
+    padding: vw(100) 0;
     background: #EFEFEF;
+    overflow: hidden;
+    &__in {
+        margin-left: vw(60);
+        margin-right: vw(60);
+    }
+    &__block {
+        cursor: pointer;
+        * {
+            pointer-events: none;
+        }
+    }
     &__title {
         font-family: 'texgyreheros', Helvetica, sans-serif;
         font-style: normal;
@@ -50,6 +61,19 @@
         color: #000000;
     }
     .glide {
+        &__track {
+            overflow: unset;
+            position: relative;
+            &:before {
+                content: '';
+                height: 100%;
+                width: vw(60);
+                left: vw(-60);
+                z-index: 3;
+                background: #EFEFEF;
+                position: absolute;
+            }
+        }
         &__slides {
             margin-bottom: vw(60);
         }
@@ -61,7 +85,11 @@
 }
 .isTablet, .isMobile {
     .main_news {
-        padding: 50px 15px;
+        padding: 50px 0;
+        &__in {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
         &__title {
             margin-bottom: 30px;
             font-size: 30px;
@@ -85,6 +113,12 @@
             font-size: 16px;
         }
         .glide {
+            &__track {
+                overflow: hidden;
+                &:before {
+                    display: none;
+                }
+            }
             &__controls {
                 top: -60px;
                 right: 0;

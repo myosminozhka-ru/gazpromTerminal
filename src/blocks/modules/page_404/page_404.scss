@@ -6,6 +6,12 @@
     height: calc(100% - #{vw(140)});
     overflow: hidden;
     position: relative;
+    .wrapper__back {
+        margin-bottom: vw(70);
+        margin-right: auto;
+        display: none;
+        width: max-content;
+    }
     &:before, &:after {
         content: '';
         width: vw(730);
@@ -131,8 +137,8 @@
         }
     }
     .button {
-        padding-bottom: 20px;
-        max-width: 303px;
+        margin-bottom: 20px;
+        max-width: vw(303);
         width: 100%;
         display: block;
         margin-left: auto;
@@ -141,12 +147,18 @@
 }
 .isTablet, .isMobile {
     .page_error {
+        .wrapper__back {
+            display: flex;
+            margin-bottom: 60px;
+            margin-top: 0px;
+        }
         padding-left: 15px;
         padding-right: 15px;
         &:before, &:after {
             left: -140px;
             width: 318px;
             height: 98px;
+            top: 130px;
             @media all and (max-width: 370px) {
                 left: -200px;
             }
@@ -194,6 +206,19 @@
             padding: 0;
             border: 0;
             margin: 0;
+        }
+        .header {
+            position: relative;
+            &:before {
+                content: '';
+                width: calc(100% - 30px);
+                left: 15px;
+                right: 15px;
+                height: 1px;
+                bottom: 0;
+                position: absolute;
+                background: #CFCFCF;
+            }
         }
     }
 }
