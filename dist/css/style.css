@@ -556,15 +556,15 @@ template {
 @font-face {
   font-family: "texgyreheros";
   font-display: swap;
-  src: url("../fonts/texgyreheros-regular.woff2") format("woff2"), url("../fonts/texgyreheros-regular.woff") format("woff"), url("../fonts/texgyreheros-regular.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/texgyreheros-bold.woff2") format("woff2"), url("../fonts/texgyreheros-bold.woff") format("woff"), url("../fonts/texgyreheros-bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "texgyreheros";
   font-display: swap;
-  src: url("../fonts/texgyreheros-bold.woff2") format("woff2"), url("../fonts/texgyreheros-bold.woff") format("woff"), url("../fonts/texgyreheros-bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/texgyreheros-regular.woff2") format("woff2"), url("../fonts/texgyreheros-regular.woff") format("woff"), url("../fonts/texgyreheros-regular.ttf") format("ttf");
+  font-weight: 400;
 }
 
 body {
@@ -1325,7 +1325,7 @@ textarea {
 .main_value__l-side--in {
   position: -webkit-sticky;
   position: sticky;
-  top: 10px;
+  top: 140px;
 }
 
 .main_value__l-side--title {
@@ -1358,8 +1358,8 @@ textarea {
 }
 
 .main_value__scheme--scale {
-  min-height: 36.9791666667vw;
-  max-height: 36.9791666667vw;
+  min-height: 33.3333333333vw;
+  max-height: 33.3333333333vw;
   background: #FAFAFA;
   border: 1px solid #CFCFCF;
   position: relative;
@@ -1652,7 +1652,7 @@ textarea {
   position: -webkit-sticky;
   position: sticky;
   display: block;
-  top: 0;
+  top: 120px;
 }
 
 .main_ques__blocks {
