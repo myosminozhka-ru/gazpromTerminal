@@ -3,6 +3,7 @@
     padding: vw(200) vw(60) vw(135) vw(60);
     &__l-side {
         max-width: vw(603);
+        flex: 0 0 vw(603);
         margin-right: vw(60);
         font-family: 'texgyreheros', Helvetica, sans-serif;
         font-style: normal;
@@ -12,21 +13,14 @@
         color: #000000;
         width: 100%;
     }
-    &__c-side {
-        max-width: vw(444);
-        margin-right: vw(105);
-        width: 100%;
-    }
     &__r-side {
-        max-width: vw(490);
-        width: 100%;
+        width: calc(100% - #{vw(663)});
     }
     &__logo {
         max-width: vw(366);
         width: 100%;
         margin-bottom: vw(40);
         display: block;
-        margin-left: vw(-12);
     }
     &__title {
         font-family: 'texgyreheros', Helvetica, sans-serif;
@@ -51,9 +45,30 @@
     }
     &__controls {
         position: absolute;
-        top: calc(100% + #{vw(137)});
-        left: 0;
+        top: calc(100% + #{vw(37)});    
+        right: vw(330);
         width: vw(250);
+    }
+    .glide {
+        &__slide {
+            display: flex;
+        }
+        &__l-side {
+            max-width: vw(444);
+            width: 100%;
+            max-height: vw(475);
+            height: 100%;
+            margin-right: vw(105);
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &__r-side {
+            max-width: vw(490);
+            width: 100%;
+        }
     }
 }
 .isTablet, .isMobile {
@@ -67,9 +82,7 @@
             font-size: 30px;
             margin-bottom: 50px;
             margin-right: 0;
-        }
-        &__c-side {
-            display: none;
+            flex: none;
         }
         &__r-side {
             max-width: 50%;
@@ -88,9 +101,22 @@
         }
         &__controls {
             width: 205px;
-            top: calc(100% + 80px);
+            top: calc(100% + 30px);
             display: flex;
+            right: unset;
+            left: 0;
             justify-content: center;
+        }
+        .glide {
+            &__slide {
+                display: flex;
+            }
+            &__l-side {
+                display: none;
+            }
+            &__r-side {
+                max-width: 100%;
+            }
         }
     }
 }
@@ -110,15 +136,13 @@
         }
         &__r-side {
             max-width: 100%;
+            width: 100%;
             padding-left: 15px;
             padding-right: 15px;
         }
-        &__logo {
-            margin-left: -6px;
-        }
         &__controls {
             width: 100%;
-            top: calc(100% + 135px);
+            top: calc(100% + 75px);
             &:before {
                 content: '';
                 position: absolute;

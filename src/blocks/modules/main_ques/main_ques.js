@@ -1,7 +1,14 @@
 import Glide from '@glidejs/glide';
 
 const MainQuestion = class MainQuestion {
-    constructor(){
+    constructor({isOpened}){
+        this.isOpened = false;
+    }
+    toogleQuestion() {
+        this.isOpened = !this.isOpened;
+    }
+    closeQuestion() {
+        this.isOpened = false;
     }
     toggleQuestion() {
         setTimeout(() => {

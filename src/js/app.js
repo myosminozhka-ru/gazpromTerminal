@@ -51,7 +51,9 @@ window.app = new Vue({
                 }
             }
         }),
-        mainQuestion: new MainQuestion(),
+        mainQuestion: new MainQuestion({
+            isOpened: false,
+        }),
         mainProjects: new MainProjects({
             sliderOptions: {
                 type: 'carousel',
@@ -76,7 +78,8 @@ window.app = new Vue({
             sliderOptions: {
                 type: 'carousel',
                 startAt: 0,
-                perView: 1
+                perView: 1,
+                transitionType: 'fade'
             }
         }),
         pageCases: new PageCases({
