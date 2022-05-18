@@ -556,15 +556,15 @@ template {
 @font-face {
   font-family: "texgyreheros";
   font-display: swap;
-  src: url("../fonts/texgyreheros-bold.woff2") format("woff2"), url("../fonts/texgyreheros-bold.woff") format("woff"), url("../fonts/texgyreheros-bold.ttf") format("ttf");
-  font-weight: 700;
+  src: url("../fonts/texgyreheros-regular.woff2") format("woff2"), url("../fonts/texgyreheros-regular.woff") format("woff"), url("../fonts/texgyreheros-regular.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "texgyreheros";
   font-display: swap;
-  src: url("../fonts/texgyreheros-regular.woff2") format("woff2"), url("../fonts/texgyreheros-regular.woff") format("woff"), url("../fonts/texgyreheros-regular.ttf") format("ttf");
-  font-weight: 400;
+  src: url("../fonts/texgyreheros-bold.woff2") format("woff2"), url("../fonts/texgyreheros-bold.woff") format("woff"), url("../fonts/texgyreheros-bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 body {
@@ -1325,11 +1325,11 @@ textarea {
 .main_value__l-side--in {
   position: -webkit-sticky;
   position: sticky;
-  top: 140px;
+  top: 7.2916666667vw;
 }
 
 .main_value__l-side--title {
-  margin-bottom: 2.0833333333vw;
+  margin-bottom: 1.5625vw;
   font-family: "texgyreheros", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1354,7 +1354,7 @@ textarea {
   font-size: 0.9375vw;
   line-height: 120%;
   color: #535353;
-  margin-bottom: 1.8229166667vw;
+  margin-bottom: 1.3020833333vw;
 }
 
 .main_value__scheme--scale {

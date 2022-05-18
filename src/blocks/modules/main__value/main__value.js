@@ -1,6 +1,6 @@
 const Value = class Value {
     constructor() {
-        this.percents = [20, 30, 20]
+        this.percents = [10, 20, 10]
     }
     setPercents(percents) {
         this.percents = percents;

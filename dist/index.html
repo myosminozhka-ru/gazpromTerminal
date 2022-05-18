@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220518065712">
+    <link rel="stylesheet" href="css/style.css?_v=20220518121635">
 </head>
 <body>
     <div class="wrapper" id="app">
@@ -112,24 +112,24 @@
                     <div class="main_value__scheme--block">
                         <div class="main_value__scheme--title">Оптимизация площадей хранения</div>
                         <div class="main_value__scheme--scale">
-                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[0] * 37 / 100}vw`">
-                                <span style="height: 40%">+ {{ value.percents[0] }}%</span>
+                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[0] * 37 / 60}vw`">
+                                <span style="height: 60%">+ {{ value.percents[0] }}%</span>
                             </div>
                         </div>
                     </div>
                     <div class="main_value__scheme--block">
                         <div class="main_value__scheme--title">Увеличение скорости доступа к товару</div>
                         <div class="main_value__scheme--scale">
-                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[1] * 37 / 100}vw`">
-                                <span style="height: 40%">+ {{ value.percents[1] }}%</span>
+                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[1] * 37 / 60}vw`">
+                                <span style="height: 60%">+ {{ value.percents[1] }}%</span>
                             </div>
                         </div>
                     </div>
                     <div class="main_value__scheme--block">
                         <div class="main_value__scheme--title">Сокращение операционных затрат </div>
                         <div class="main_value__scheme--scale">
-                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[2] * 37 / 100}vw`">
-                                <span style="height: 40%">+ {{ value.percents[2] }}%</span>
+                            <div class="main_value__scheme--progress" :style="`height: ${value.percents[2] * 37 / 60}vw`">
+                                <span style="height: 60%">+ {{ value.percents[2] }}%</span>
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
             </div>
         </div>
         <div class="main_value__r-side">
-            <div class="main_value__block" @mouseenter="value.setPercents([80,90,70])">
+            <div class="main_value__block" @mouseenter="value.setPercents([40,50,30])">
                 <div class="main_value__block--l">
                     <img src="./img/svg/val3.svg" alt="Модернизация инфраструктуры">
                 </div>
@@ -147,7 +147,7 @@
                     <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
                 </div>
             </div>
-            <div class="main_value__block" @mouseenter="value.setPercents([30,40,50])">
+            <div class="main_value__block" @mouseenter="value.setPercents([20,40,30])">
                 <div class="main_value__block--l">
                     <img src="./img/svg/val2.svg" alt="Рекомендации по управлению складом">
                 </div>
@@ -157,7 +157,7 @@
                     <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
                 </div>
             </div>            
-            <div class="main_value__block" @mouseenter="value.setPercents([20,30,20])">
+            <div class="main_value__block" @mouseenter="value.setPercents([10,20,10])">
                 <div class="main_value__block--l">
                     <img src="./img/svg/val1.svg" alt="Диагностика">
                 </div>
@@ -505,14 +505,10 @@
                 <span>Для связи в месседжерах:</span>
                 <div class="footer__socs">
                     <a href="#" target="_blank">
-                        <object type="image/svg+xml" data="../img/svg/tg_icon.svg">
-                            <picture><source srcset="./img/tg_icon.webp" type="image/webp"><img src="./img/tg_icon.png" alt="" /></picture>
-                        </object>
+                        <img src="../img/svg/tg_icon.svg" alt="">
                     </a>
                     <a href="#" target="_blank">
-                        <object type="image/svg+xml" data="../img/svg/wp_icon.svg">
-                            <picture><source srcset="./img/wp_icon.webp" type="image/webp"><img src="./img/wp_icon.png" alt="" /></picture>
-                        </object>
+                        <img src="../img/svg/wp_icon.svg" alt="">
                     </a>
                 </div>
             </div>
@@ -651,6 +647,6 @@
 </div>
         </div>
     </div>
-    <script src="js/app.min.js?_v=20220518065712"></script>
+    <script src="js/app.min.js?_v=20220518121635"></script>
 </body>
 </html>
