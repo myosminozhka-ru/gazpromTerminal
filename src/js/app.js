@@ -37,7 +37,7 @@ window.app = new Vue({
                 perView: 4,
                 gap: 40,
                 watchOverflow: true,
-                startAt: 1,
+                startAt: 0,
                 breakpoints: {
                     1023: {
                         perView: 3

@@ -6,14 +6,20 @@ const Modals = class Modals {
         this.modalsOpenerSelector = modalsOpenerSelector;
         this.openedClass = openedClass;
         this.sliderOptions = sliderOptions;
+        this.textareaValue = '';
+        this.slider = new Glide('.modal-glide-js', this.sliderOptions);
     }
     initialSlider() {
         setTimeout(() => {
             if (!document.querySelector('.modal-glide-js')) return;
-            new Glide('.modal-glide-js', this.sliderOptions).mount();
+            this.slider.mount();
         }, 500)
     }
     openModal(id) {
+        if (id === '3' && this.textareaValue === '') {
+            alert('Введите ваш вопрос');
+            return false;
+        }
         if (!document.querySelector(`[${this.modalsSelector}="${id}"]`)) return;
         document.querySelector(`[${this.modalsSelector}="${id}"]`).classList.add(this.openedClass);
     }

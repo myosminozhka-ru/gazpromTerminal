@@ -5,11 +5,11 @@
     </div>
     <div class="main_form__r-side">
         <form action="">
-            <textarea name="ques" placeholder="Ваш вопрос"></textarea>
+            <textarea name="ques" placeholder="Ваш вопрос" v-model="modals.textareaValue"></textarea>
             <div class="main_form__buttons">
                 @@include('../../components/button/button.html', {
                     "text" : "Отправить",
-                    "type" : "feedback"
+                    "type" : "question"
                 })
                 @@include('../../components/checkbox/checkbox.html', {
                     "text": "2"
