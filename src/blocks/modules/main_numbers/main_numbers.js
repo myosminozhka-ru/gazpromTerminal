@@ -16,7 +16,7 @@ const MainNumber = class MainNumber {
             val: NewVal,
             roundProps: "val",
             onUpdate: function () {
-                document.getElementById("counter").innerHTML = Cont.val;
+                document.getElementById("counter1").innerHTML = Cont.val;
                 // document.querySelectorAll('.counter').forEach(item => {
                 //     item.innerHTML = Cont.val;
                 // })
