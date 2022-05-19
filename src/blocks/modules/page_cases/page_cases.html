@@ -1,5 +1,5 @@
 <div class="page_cases">
-    <a onclick="javascript:history.back();" class="wrapper__back"><span></span>Назад</a>
+    <a @click.prevent="backPage" class="wrapper__back"><span></span>Назад</a>
     <div class="wrapper__h1">Реализованные проекты</div>
     <div class="page_cases__slider glide cases-glide-js">
         <div data-glide-el="track" class="glide__track">
