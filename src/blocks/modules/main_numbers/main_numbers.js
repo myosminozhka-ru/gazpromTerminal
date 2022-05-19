@@ -9,23 +9,18 @@ const MainNumber = class MainNumber {
     }
     animationNumbers() {
         var Cont = { val: 0 },
-        // NewVal = number;
-        NewVal = 40;
+        NewVal = 60;
 
         TweenLite.to(Cont, 5, {
             val: NewVal,
             roundProps: "val",
             onUpdate: function () {
                 document.getElementById("counter1").innerHTML = Cont.val;
-                // document.querySelectorAll('.counter').forEach(item => {
-                //     item.innerHTML = Cont.val;
-                // })
             }
         });
     }
     animationNumbers2() {
         var Cont = { val: 0 },
-        // NewVal = number;
         NewVal = 50;
 
         TweenLite.to(Cont, 5, {
@@ -33,15 +28,11 @@ const MainNumber = class MainNumber {
             roundProps: "val",
             onUpdate: function () {
                 document.getElementById("counter2").innerHTML = Cont.val;
-                // document.querySelectorAll('.counter').forEach(item => {
-                //     item.innerHTML = Cont.val;
-                // })
             }
         });
     }
     animationNumbers3() {
         var Cont = { val: 0 },
-        // NewVal = number;
         NewVal = 30;
 
         TweenLite.to(Cont, 5, {
@@ -49,9 +40,6 @@ const MainNumber = class MainNumber {
             roundProps: "val",
             onUpdate: function () {
                 document.getElementById("counter3").innerHTML = Cont.val;
-                // document.querySelectorAll('.counter').forEach(item => {
-                //     item.innerHTML = Cont.val;
-                // })
             }
         });
     }
