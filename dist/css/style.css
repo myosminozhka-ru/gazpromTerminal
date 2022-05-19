@@ -1371,8 +1371,8 @@ textarea {
 }
 
 .main_value__scheme--scale {
-  min-height: 33.3333333333vw;
-  max-height: 33.3333333333vw;
+  min-height: 31.25vw;
+  max-height: 31.25vw;
   background: #FAFAFA;
   border: 1px solid #CFCFCF;
   position: relative;
