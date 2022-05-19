@@ -8,43 +8,51 @@ const MainNumber = class MainNumber {
         this.number3 = number3;
     }
     animationNumbers() {
-        var Cont = { val: 0 },
-        NewVal = this.number1;
+        setTimeout(() => {
+            var Cont = { val: 0 },
+            NewVal = this.number1;
 
-        TweenLite.to(Cont, 5, {
-            val: NewVal,
-            roundProps: "val",
-            onUpdate: function () {
-                document.getElementById("counter1").innerHTML = Cont.val;
-            }
-        });
+            TweenLite.to(Cont, 5, {
+                val: NewVal,
+                roundProps: "val",
+                onUpdate: function () {
+                    if (!document.getElementById("counter1")) return;
+                    document.getElementById("counter1").innerHTML = Cont.val;
+                }
+            });
+        }, 500)
     }
     animationNumbers2() {
-        var Cont = { val: 0 },
-        NewVal = this.number2;
+        setTimeout(() => {
+            var Cont = { val: 0 },
+            NewVal = this.number2;
 
-        TweenLite.to(Cont, 5, {
-            val: NewVal,
-            roundProps: "val",
-            onUpdate: function () {
-                document.getElementById("counter2").innerHTML = Cont.val;
-            }
-        });
+            TweenLite.to(Cont, 5, {
+                val: NewVal,
+                roundProps: "val",
+                onUpdate: function () {
+                    if (!document.getElementById("counter2")) return;
+                    document.getElementById("counter2").innerHTML = Cont.val;
+                }
+            });
+        }, 500)
     }
     animationNumbers3() {
-        var Cont = { val: 0 },
-        NewVal = this.number3;
+        setTimeout(() => {
+            var Cont = { val: 0 },
+            NewVal = this.number3;
 
-        TweenLite.to(Cont, 5, {
-            val: NewVal,
-            roundProps: "val",
-            onUpdate: function () {
-                document.getElementById("counter3").innerHTML = Cont.val;
-            }
-        });
+            TweenLite.to(Cont, 5, {
+                val: NewVal,
+                roundProps: "val",
+                onUpdate: function () {
+                    if (!document.getElementById("counter3")) return;
+                    document.getElementById("counter3").innerHTML = Cont.val;
+                }
+            });
+        }, 500)
     }
     init() {
-        if (!document.getElementById("counter1")) return;
         this.animationNumbers();
         this.animationNumbers2();
         this.animationNumbers3();
