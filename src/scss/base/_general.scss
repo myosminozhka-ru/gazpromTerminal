@@ -16,6 +16,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    &__in {
+        padding-top: vw(138);
+    }
 }
 .main {
     flex: 1 0 auto;
@@ -117,6 +120,7 @@ textarea {
     }
 }
 .isTablet, .isMobile {
+    padding-top: 0;
     .glide {
         &__controls {
             div {

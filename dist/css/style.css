@@ -592,6 +592,10 @@ body {
   height: 100%;
 }
 
+.wrapper__in {
+  padding-top: 7.1875vw;
+}
+
 .main {
   flex: 1 0 auto;
 }
@@ -705,6 +709,11 @@ textarea {
 .glide__controls div:hover,
 .glide__controls div:active {
   opacity: 1;
+}
+
+.isTablet,
+.isMobile {
+  padding-top: 0;
 }
 
 .isTablet .glide__controls div,
@@ -2213,6 +2222,7 @@ textarea {
   margin-bottom: 1.5625vw;
   max-height: 14.5833333333vw;
   height: 100%;
+  overflow: hidden;
 }
 
 .main_news__img img {
@@ -3840,19 +3850,10 @@ textarea {
   max-width: 281px;
 }
 
-.page_404 .wrapper__in {
-  padding-top: 7.1875vw;
-}
-
 .page_404 .footer {
   padding: 0;
   border: 0;
   margin: 0;
-}
-
-.page_404 .isTablet,
-.page_404 .isMobile {
-  padding-top: 0;
 }
 
 .page_404 .isTablet .footer,

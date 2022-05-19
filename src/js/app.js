@@ -82,7 +82,7 @@ window.app = new Vue({
         }),
         pageCases: new PageCases({
             sliderOptions: {
-                type: 'carousel',
+                type: 'slider',
                 startAt: 0,
                 perView: 1
             }
@@ -138,5 +138,8 @@ window.app = new Vue({
                 document.querySelector('.wrapper').classList.add(nameOfClass)
             }
         },
+        backPage() {
+            window.history.length > 2 ? window.history.back() : document.location.href='/'
+        }
     }
 });

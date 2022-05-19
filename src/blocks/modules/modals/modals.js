@@ -13,6 +13,12 @@ const Modals = class Modals {
         setTimeout(() => {
             if (!document.querySelector('.modal-glide-js')) return;
             this.slider.mount();
+            this.slider.on(['run.before'], () => {
+                document.querySelectorAll('.glide__slide').forEach(slide => {
+                    if (!slide.querySelector('.modal__block--in')) return;
+                    slide.querySelector('.modal__block--in').scrollTop = 0;
+                })
+            })
         }, 500)
     }
     openModal(id) {

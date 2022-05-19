@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220519153702">
+    <link rel="stylesheet" href="css/style.css?_v=20220519171003">
 </head>
 <body>
     <div class="wrapper" id="app">
@@ -24,7 +24,7 @@
     </div>
     <nav class="header__menu">
         <ul>
-            <li><a href="/#link1">Наши услуги</a></li>
+            <li><a href="/page_404.html">Наши услуги</a></li>
             <li><a href="/#link2">Как работает Terminal</a></li>
             <li><a href="/#link3">Технологии</a></li>
             <li><a href="/#link4">Часто задаваемые вопросы</a></li>
@@ -60,13 +60,13 @@
         <div class="menu_burger__bottom">
             <nav class="menu_burger__menu">
                 <ul>
-                    <li><a href="#link1">Наши услуги</a></li>
-                    <li><a href="#link2">Как работает Terminal</a></li>
-                    <li><a href="#link3">Технологии</a></li>
-                    <li><a href="#link4">Часто задаваемые вопросы</a></li>
-                    <li><a href="#link5">Кейсы</a></li>
-                    <li><a href="#link6">Новости</a></li>
-                    <li><a href="#link7">Экосистема Isource</a></li>
+                    <li><a href="/#link1" @click="burger.closeMobileMenu.apply(burger)">Наши услуги</a></li>
+                    <li><a href="/#link2" @click="burger.closeMobileMenu.apply(burger)">Как работает Terminal</a></li>
+                    <li><a href="/#link3" @click="burger.closeMobileMenu.apply(burger)">Технологии</a></li>
+                    <li><a href="/#link4" @click="burger.closeMobileMenu.apply(burger)">Часто задаваемые вопросы</a></li>
+                    <li><a href="/#link5" @click="burger.closeMobileMenu.apply(burger)">Кейсы</a></li>
+                    <li><a href="/#link6" @click="burger.closeMobileMenu.apply(burger)">Новости</a></li>
+                    <li><a href="/#link7" @click="burger.closeMobileMenu.apply(burger)">Экосистема Isource</a></li>
                 </ul>
             </nav>
             <div class="menu_burger__button" @click.prevent="burger.closeMobileMenu.apply(burger)">
@@ -78,7 +78,7 @@
 </div>
             <main>
                 <div class="page_error">
-    <a onclick="javascript:history.back();" class="wrapper__back"><span></span>Назад</a>
+    <a @click.prevent="backPage" class="wrapper__back"><span></span>Назад</a>
     <div class="page_error__title">
         <svg width="636" height="289" viewBox="0 0 636 289" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M196.808 223.551H167.563V285.452H112.236V223.551H0V177.027L102.356 5.91405H167.563V177.816H196.808V223.551ZM112.236 177.816V58.352L39.1244 177.816H112.236Z" fill="#1400DC"/>
@@ -209,7 +209,7 @@
                         </div>
                     </div>
                   </li>
-                  <!-- <li class="glide__slide">
+                  <li class="glide__slide">
                     <div class="modal__block">
                         <div class="modal__title">Повышение емкости хранения материалов на 30%3</div>
                         <div class="modal__date">12.12.2022</div>
@@ -304,7 +304,7 @@
                             </div>
                         </div>
                     </div>
-                  </li> -->
+                  </li>
                 </ul>
             </div>
             <div class="modal__controls">
@@ -333,7 +333,7 @@
 </div>
         </div>
     </div>
-    <script src="js/app.min.js?_v=20220519153702"></script>
+    <script src="js/app.min.js?_v=20220519171003"></script>
     <script>
         app.addClassToWrapper('page_404');
     </script>

@@ -13,9 +13,9 @@
 </head>
 <body>
     <div class="wrapper" id="app">
-        <div class="wrapper__in" :class="{isMobile, isTablet}" :style="`padding-top: ${headerHeight}px`">
+        <div class="wrapper__in" :class="{isMobile, isTablet}">
             @@include('blocks/modules/header/header.html', {})
-            <main>
+            <main id="link1">
                 @@include('blocks/modules/main_first/main_first.html', {})
                 @@include('blocks/modules/main_numbers/main_numbers.html', {})
                 @@include('blocks/modules/main__value/main__value.html', {})
