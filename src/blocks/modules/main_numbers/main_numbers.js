@@ -2,14 +2,14 @@ import gsap from 'gsap';
 import { TweenLite } from 'gsap';
 
 const MainNumber = class MainNumber {
-    constructor(){
-        document.querySelectorAll('.counter').forEach(item => {
-            let number = item.getAttribute('data-count');
-        })
+    constructor({number1, number2, number3}){
+        this.number1 = number1;
+        this.number2 = number2;
+        this.number3 = number3;
     }
     animationNumbers() {
         var Cont = { val: 0 },
-        NewVal = 60;
+        NewVal = this.number1;
 
         TweenLite.to(Cont, 5, {
             val: NewVal,
@@ -21,7 +21,7 @@ const MainNumber = class MainNumber {
     }
     animationNumbers2() {
         var Cont = { val: 0 },
-        NewVal = 50;
+        NewVal = this.number2;
 
         TweenLite.to(Cont, 5, {
             val: NewVal,
@@ -33,7 +33,7 @@ const MainNumber = class MainNumber {
     }
     animationNumbers3() {
         var Cont = { val: 0 },
-        NewVal = 30;
+        NewVal = this.number3;
 
         TweenLite.to(Cont, 5, {
             val: NewVal,
@@ -44,7 +44,7 @@ const MainNumber = class MainNumber {
         });
     }
     init() {
-        if (!document.getElementById("counter")) return;
+        if (!document.getElementById("counter1")) return;
         this.animationNumbers();
         this.animationNumbers2();
         this.animationNumbers3();

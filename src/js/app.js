@@ -30,7 +30,11 @@ window.app = new Vue({
         }),
         mainHeader: new MainHeader(),
         mainFooter: new MainFooter(),
-        mainNumber: new MainNumber(),
+        mainNumber: new MainNumber({
+            number1: 60,
+            number2: 50,
+            number3: 30,
+        }),
         mainNews: new MainNews({
             sliderOptions: {
                 type: 'carousel',
