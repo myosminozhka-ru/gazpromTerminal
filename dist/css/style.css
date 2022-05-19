@@ -2221,11 +2221,13 @@ textarea {
 .main_news__img {
   margin-bottom: 1.5625vw;
   max-height: 14.5833333333vw;
+  min-height: 14.5833333333vw;
   height: 100%;
   overflow: hidden;
 }
 
 .main_news__img img {
+  min-height: 14.5833333333vw;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -2310,6 +2312,12 @@ textarea {
 .isMobile .main_news__img {
   max-height: unset;
   margin-bottom: 10px;
+  min-height: unset;
+}
+
+.isTablet .main_news__img img,
+.isMobile .main_news__img img {
+  min-height: unset;
 }
 
 .isTablet .main_news__date,
