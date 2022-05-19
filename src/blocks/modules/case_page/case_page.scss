@@ -209,7 +209,8 @@
                     display: flex;
                 }
                 &__tab {
-                    border: 2px solid #CFCFCF;
+                    border: 2px solid #CFCFCF;    
+                    text-transform: capitalize;
                     text-decoration: none;
                     text-align: center;
                     font-family: 'texgyreheros', Helvetica, sans-serif;

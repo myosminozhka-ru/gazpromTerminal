@@ -51,6 +51,11 @@
         }
     }
     &__menu {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
         li {
             a {
                 margin-bottom: vw(30);

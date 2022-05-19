@@ -13,6 +13,10 @@ const Burger = class Burger {
             if (event.target.closest('.menu_burger__body') || event.target.closest('.menu_burger')) return;
             this.closeMobileMenu();
         }) 
+        document.getElementsByClassName('menu_burger__menu').onclick = function(e) {
+            if(e.target.tagName != 'A') return;
+            else closeMobileMenu();//Иначе закрываем меню
+        }
     }
     init() {
         this.setEventListener();
