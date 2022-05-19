@@ -576,6 +576,7 @@ body {
 ::before {
   box-sizing: inherit;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 html,

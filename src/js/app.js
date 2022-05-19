@@ -4,7 +4,6 @@ globalFunctions.isWebp();
 import Vue from 'vue/dist/vue.js';
 
 import Burger from '../blocks/components/burger/burger.js';
-import MainHeader from '../blocks/modules/header/header.js';
 import MainNumber from '../blocks/modules/main_numbers/main_numbers.js';
 import MainProjects from '../blocks/modules/main_projects/main_projects.js';
 import MainQuestion from '../blocks/modules/main_ques/main_ques.js';
@@ -28,16 +27,11 @@ window.app = new Vue({
         burger: new Burger({
             isMobileMenuOpened: false,
         }),
-        mainHeader: new MainHeader(),
         mainFooter: new MainFooter(),
-        mainNumber: new MainNumber({
-            number1: 40,
-            number2: 50,
-            number3: 30,
-        }),
+        mainNumber: new MainNumber(),
         mainNews: new MainNews({
             sliderOptions: {
-                type: 'carousel',
+                type: 'slider',
                 perView: 4,
                 gap: 40,
                 watchOverflow: true,
@@ -98,7 +92,7 @@ window.app = new Vue({
             modalsOpenerSelector: "data-modal-id",
             openedClass: "isOpened",
             sliderOptions: {
-                type: 'carousel',
+                type: 'slider',
                 startAt: 0,
                 perView: 1
             }
@@ -114,7 +108,6 @@ window.app = new Vue({
     beforeMount() {
         this.isMounted = true;
         this.burger.init();
-        this.mainHeader.init();
         this.mainFooter.init();
         this.mainNumber.init();
         this.mainQuestion.init();
