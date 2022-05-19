@@ -31,7 +31,7 @@ window.app = new Vue({
         mainHeader: new MainHeader(),
         mainFooter: new MainFooter(),
         mainNumber: new MainNumber({
-            number1: 60,
+            number1: 40,
             number2: 50,
             number3: 30,
         }),
