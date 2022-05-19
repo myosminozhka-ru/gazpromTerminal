@@ -24,9 +24,11 @@
     &__img {
         margin-bottom: vw(30);
         max-height: vw(280);
+        min-height: vw(280);
         height: 100%;
         overflow: hidden;
         img {
+            min-height: vw(280);
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -99,6 +101,10 @@
         &__img {
             max-height: unset;
             margin-bottom: 10px;
+            min-height: unset;
+            img {
+                min-height: unset;
+            }
         }
         &__date {
             padding-left: 17px;
