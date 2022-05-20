@@ -547,17 +547,17 @@ template {
 }
 
 @font-face {
-  font-family: "PT";
-  font-display: swap;
-  src: url("../fonts/PT-Root-UI_Regular.woff2") format("woff2"), url("../fonts/PT-Root-UI_Regular.woff") format("woff"), url("../fonts/PT-Root-UI_Regular.ttf") format("ttf");
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "texgyreheros";
   font-display: swap;
   src: url("../fonts/texgyreheros-bold.woff2") format("woff2"), url("../fonts/texgyreheros-bold.woff") format("woff"), url("../fonts/texgyreheros-bold.ttf") format("ttf");
   font-weight: 700;
+}
+
+@font-face {
+  font-family: "PT";
+  font-display: swap;
+  src: url("../fonts/PT-Root-UI_Regular.woff2") format("woff2"), url("../fonts/PT-Root-UI_Regular.woff") format("woff"), url("../fonts/PT-Root-UI_Regular.ttf") format("ttf");
+  font-weight: 400;
 }
 
 @font-face {
@@ -1443,7 +1443,7 @@ textarea {
 }
 
 .main_value__block {
-  padding: 5.2083333333vw;
+  padding: 2.0833333333vw 5.2083333333vw;
   display: flex;
   align-items: flex-start;
   transition: all 0.3s ease-out;

@@ -118,7 +118,7 @@
         width: 100%;
     }
     &__block {
-        padding: vw(100);
+        padding: vw(40) vw(100);
         display: flex;
         align-items: flex-start;
         transition: all .3s ease-out;
