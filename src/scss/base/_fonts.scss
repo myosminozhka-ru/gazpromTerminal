@@ -1,6 +1,12 @@
 @font-face {
 	font-family: "texgyreheros";
 	font-display: swap;
+	src: url("../fonts/texgyreheros-regular.woff2") format("woff2"), url("../fonts/texgyreheros-regular.woff") format("woff"), url("../fonts/texgyreheros-regular.ttf") format("ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "texgyreheros";
+	font-display: swap;
 	src: url("../fonts/texgyreheros-bold.woff2") format("woff2"), url("../fonts/texgyreheros-bold.woff") format("woff"), url("../fonts/texgyreheros-bold.ttf") format("ttf");
 	font-weight: 700;
 }
@@ -8,11 +14,5 @@
 	font-family: "PT";
 	font-display: swap;
 	src: url("../fonts/PT-Root-UI_Regular.woff2") format("woff2"), url("../fonts/PT-Root-UI_Regular.woff") format("woff"), url("../fonts/PT-Root-UI_Regular.ttf") format("ttf");
-	font-weight: 400;
-}
-@font-face {
-	font-family: "texgyreheros";
-	font-display: swap;
-	src: url("../fonts/texgyreheros-regular.woff2") format("woff2"), url("../fonts/texgyreheros-regular.woff") format("woff"), url("../fonts/texgyreheros-regular.ttf") format("ttf");
 	font-weight: 400;
 }
