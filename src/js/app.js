@@ -120,6 +120,13 @@ window.app = new Vue({
         this.value.init();        
     },
     mounted() {
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+              document.body.classList.add('loaded');
+              document.body.classList.remove('loaded_hiding');
+            }, 500);
+        };
         setTimeout(() => {
             this.headerHeight = document.querySelector('.header').offsetHeight;
         }, 500)

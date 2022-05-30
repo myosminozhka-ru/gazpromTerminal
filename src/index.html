@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    @@include('blocks/modules/preloader/preloader.html', {})
     <div class="wrapper" id="app">
         <div class="wrapper__in" :class="{isMobile, isTablet}">
+            @@include('blocks/modules/preloader/preloader.html', {})
             @@include('blocks/modules/header/header.html', {})
             <main id="link1">
                 @@include('blocks/modules/main_first/main_first.html', {})
