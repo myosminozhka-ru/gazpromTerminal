@@ -204,7 +204,8 @@
                 font-weight: 700;
                 font-size: vw(25);
                 line-height: 110%;
-                color: rgba(20, 0, 220, 0.2);
+                color: rgba(20, 0, 220, 1);
+                opacity: .6;
                 background-size: 30px;
                 transition: unset !important;
                 &:nth-child(1) {
