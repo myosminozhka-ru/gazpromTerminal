@@ -19,7 +19,7 @@
     &__soc {
         span {
             display: block;
-            font-family: "texgyreheros", Helvetica, sans-serif;
+            font-family: 'texgyreheros', Arial;
             font-style: normal;
             font-weight: 700;
             font-size: vw(20);
@@ -79,7 +79,7 @@
         align-items: flex-end;
     }
     &__tel {
-        font-family: "texgyreheros", Helvetica, sans-serif;
+        font-family: 'texgyreheros', Arial;
         font-style: normal;
         font-weight: 700;
         font-size: vw(30);
@@ -87,9 +87,10 @@
         color: #000000;
         margin-bottom: vw(40);
         text-decoration: none;
+        white-space: nowrap;
     }
     &__mail {
-        font-family: "texgyreheros", Helvetica, sans-serif;
+        font-family: 'texgyreheros', Arial;
         font-style: normal;
         font-weight: 700;
         font-size: vw(30);

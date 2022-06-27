@@ -549,17 +549,17 @@ template {
 }
 
 @font-face {
-  font-family: "texgyreheros";
-  font-display: swap;
-  src: url("../fonts/texgyreheros-bold.woff2") format("woff2"), url("../fonts/texgyreheros-bold.woff") format("woff"), url("../fonts/texgyreheros-bold.ttf") format("ttf");
-  font-weight: 700;
-}
-
-@font-face {
   font-family: "PT";
   font-display: swap;
   src: url("../fonts/PT-Root-UI_Regular.woff2") format("woff2"), url("../fonts/PT-Root-UI_Regular.woff") format("woff"), url("../fonts/PT-Root-UI_Regular.ttf") format("ttf");
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "texgyreheros";
+  font-display: swap;
+  src: url("../fonts/texgyreheros-bold.woff2") format("woff2"), url("../fonts/texgyreheros-bold.woff") format("woff"), url("../fonts/texgyreheros-bold.ttf") format("ttf");
+  font-weight: 700;
 }
 
 @font-face {
@@ -1012,7 +1012,7 @@ textarea {
   display: inline-block;
   padding-left: 0.78125vw;
   padding-right: 0.78125vw;
-  font-family: "PT", Helvetica, sans-serif;
+  font-family: "PT", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 0.8333333333vw;
@@ -1092,7 +1092,7 @@ textarea {
 
 .main_first__title {
   margin-bottom: 1.0416666667vw;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 5.2083333333vw;
@@ -1101,7 +1101,7 @@ textarea {
 }
 
 .main_first__text {
-  font-family: "PT", Helvetica, sans-serif;
+  font-family: "PT", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3020833333vw;
@@ -1124,7 +1124,7 @@ textarea {
 .main_first__download {
   position: relative;
   text-decoration: none;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 1.0416666667vw;
@@ -1251,7 +1251,7 @@ textarea {
 }
 
 .main_numbers__number {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 3.125vw;
@@ -1265,7 +1265,7 @@ textarea {
 }
 
 .main_numbers__text {
-  font-family: "PT", Helvetica, sans-serif;
+  font-family: "PT", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3020833333vw;
@@ -1312,7 +1312,7 @@ textarea {
 }
 
 .main_value__title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 3.125vw;
@@ -1345,7 +1345,7 @@ textarea {
 
 .main_value__l-side--title {
   margin-bottom: 1.5625vw;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 2.0833333333vw;
@@ -1395,7 +1395,7 @@ textarea {
   left: 0;
   right: 0;
   position: absolute;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 2.0833333333vw;
@@ -1419,7 +1419,7 @@ textarea {
 }
 
 .main_value__tit {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3020833333vw;
@@ -1605,7 +1605,7 @@ textarea {
 }
 
 .main_red-block__title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 3.125vw;
@@ -1654,7 +1654,7 @@ textarea {
   max-width: 34.4791666667vw;
   width: 100%;
   flex: 0 0 34.4791666667vw;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 3.125vw;
@@ -1677,7 +1677,7 @@ textarea {
 
 .main_ques__tit {
   position: relative;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3020833333vw;
@@ -1701,7 +1701,7 @@ textarea {
   background: #FFFFFF;
   margin-top: 2.6041666667vw;
   padding: 2.0833333333vw;
-  font-family: "PT", Helvetica, sans-serif;
+  font-family: "PT", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375vw;
@@ -1748,7 +1748,7 @@ textarea {
   align-items: center;
   justify-content: flex-end;
   text-decoration: none;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.0416666667vw;
@@ -1867,7 +1867,7 @@ textarea {
 }
 
 .main_projects__title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 3.125vw;
@@ -1946,7 +1946,7 @@ textarea {
 .main_projects__date {
   position: relative;
   padding-left: 1.5625vw;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3020833333vw;
@@ -1967,7 +1967,7 @@ textarea {
 }
 
 .main_projects__tit {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
@@ -2016,7 +2016,7 @@ textarea {
 .main_projects__more {
   background: none;
   padding: 0;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.0416666667vw;
@@ -2211,7 +2211,7 @@ textarea {
 }
 
 .main_news__title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 3.125vw;
@@ -2239,7 +2239,7 @@ textarea {
 .main_news__date {
   padding-left: 1.5625vw;
   position: relative;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3020833333vw;
@@ -2260,7 +2260,7 @@ textarea {
 }
 
 .main_news__text {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 0.9375vw;
@@ -2369,7 +2369,7 @@ textarea {
   max-width: 31.40625vw;
   flex: 0 0 31.40625vw;
   margin-right: 3.125vw;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 3.125vw;
@@ -2389,8 +2389,12 @@ textarea {
   display: block;
 }
 
+.main_terminal__logo img {
+  width: 100%;
+}
+
 .main_terminal__title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3020833333vw;
@@ -2400,7 +2404,7 @@ textarea {
 }
 
 .main_terminal__text {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375vw;
@@ -2566,7 +2570,7 @@ textarea {
 }
 
 .main_form__title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 3.125vw;
@@ -2576,7 +2580,7 @@ textarea {
 }
 
 .main_form__subtitle {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375vw;
@@ -2603,7 +2607,7 @@ textarea {
   width: 100%;
   margin-bottom: 1.5625vw;
   min-height: 20.8333333333vw;
-  font-family: "PT", Helvetica, sans-serif;
+  font-family: "PT", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375vw;
@@ -2699,7 +2703,7 @@ textarea {
 
 .footer__soc span {
   display: block;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.0416666667vw;
@@ -2764,7 +2768,7 @@ textarea {
 }
 
 .footer__tel {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.5625vw;
@@ -2772,10 +2776,11 @@ textarea {
   color: #000000;
   margin-bottom: 2.0833333333vw;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .footer__mail {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.5625vw;
@@ -3056,7 +3061,7 @@ textarea {
 .page_cases__date {
   position: relative;
   padding-left: 1.5625vw;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3020833333vw;
@@ -3077,7 +3082,7 @@ textarea {
 }
 
 .page_cases__title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
@@ -3097,7 +3102,7 @@ textarea {
 .page_cases__more {
   background: none;
   padding: 0;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -3237,7 +3242,7 @@ textarea {
 .case_page__date {
   padding-left: 1.5625vw;
   position: relative;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3020833333vw;
@@ -3258,7 +3263,7 @@ textarea {
 }
 
 .case_page__h1 {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.8229166667vw;
@@ -3268,7 +3273,7 @@ textarea {
 }
 
 .case_page__text {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3020833333vw;
@@ -3306,7 +3311,7 @@ textarea {
 }
 
 .case_page__tab--title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3020833333vw;
@@ -3345,7 +3350,7 @@ textarea {
 
 .case_page__tab--tit {
   margin-top: 2.0833333333vw;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3020833333vw;
@@ -3415,6 +3420,7 @@ textarea {
   width: 13.0208333333vw;
   margin-left: auto;
   margin-right: auto;
+  display: none;
 }
 
 .case_page__slider {
@@ -3473,7 +3479,7 @@ textarea {
   text-transform: capitalize;
   text-decoration: none;
   text-align: center;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -3643,7 +3649,7 @@ textarea {
 }
 
 .page_error__text {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.8229166667vw;
@@ -3900,7 +3906,7 @@ textarea {
   margin-bottom: 1.8229166667vw;
   position: relative;
   padding-left: 2.6041666667vw;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.0416666667vw;
@@ -3963,7 +3969,7 @@ textarea {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 2.0833333333vw;
@@ -3977,7 +3983,7 @@ textarea {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: "PT", Helvetica, sans-serif;
+  font-family: "PT", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375vw;
@@ -4202,7 +4208,7 @@ textarea {
 }
 
 .modal__title {
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.5625vw;
@@ -4226,7 +4232,7 @@ textarea {
   background: #FFFFFF;
   border: 1px solid #CFCFCF;
   padding: 1.09375vw 2.6041666667vw;
-  font-family: "PT", Helvetica, sans-serif;
+  font-family: "PT", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375vw;
@@ -4282,7 +4288,7 @@ textarea {
 .modal__news .modal__date {
   padding-left: 1.5625vw;
   position: relative;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3020833333vw;
@@ -4321,7 +4327,7 @@ textarea {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: "PT", Helvetica, sans-serif;
+  font-family: "PT", Arial;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375vw;
@@ -4342,7 +4348,7 @@ textarea {
 .modal__news .glide__controls div {
   max-width: 10.9375vw;
   width: 100%;
-  font-family: "texgyreheros", Helvetica, sans-serif;
+  font-family: "texgyreheros", Arial;
   font-style: normal;
   font-weight: 700;
   font-size: 1.3020833333vw;
@@ -4463,6 +4469,12 @@ textarea {
 .isMobile .modal__news .modal__img {
   min-height: 200px;
   max-height: 200px;
+}
+
+@media all and (min-width: 1023px) {
+  .main_terminal .glide__slide:nth-child(5) .main_terminal__logo {
+    max-width: 250px;
+  }
 }
 
 @media all and (max-width: 370px) {

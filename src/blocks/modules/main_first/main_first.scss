@@ -29,7 +29,7 @@
     }
     &__title {
         margin-bottom: vw(20);
-        font-family: 'texgyreheros', Helvetica, sans-serif;
+        font-family: 'texgyreheros', Arial;
         font-style: normal;
         font-weight: 700;
         font-size: vw(100);
@@ -37,7 +37,7 @@
         color: #000000;
     }
     &__text {
-        font-family: 'PT', Helvetica, sans-serif;
+        font-family: 'PT', Arial;
         font-style: normal;
         font-weight: 400;
         font-size: vw(25);
@@ -55,7 +55,7 @@
     &__download {
         position: relative; 
         text-decoration: none;
-        font-family: 'texgyreheros', Helvetica, sans-serif;
+        font-family: 'texgyreheros', Arial;
         font-style: normal;
         font-weight: 400;
         font-size: vw(20);

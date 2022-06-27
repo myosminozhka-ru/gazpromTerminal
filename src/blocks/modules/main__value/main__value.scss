@@ -1,7 +1,7 @@
 .main_value {
     margin: vw(80) vw(60) vw(100) vw(60);
     &__title {
-        font-family: 'texgyreheros', Helvetica, sans-serif;
+        font-family: 'texgyreheros', Arial;
         font-style: normal;
         font-weight: 700;
         font-size: vw(60);
@@ -28,7 +28,7 @@
         }
         &--title {
             margin-bottom: vw(30);
-            font-family: 'texgyreheros', Helvetica, sans-serif;
+            font-family: 'texgyreheros', Arial;
             font-style: normal;
             font-weight: 700;
             font-size: vw(40);
@@ -71,7 +71,7 @@
                 left: 0;
                 right: 0;
                 position: absolute;
-                font-family: 'texgyreheros', Helvetica, sans-serif;
+                font-family: 'texgyreheros', Arial;
                 font-style: normal;
                 font-weight: 700;
                 font-size: vw(40);
@@ -95,7 +95,7 @@
         flex-direction: column;
     }
     &__tit {
-        font-family: 'texgyreheros', Helvetica, sans-serif;
+        font-family: 'texgyreheros', Arial;
         font-style: normal;
         font-weight: 700;
         font-size: vw(25);
