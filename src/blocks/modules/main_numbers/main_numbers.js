@@ -16,10 +16,23 @@ const MainNumber = class MainNumber {
                     document.querySelector(`[data-counter="${counter.dataset.counter}"]`).innerHTML = Cont.val;
                 }
             });
-        })
+        });
+    }
+    showElem() {
+        let isEvent = false;
+        const scrollToSecScr=()=>{
+            let blShow=document.querySelector('.main_numbers');
+            if (document.documentElement.scrollTop>blShow.getBoundingClientRect().top) {
+                if ( !isEvent ) {
+                    isEvent = true;
+                    this.animationNumbers()
+                }
+            }
+          }
+          window.addEventListener('scroll',scrollToSecScr);
     }
     init() {
-        this.animationNumbers();
+        this.showElem();
     }
 }
 
