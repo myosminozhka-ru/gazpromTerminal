@@ -1,13 +1,6 @@
 .main_terminal {
     display: flex;
     padding: vw(200) vw(60) vw(135) vw(60);
-    @media all and (min-width: 1023px) {
-        .glide__slide:nth-child(5) {
-            .main_terminal__logo {
-                max-width: 250px;
-            }
-        }
-    }
     &__l-side {
         max-width: vw(603);
         flex: 0 0 vw(603);

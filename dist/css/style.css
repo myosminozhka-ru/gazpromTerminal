@@ -415,6 +415,7 @@ template {
 .glide__slides--dragging {
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -425,6 +426,7 @@ template {
   white-space: normal;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
@@ -442,6 +444,7 @@ template {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -449,6 +452,7 @@ template {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -894,6 +898,7 @@ textarea {
   align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   position: relative;
   cursor: pointer;
@@ -4464,12 +4469,6 @@ textarea {
 .isMobile .modal__news .modal__img {
   min-height: 200px;
   max-height: 200px;
-}
-
-@media all and (min-width: 1023px) {
-  .main_terminal .glide__slide:nth-child(5) .main_terminal__logo {
-    max-width: 250px;
-  }
 }
 
 @media all and (max-width: 370px) {

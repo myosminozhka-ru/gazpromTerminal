@@ -22,14 +22,15 @@ const MainNumber = class MainNumber {
         let isEvent = false;
         const scrollToSecScr=()=>{
             let blShow=document.querySelector('.main_numbers');
-            if (document.documentElement.scrollTop>blShow.getBoundingClientRect().top) {
-                if ( !isEvent ) {
+            if ( !isEvent ) {
+                // if (document.documentElement.scrollTop>blShow.getBoundingClientRect().top) {
+                if (document.documentElement.scrollTop) {
                     isEvent = true;
                     this.animationNumbers()
                 }
             }
-          }
-          window.addEventListener('scroll',scrollToSecScr);
+        }
+        window.addEventListener('scroll',scrollToSecScr);
     }
     init() {
         this.showElem();
