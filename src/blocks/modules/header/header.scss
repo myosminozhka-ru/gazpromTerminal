@@ -34,12 +34,13 @@
             li {
                 a {
                     display: inline-block;
-                    padding-left: vw(15);
-                    padding-right: vw(15);
+                    padding-left: vw(10);
+                    padding-right: vw(10);
                     font-family: 'PT', Arial;
+                    text-align: center;
                     font-style: normal;
                     font-weight: 400;
-                    font-size: vw(16);
+                    font-size: 16px;
                     line-height: 110%;
                     color: #535353;
                     text-decoration: none;

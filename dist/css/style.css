@@ -1010,12 +1010,13 @@ textarea {
 
 .header__menu ul li a {
   display: inline-block;
-  padding-left: 0.78125vw;
-  padding-right: 0.78125vw;
+  padding-left: 0.5208333333vw;
+  padding-right: 0.5208333333vw;
   font-family: "PT", Arial;
+  text-align: center;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.8333333333vw;
+  font-size: 16px;
   line-height: 110%;
   color: #535353;
   text-decoration: none;
