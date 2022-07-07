@@ -186,9 +186,8 @@
             <input type="tel" placeholder="Телефон">
             <input type="email" placeholder="E-mail">
             <input type="hidden" :value="modals.textareaValue">
-            @@include('../../components/checkbox/checkbox.html', {
-                "text": "1"
-            })
+            <input class="custom-checkbox" type="checkbox" name="personal3" id="personal3">
+            <label for="personal3">Даю согласие на обработку персональных данных</label>
             @@include('../../components/button/button.html', {
                 "text" : "Отправить",
                 "type" : "modal"

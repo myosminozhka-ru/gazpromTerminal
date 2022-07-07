@@ -23,8 +23,8 @@ const MainNumber = class MainNumber {
         const scrollToSecScr=()=>{
             let blShow=document.querySelector('.main_numbers');
             if ( !isEvent ) {
-                // if (document.documentElement.scrollTop>blShow.getBoundingClientRect().top) {
-                if (document.documentElement.scrollTop) {
+                if (document.documentElement.scrollTop>blShow.getBoundingClientRect().top) {
+                // if (document.documentElement.scrollTop) {
                     isEvent = true;
                     this.animationNumbers()
                 }

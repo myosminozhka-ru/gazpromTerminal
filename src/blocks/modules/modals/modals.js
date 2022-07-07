@@ -26,6 +26,21 @@ const Modals = class Modals {
             alert('Введите ваш вопрос');
             return false;
         }
+        // if (id === '3' && this.checked === '') {
+        //     alert('Подтвердите обработку данных');
+        //     return false;
+        // // }
+
+        // const checkbox = document.getElementById("personal2");
+        // const btn_submit = document.querySelector(".button__feedback");
+
+        // checkbox.addEventListener("change", () => {
+        //     if (checkbox.checked) {
+        //         btn_submit.removeAttribute("disabled");
+        //     } else {
+        //         btn_submit.setAttribute("disabled", true);
+        //     }
+        // });
         if (!document.querySelector(`[${this.modalsSelector}="${id}"]`)) return;
         document.querySelector(`[${this.modalsSelector}="${id}"]`).classList.add(this.openedClass);
     }
