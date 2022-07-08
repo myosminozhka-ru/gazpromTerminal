@@ -4,7 +4,7 @@ const MainForm2 = class MainForm2 {
         this.phone = "";
         this.email = "";
         this.check2 = false;
-        this.url = "/local/ajax/form1.php";
+        this.url = "/local/ajax/form.php";
         this.errors = {
             name: '',
             phone: '',
