@@ -4,16 +4,16 @@
         <div class="main_form__subtitle">Оставьте заявку на консультацию и наш менеджер свяжется с вами</div>
     </div>
     <div class="main_form__r-side">
-        <form action="">
-            <textarea name="ques" placeholder="Ваш вопрос" v-model="modals.textareaValue"></textarea>
+        <form action="" @submit.prevent="mainForm.openNextStep.apply(mainForm)" v-if="!mainForm.isSended">
+            <textarea name="ques" placeholder="Ваш вопрос" v-model="mainForm.question" :class="{'hasError': mainForm.errors.question}"></textarea>
+            <div v-if="mainForm.errors.question">{{ mainForm.errors.question }}</div>
             <div class="main_form__buttons">
-                @@include('../../components/button/button.html', {
-                    "text" : "Отправить",
-                    "type" : "question"
-                })
-                <input class="custom-checkbox" type="checkbox" name="personal2" id="personal2" checked>
-                <label for="personal2">Даю согласие на обработку персональных данных</label>
+                <button type="submit" class="button button__feedback">Отправить</button>
+                <input class="custom-checkbox" type="checkbox" name="personal2" id="personal2" v-model="mainForm.check1">
+                <label for="personal2" :class="{'hasError': mainForm.errors.check1}">Даю согласие на обработку персональных данных</label>
             </div>
+            <div v-if="mainForm.errors.check1">{{ mainForm.errors.check1 }}</div>
         </form>
+        <div v-else>Спасибо за Ваш вопрос</div>
     </div>
 </div>

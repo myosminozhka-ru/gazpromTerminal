@@ -22,10 +22,10 @@ const Modals = class Modals {
         }, 500)
     }
     openModal(id) {
-        if (id === '3' && this.textareaValue === '') {
-            alert('Введите ваш вопрос');
-            return false;
-        }
+        // if (id === '3' && this.textareaValue === '') {
+        //     alert('Введите ваш вопрос');
+        //     return false;
+        // }
         // if (id === '3' && this.checked === '') {
         //     alert('Подтвердите обработку данных');
         //     return false;

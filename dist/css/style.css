@@ -415,7 +415,6 @@ template {
 .glide__slides--dragging {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -426,7 +425,6 @@ template {
   white-space: normal;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
@@ -444,7 +442,6 @@ template {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -452,7 +449,6 @@ template {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -549,9 +545,9 @@ template {
 }
 
 @font-face {
-  font-family: "texgyreheros";
+  font-family: "PT";
   font-display: swap;
-  src: url("../fonts/texgyreheros-regular.woff2") format("woff2"), url("../fonts/texgyreheros-regular.woff") format("woff"), url("../fonts/texgyreheros-regular.ttf") format("ttf");
+  src: url("../fonts/PT-Root-UI_Regular.woff2") format("woff2"), url("../fonts/PT-Root-UI_Regular.woff") format("woff"), url("../fonts/PT-Root-UI_Regular.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -563,9 +559,9 @@ template {
 }
 
 @font-face {
-  font-family: "PT";
+  font-family: "texgyreheros";
   font-display: swap;
-  src: url("../fonts/PT-Root-UI_Regular.woff2") format("woff2"), url("../fonts/PT-Root-UI_Regular.woff") format("woff"), url("../fonts/PT-Root-UI_Regular.ttf") format("ttf");
+  src: url("../fonts/texgyreheros-regular.woff2") format("woff2"), url("../fonts/texgyreheros-regular.woff") format("woff"), url("../fonts/texgyreheros-regular.ttf") format("ttf");
   font-weight: 400;
 }
 
@@ -907,7 +903,6 @@ textarea {
   align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   position: relative;
   cursor: pointer;
