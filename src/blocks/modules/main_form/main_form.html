@@ -1,19 +1,32 @@
 <div class="main_form">
-    <div class="main_form__l-side">
-        <div class="main_form__title">Остались вопросы?</div>
-        <div class="main_form__subtitle">Оставьте заявку на консультацию и наш менеджер свяжется с вами</div>
+    <div class="main_form__l-side" :class="{'isThanksMessage': mainForm.isSended}">
+        <div class="main_form__title">
+            <template v-if="!mainForm.isSended">
+                Остались вопросы?
+            </template>
+            <template v-if="mainForm.isSended">
+                Спасибо !
+            </template>
+        </div>
+        <div class="main_form__subtitle">
+            <template v-if="!mainForm.isSended">
+                Оставьте заявку на консультацию и наш менеджер свяжется с вами
+            </template>
+            <template v-if="mainForm.isSended">
+                Скоро мы свяжемся с вами !
+            </template>
+            
+        </div>
     </div>
-    <div class="main_form__r-side">
-        <form action="" @submit.prevent="mainForm.openNextStep.apply(mainForm)" v-if="!mainForm.isSended">
-            <textarea name="ques" placeholder="Ваш вопрос" v-model="mainForm.question" :class="{'hasError': mainForm.errors.question}"></textarea>
-            <div v-if="mainForm.errors.question">{{ mainForm.errors.question }}</div>
+    <div class="main_form__r-side" v-if="!mainForm.isSended">
+        <form action="" @submit.prevent="mainForm.openNextStep.apply(mainForm)">
+            <div class="main_form__error" v-if="mainForm.errors.question">{{ mainForm.errors.question }}</div>
+            <textarea name="ques" placeholder="Ваш вопрос" v-model="mainForm.question" :class="{'hasError': mainForm.errors.question}" @input="mainForm.errors.question = ''"></textarea>
             <div class="main_form__buttons">
                 <button type="submit" class="button button__feedback">Отправить</button>
-                <input class="custom-checkbox" type="checkbox" name="personal2" id="personal2" v-model="mainForm.check1">
+                <input @change="mainForm.errors.check1 = ''" class="custom-checkbox" type="checkbox" name="personal2" id="personal2" v-model="mainForm.check1">
                 <label for="personal2" :class="{'hasError': mainForm.errors.check1}">Даю согласие на обработку персональных данных</label>
             </div>
-            <div v-if="mainForm.errors.check1">{{ mainForm.errors.check1 }}</div>
         </form>
-        <div v-else>Спасибо за Ваш вопрос</div>
     </div>
 </div>

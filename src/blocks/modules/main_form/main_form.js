@@ -6,7 +6,7 @@ const MainForm = class MainForm {
         this.email = "";
         this.check1 = false;
         this.check2 = false;
-        this.url = "http://gazprom-tech.01sh.ru/local/ajax/form1.php";
+        this.url = "/local/ajax/form1.php";
         this.errors = {
             question: '',
             check1: '',
@@ -15,7 +15,7 @@ const MainForm = class MainForm {
             email: '',
             check2: ''
         }
-        this.isSended = false
+        this.isSended = true
     }
     openNextStep() {
         console.log('form next step')

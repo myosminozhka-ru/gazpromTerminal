@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220708120759">
+    <link rel="stylesheet" href="css/style.css?_v=20220708164225">
 </head>
 <body>
     <div class="preloader">
@@ -276,22 +276,35 @@
     <button class="page_cases__more"><span></span>Еще кейсы</button>
 </div>
                 <div class="main_form">
-    <div class="main_form__l-side">
-        <div class="main_form__title">Остались вопросы?</div>
-        <div class="main_form__subtitle">Оставьте заявку на консультацию и наш менеджер свяжется с вами</div>
+    <div class="main_form__l-side" :class="{'isThanksMessage': mainForm.isSended}">
+        <div class="main_form__title">
+            <template v-if="!mainForm.isSended">
+                Остались вопросы?
+            </template>
+            <template v-if="mainForm.isSended">
+                Спасибо !
+            </template>
+        </div>
+        <div class="main_form__subtitle">
+            <template v-if="!mainForm.isSended">
+                Оставьте заявку на консультацию и наш менеджер свяжется с вами
+            </template>
+            <template v-if="mainForm.isSended">
+                Скоро мы свяжемся с вами !
+            </template>
+            
+        </div>
     </div>
-    <div class="main_form__r-side">
-        <form action="" @submit.prevent="mainForm.openNextStep.apply(mainForm)" v-if="!mainForm.isSended">
-            <textarea name="ques" placeholder="Ваш вопрос" v-model="mainForm.question" :class="{'hasError': mainForm.errors.question}"></textarea>
-            <div v-if="mainForm.errors.question">{{ mainForm.errors.question }}</div>
+    <div class="main_form__r-side" v-if="!mainForm.isSended">
+        <form action="" @submit.prevent="mainForm.openNextStep.apply(mainForm)">
+            <div class="main_form__error" v-if="mainForm.errors.question">{{ mainForm.errors.question }}</div>
+            <textarea name="ques" placeholder="Ваш вопрос" v-model="mainForm.question" :class="{'hasError': mainForm.errors.question}" @input="mainForm.errors.question = ''"></textarea>
             <div class="main_form__buttons">
                 <button type="submit" class="button button__feedback">Отправить</button>
-                <input class="custom-checkbox" type="checkbox" name="personal2" id="personal2" v-model="mainForm.check1">
+                <input @change="mainForm.errors.check1 = ''" class="custom-checkbox" type="checkbox" name="personal2" id="personal2" v-model="mainForm.check1">
                 <label for="personal2" :class="{'hasError': mainForm.errors.check1}">Даю согласие на обработку персональных данных</label>
             </div>
-            <div v-if="mainForm.errors.check1">{{ mainForm.errors.check1 }}</div>
         </form>
-        <div v-else>Спасибо за Ваш вопрос</div>
     </div>
 </div>
             </main>
@@ -524,21 +537,20 @@
         <div class="modal__closer"></div>
         <div class="modal__title">Чтобы мы смогли вам ответить, пожалуйста, оставьте ваши контакты</div>
         <form action="" class="modal__form" @submit.prevent="mainForm.sendForm.apply(mainForm)">
+            <div class="main_form__error" v-if="mainForm.errors.name">{{ mainForm.errors.name }}</div>
             <input type="text" placeholder="Ваше ФИО" v-model="mainForm.name" :class="{'hasError': mainForm.errors.name}">
-            <div v-if="mainForm.errors.name">{{ mainForm.errors.name }}</div>
+            <div class="main_form__error" v-if="mainForm.errors.phone">{{ mainForm.errors.phone }}</div>
             <input type="tel" placeholder="Телефон" v-model="mainForm.phone" :class="{'hasError': mainForm.errors.phone}">
-            <div v-if="mainForm.errors.phone">{{ mainForm.errors.phone }}</div>
+            <div class="main_form__error" v-if="mainForm.errors.email">{{ mainForm.errors.email }}</div>
             <input type="email" placeholder="E-mail" v-model="mainForm.email" :class="{'hasError': mainForm.errors.email}">
-            <div v-if="mainForm.errors.email">{{ mainForm.errors.email }}</div>
             <input class="custom-checkbox" type="checkbox" name="personal3" id="personal3" v-model="mainForm.check2">
             <label for="personal3" :class="{'hasError': mainForm.errors.check2}">Даю согласие на обработку персональных данных</label>
-            <div v-if="mainForm.errors.check2">{{ mainForm.errors.check2 }}</div>
             <button class="button modal__button">Отправить</button>
         </form>
     </div>
 </div>
         </div>
     </div>
-    <script src="js/app.min.js?_v=20220708120759"></script>
+    <script src="js/app.min.js?_v=20220708164225"></script>
 </body>
 </html>

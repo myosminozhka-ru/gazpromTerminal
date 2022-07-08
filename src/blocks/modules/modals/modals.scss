@@ -96,6 +96,9 @@
         width: 100%;
         display: block;
         margin-bottom: vw(20);
+        &.hasError {
+            border-color: #FF5F05;
+        }
     }
     .custom-checkbox {
         & + label {

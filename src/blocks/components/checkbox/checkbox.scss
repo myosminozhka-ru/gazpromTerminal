@@ -16,6 +16,9 @@
         color: #535353;
         max-width: vw(300);
         width: 100%;
+        &.hasError {
+            color: #FF5F05;
+        }
         &:before {
             pointer-events: none;
             content: '';
@@ -26,6 +29,9 @@
             flex-grow: 0;
             border: 1px solid #CFCFCF;
             margin-right: vw(20);
+        }
+        &.hasError:before {
+            border-color: #FF5F05;
         }
         &:after {
             pointer-events: none;

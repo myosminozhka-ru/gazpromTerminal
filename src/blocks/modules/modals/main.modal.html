@@ -182,15 +182,14 @@
         <div class="modal__closer"></div>
         <div class="modal__title">Чтобы мы смогли вам ответить, пожалуйста, оставьте ваши контакты</div>
         <form action="" class="modal__form" @submit.prevent="mainForm.sendForm.apply(mainForm)">
+            <div class="main_form__error" v-if="mainForm.errors.name">{{ mainForm.errors.name }}</div>
             <input type="text" placeholder="Ваше ФИО" v-model="mainForm.name" :class="{'hasError': mainForm.errors.name}">
-            <div v-if="mainForm.errors.name">{{ mainForm.errors.name }}</div>
+            <div class="main_form__error" v-if="mainForm.errors.phone">{{ mainForm.errors.phone }}</div>
             <input type="tel" placeholder="Телефон" v-model="mainForm.phone" :class="{'hasError': mainForm.errors.phone}">
-            <div v-if="mainForm.errors.phone">{{ mainForm.errors.phone }}</div>
+            <div class="main_form__error" v-if="mainForm.errors.email">{{ mainForm.errors.email }}</div>
             <input type="email" placeholder="E-mail" v-model="mainForm.email" :class="{'hasError': mainForm.errors.email}">
-            <div v-if="mainForm.errors.email">{{ mainForm.errors.email }}</div>
             <input class="custom-checkbox" type="checkbox" name="personal3" id="personal3" v-model="mainForm.check2">
             <label for="personal3" :class="{'hasError': mainForm.errors.check2}">Даю согласие на обработку персональных данных</label>
-            <div v-if="mainForm.errors.check2">{{ mainForm.errors.check2 }}</div>
             @@include('../../components/button/button.html', {
                 "text" : "Отправить",
                 "type" : "modal"

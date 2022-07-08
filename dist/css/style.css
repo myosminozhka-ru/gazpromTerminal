@@ -916,6 +916,10 @@ textarea {
   width: 100%;
 }
 
+.custom-checkbox + label.hasError {
+  color: #FF5F05;
+}
+
 .custom-checkbox + label:before {
   pointer-events: none;
   content: "";
@@ -926,6 +930,10 @@ textarea {
   flex-grow: 0;
   border: 1px solid #CFCFCF;
   margin-right: 1.0416666667vw;
+}
+
+.custom-checkbox + label.hasError:before {
+  border-color: #FF5F05;
 }
 
 .custom-checkbox + label:after {
@@ -2578,6 +2586,10 @@ textarea {
   padding-top: 5.2083333333vw;
 }
 
+.main_form__l-side.isThanksMessage {
+  max-width: 100%;
+}
+
 .main_form__title {
   font-family: "texgyreheros", Arial;
   font-style: normal;
@@ -2624,8 +2636,22 @@ textarea {
   color: #535353;
 }
 
+.main_form textarea.hasError {
+  border-color: #FF5F05;
+}
+
 .main_form .button {
   margin-right: 30px;
+}
+
+.main_form__error {
+  font-family: "PT", Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375vw;
+  line-height: 150%;
+  color: #FF5F05;
+  margin-bottom: 0.5208333333vw;
 }
 
 .isTablet .main_form,
@@ -4254,6 +4280,12 @@ textarea {
   width: 100%;
   display: block;
   margin-bottom: 1.0416666667vw;
+}
+
+.modal input[type=text].hasError,
+.modal input[type=tel].hasError,
+.modal input[type=email].hasError {
+  border-color: #FF5F05;
 }
 
 .modal .custom-checkbox + label {

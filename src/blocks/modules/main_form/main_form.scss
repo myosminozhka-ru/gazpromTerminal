@@ -11,6 +11,9 @@
         max-width: vw(315);
         width: 100%;
         padding-top: vw(100);
+        &.isThanksMessage {
+            max-width: 100%;
+        }
     }
     &__title {
         font-family: 'texgyreheros', Arial;
@@ -52,9 +55,22 @@
         font-size: vw(18);
         line-height: 150%;
         color: #535353;
+        &.hasError {
+            border-color: #FF5F05;
+        }
     }
     .button {
         margin-right: 30px;
+    }
+
+    &__error {
+        font-family: 'PT', Arial;
+        font-style: normal;
+        font-weight: 400;
+        font-size: vw(18);
+        line-height: 150%;
+        color: #FF5F05;
+        margin-bottom: vw(10);
     }
 }
 .isTablet, .isMobile {
