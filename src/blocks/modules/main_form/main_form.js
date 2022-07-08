@@ -6,7 +6,7 @@ const MainForm = class MainForm {
         this.email = "";
         this.check1 = false;
         this.check2 = false;
-        this.url = "/local/ajax/form.php";
+        this.url = "http://gazprom-tech.01sh.ru/local/ajax/form.php";
         this.errors = {
             question: '',
             check1: '',
