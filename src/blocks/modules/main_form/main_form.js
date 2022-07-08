@@ -6,7 +6,7 @@ const MainForm = class MainForm {
         this.email = "";
         this.check1 = false;
         this.check2 = false;
-        this.url = "http://gazprom-tech.01sh.ru/local/ajax/form.php";
+        this.url = "http://gazprom-tech.01sh.ru/local/ajax/form1.php";
         this.errors = {
             question: '',
             check1: '',
@@ -64,22 +64,35 @@ const MainForm = class MainForm {
         })
 
         if (this.name !== '' && this.phone !== '' && this.email !== '' && this.check2) {
-
-            fetch(this.url, {
+            var data = new FormData();
+            data.append('QUESTION', this.question);
+            data.append('FID', this.name);
+            data.append('PHONE', this.phone);
+            data.append('EMAIL', this.email);
+            data.append('PERS_DATA', this.check2);
+            let req = new Request(this.url, {
                 method: 'POST',
-                body: {
-                    QUESTION: this.question,
-                    FID: this.name,
-                    PHONE: this.phone,
-                    EMAIL: this.email,
-                    PERS_DATA: this.check2,
+                // mode: 'no-cors',
+                // headers: {
+                //     'Accept': 'application/json',
+                //     'Content-Type': 'application/json'
+                // },
+                body: data
+            })
+            fetch(req).then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Bad HTTP!'); 
                 }
-            }).then(response => response.json()).then(response => {
+            }).then(response => {
                 console.log(response);
                 if (response.id) {
                     app.modals.closeModal(3)
                     this.isSended = true;
                 }
+            }).catch(error => {
+                console.log(error.message);
             })
         }
     }
