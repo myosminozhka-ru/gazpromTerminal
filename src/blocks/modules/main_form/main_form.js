@@ -54,14 +54,6 @@ const MainForm = class MainForm {
         } else {
             this.errors.check2 = '';
         }
-        console.log({
-            question: this.question,
-            name: this.name,
-            phone: this.phone,
-            email: this.email,
-            check1: this.check1,
-            check2: this.check2,
-        })
 
         if (this.name !== '' && this.phone !== '' && this.email !== '' && this.check2) {
             var data = new FormData();
@@ -87,7 +79,7 @@ const MainForm = class MainForm {
                 }
             }).then(response => {
                 console.log(response);
-                if (response.id) {
+                if (response.success) {
                     app.modals.closeModal(3)
                     this.isSended = true;
                 }

@@ -2,6 +2,7 @@ import * as globalFunctions from './modules/functions.js';
 globalFunctions.isWebp();
 
 import Vue from 'vue/dist/vue.js';
+// import PhoneMaskInput from  "vue-phone-mask-input";
 
 import Burger from '../blocks/components/burger/burger.js';
 import MainNumber from '../blocks/modules/main_numbers/main_numbers.js';
