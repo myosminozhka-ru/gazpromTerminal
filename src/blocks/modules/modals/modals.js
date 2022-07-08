@@ -9,6 +9,7 @@ const Modals = class Modals {
         this.textareaValue = '';
         this.slider = new Glide('.modal-glide-js', this.sliderOptions);
     }
+    
     initialSlider() {
         setTimeout(() => {
             if (!document.querySelector('.modal-glide-js')) return;

@@ -18,6 +18,7 @@ import MainForm from '../blocks/modules/main_form/main_form.js';
 import MainForm2 from '../blocks/modules/header/header.js';
 import Value from '../blocks/modules/main__value/main__value.js';
 
+
 window.app = new Vue({
     el: '#app',
     data: () => ({
@@ -136,7 +137,7 @@ window.app = new Vue({
         };
         setTimeout(() => {
             this.headerHeight = document.querySelector('.header').offsetHeight;
-        }, 500)
+        }, 500);
     },
     computed: {
         isMobile: function () {
