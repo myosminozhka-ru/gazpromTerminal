@@ -105,6 +105,10 @@
             margin-bottom: 20px;
             min-height: 277px;
         }
+        &__error {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
         &__buttons {
             flex-direction: column-reverse;
             align-items: flex-start;

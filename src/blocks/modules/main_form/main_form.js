@@ -15,7 +15,7 @@ const MainForm = class MainForm {
             email: '',
             check2: ''
         }
-        this.isSended = true
+        this.isSended = false
     }
     openNextStep() {
         console.log('form next step')

@@ -2698,6 +2698,12 @@ textarea {
   min-height: 277px;
 }
 
+.isTablet .main_form__error,
+.isMobile .main_form__error {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
 .isTablet .main_form__buttons,
 .isMobile .main_form__buttons {
   flex-direction: column-reverse;
