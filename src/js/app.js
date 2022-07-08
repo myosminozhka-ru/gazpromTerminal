@@ -15,6 +15,7 @@ import PageCases from '../blocks/modules/page_cases/page_cases.js';
 import CasePage from '../blocks/modules/case_page/case_page.js';
 import Modals from '../blocks/modules/modals/modals.js';
 import MainForm from '../blocks/modules/main_form/main_form.js';
+import MainForm2 from '../blocks/modules/header/header.js';
 import Value from '../blocks/modules/main__value/main__value.js';
 
 window.app = new Vue({
@@ -30,6 +31,7 @@ window.app = new Vue({
             isMobileMenuOpened: false,
         }),
         mainForm: new MainForm(),
+        mainForm2: new MainForm2(),
         mainFooter: new MainFooter(),
         mainNumber: new MainNumber(),
         mainNews: new MainNews({
@@ -122,6 +124,7 @@ window.app = new Vue({
         this.modals.init();
         this.value.init();   
         this.mainForm.init();     
+        this.mainForm2.init();     
     },
     mounted() {
         window.onload = function () {
