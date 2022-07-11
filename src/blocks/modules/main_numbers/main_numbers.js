@@ -18,15 +18,25 @@ const MainNumber = class MainNumber {
             });
         });
     }
+    isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
     showElem() {
         let isEvent = false;
         const scrollToSecScr=()=>{
             let blShow=document.querySelector('.main_numbers');
+            // console.log(this.isInViewport(blShow));
             if ( !isEvent ) {
-                if (document.documentElement.scrollTop>blShow.getBoundingClientRect().top) {
+                if (this.isInViewport(blShow)) {
                 // if (document.documentElement.scrollTop) {
-                    isEvent = true;
                     this.animationNumbers()
+                    isEvent = true;
                 }
             }
         }
