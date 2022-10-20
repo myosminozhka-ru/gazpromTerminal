@@ -3,12 +3,14 @@ const MainForm2 = class MainForm2 {
         this.name = "";
         this.phone = "";
         this.email = "";
+        this.comment = "";
         this.check2 = false;
         this.url = "/local/ajax/form.php";
         this.errors = {
             name: '',
             phone: '',
             email: '',
+            comment: '',
             check2: ''
         }
         this.isSended = false
@@ -87,6 +89,7 @@ const MainForm2 = class MainForm2 {
             data.append('PHONE', this.phone);
             data.append('EMAIL', this.email);
             data.append('PERS_DATA', this.check2);
+            data.append('COMMENT', this.comment);
             let req = new Request(this.url, {
                 method: 'POST',
                 // mode: 'no-cors',
