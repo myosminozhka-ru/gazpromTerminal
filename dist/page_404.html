@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20220711194942">
+    <link rel="stylesheet" href="css/style.css?_v=20221020095313">
 </head>
 <body>
     <div class="preloader">
@@ -166,6 +166,8 @@
             <input @input="mainForm2.mask.apply(mainForm2)" type="tel" placeholder="Телефон" v-model="mainForm2.phone" :class="{'hasError': mainForm2.errors.phone}" ref="phone">
             <div class="main_form__error" v-if="mainForm2.errors.email">{{ mainForm2.errors.email }}</div>
             <input type="email" placeholder="E-mail" v-model="mainForm2.email" :class="{'hasError': mainForm2.errors.email}">
+            <div class="main_form__error" v-if="mainForm2.errors.comment">{{ mainForm2.errors.comment }}</div>
+            <input type="text" placeholder="Комментарий" v-model="mainForm2.comment" :class="{'hasError': mainForm2.errors.comment}">
             <input class="custom-checkbox" type="checkbox" name="personal3" id="personal3" v-model="mainForm2.check2">
             <label for="personal3" :class="{'hasError': mainForm2.errors.check2}">Даю согласие на обработку персональных данных</label>
             <button class="button modal__button">Отправить</button>
@@ -352,7 +354,7 @@
 </div>
         </div>
     </div>
-    <script src="js/app.min.js?_v=20220711194942"></script>
+    <script src="js/app.min.js?_v=20221020095313"></script>
     <script>
         app.addClassToWrapper('page_404');
     </script>

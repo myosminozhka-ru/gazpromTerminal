@@ -873,7 +873,6 @@ textarea {
   padding: 0.8854166667vw 0.9895833333vw;
   transition: all 0.3s ease-out;
   text-align: center;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   min-width: 10.2083333333vw;
@@ -1129,7 +1128,6 @@ textarea {
 }
 
 .main_first__buttons .button {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -1351,7 +1349,6 @@ textarea {
 }
 
 .main_value__l-side--in {
-  position: -webkit-sticky;
   position: sticky;
   top: 7.2916666667vw;
 }
@@ -1677,7 +1674,6 @@ textarea {
 }
 
 .main_ques__title span {
-  position: -webkit-sticky;
   position: sticky;
   display: block;
   top: 120px;
@@ -2040,7 +2036,6 @@ textarea {
   line-height: 110%;
   color: #000000;
   position: relative;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding-right: 2.0833333333vw;
@@ -2714,7 +2709,6 @@ textarea {
 .isMobile .main_form .button {
   margin-top: 20px;
   margin-right: 0;
-  max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
 }
@@ -3154,7 +3148,6 @@ textarea {
   line-height: 110%;
   color: #000000;
   position: relative;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding-right: 40px;
@@ -3469,7 +3462,6 @@ textarea {
 }
 
 .case_page__slider {
-  position: -webkit-sticky;
   position: sticky;
   top: 10px;
 }
@@ -3512,7 +3504,6 @@ textarea {
 
 .isTablet .case_page__r-side .tabs__in,
 .isMobile .case_page__r-side .tabs__in {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   display: flex;
@@ -3656,7 +3647,6 @@ textarea {
   margin-bottom: 3.6458333333vw;
   margin-right: auto;
   display: none;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -3749,15 +3739,11 @@ textarea {
 }
 
 .page_error__socket-l svg {
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  animation-name: bounce;
+  animation-timing-function: ease-out;
   transform-origin: right;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
 }
 
 .page_error__socket-l:before {
@@ -3771,34 +3757,16 @@ textarea {
 }
 
 .page_error__socket-r svg {
-  -webkit-animation-name: bounce2;
-          animation-name: bounce2;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: bounce2;
+  animation-timing-function: ease-out;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
   transform-origin: bottom;
   bottom: -3px;
 }
 
 .page_error__socket-r:before {
   left: unset !important;
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    transform: translateX(-27px);
-  }
-
-  50% {
-    transform: translateX(38px);
-  }
-
-  100% {
-    transform: translateX(-27px);
-  }
 }
 
 @keyframes bounce {
@@ -3812,20 +3780,6 @@ textarea {
 
   100% {
     transform: translateX(-27px);
-  }
-}
-
-@-webkit-keyframes bounce2 {
-  0% {
-    transform: translateX(57px);
-  }
-
-  50% {
-    transform: translateX(0px);
-  }
-
-  100% {
-    transform: translateX(57px);
   }
 }
 
@@ -4113,8 +4067,7 @@ textarea {
   margin-top: -35px;
   margin-left: -35px;
   text-align: center;
-  -webkit-animation: preloader-rotate 2s infinite linear;
-          animation: preloader-rotate 2s infinite linear;
+  animation: preloader-rotate 2s infinite linear;
 }
 
 .preloader__item {
@@ -4125,36 +4078,18 @@ textarea {
   border-radius: 100%;
   width: 35px;
   height: 35px;
-  -webkit-animation: preloader-bounce 2s infinite ease-in-out;
-          animation: preloader-bounce 2s infinite ease-in-out;
+  animation: preloader-bounce 2s infinite ease-in-out;
 }
 
 .preloader__item:last-child {
   top: auto;
   bottom: 0;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
-}
-
-@-webkit-keyframes preloader-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+  animation-delay: -1s;
 }
 
 @keyframes preloader-rotate {
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes preloader-bounce {
-  0%, 100% {
-    transform: scale(0);
-  }
-
-  50% {
-    transform: scale(1);
   }
 }
 
