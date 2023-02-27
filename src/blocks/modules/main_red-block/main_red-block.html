@@ -1,6 +1,78 @@
 <div class="main_red-block" id="link3">
     <div class="main_red-block__title">Технологии</div>
+    <div class="main_red-block-background"></div>
     <div class="main_red-block__img">
-        <img src="./img/bg_first.png" alt="">
+        <video autoplay loop muted>
+            <source src="./files/technologies/desctop.mp4">
+        </video>
+        <button 
+          v-if="!terminal.clonActive"
+          class="button button__feedback main_red-block__img--back main_red-block__img--clon"
+        >Цифровой двойник</button>
+        <div 
+          class="main_red-block__img--button-container"
+          :class="{
+            hidden: !terminal.showPLus
+          }"
+        >
+            <button 
+                v-for="item in terminal.items"
+                :key="item.id"
+                :style="{ left: item.left + '%', top: item.top + '%' }"
+                :class="{
+                  open: item.open,
+                  'plus-btn': !item.open
+                }"
+                style="position: absolute;"
+                class=" main_red-block-plus"
+                @click="terminal.activeItems(item.id)"
+            >
+              <div v-if="!item.open" >
+                <img src="./img/plus.png" alt="">
+              </div>
+              <div v-if="item.open" class="main_red-block-plus-container">
+                <span>{{ item.name }}</span>
+                <div @click="terminal.showTabs(item)">
+                  <img src="./img/eye.png" alt="">
+                </div>
+              </div>
+            </button>
+        </div>
+        <div class="main_red-block__img--tabs">
+            <div 
+                v-for="(item, ind) in terminal.tabs"
+                :key="item.name"
+                class="main_red-block__img--tabs-item"
+                :class="{
+                  open: item.open
+                }"
+                @click="terminal.activeTab(ind)"
+            >
+                <div class="main_red-block__img--tabs-item-header">
+                    {{ item.name }}
+                    <div v-if="item.open  && (isMobile || isTablet)" >
+                        <img src="./img/arrow-secondary.png" alt="">
+                    </div>
+                    <div v-if="!item.open" >
+                        <img src="./img/arrow-perimery.png" alt="">
+                    </div>
+                    <div v-else >
+                        <img src="./img/arrow-perimery.png" alt="">
+                    </div>
+                </div>
+                <ul class="main_red-block__img--tabs-item-body">
+                    <li v-for="listItem in item.list" :key="listItem">
+                        <span></span>
+                        <p>{{ listItem }}</p>
+                    </li>
+                </ul>
+            </div>
+
+            <button 
+              v-if="terminal.tabs.length"
+              class="button button__feedback main_red-block__img--tabs-back"
+              @click="terminal.clearTabsRool()"
+            >Вернуться назад</button>
+        </div>
     </div>
 </div>
