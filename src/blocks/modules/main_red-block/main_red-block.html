@@ -1,78 +1,637 @@
 <div class="main_red-block" id="link3">
-    <div class="main_red-block__title">Технологии</div>
-    <div class="main_red-block-background"></div>
-    <div class="main_red-block__img">
-        <video autoplay loop muted>
-            <source src="./files/technologies/desctop.mp4">
+  <div class="main_red-block__title">Технологии</div>
+  <div class="main_red-block-background"></div>
+  <div
+    class="main_red-block__img"
+    :class="{loading: isLoading}"
+    v-if="windowSize > 1024"
+  >
+    <video
+      autoplay
+      loop
+      muted
+      v-show="items[0].showVideo"
+      :class="{videoLoading: isLoading}"
+    >
+      <source src="./files/technologies/VR_AR/desktop/desk0001-2000.mp4" />
+    </video>
+    <video
+      autoplay
+      loop
+      muted
+      v-show="items[1].showVideo"
+      :class="{videoLoading: isLoading}"
+    >
+      <source
+        src="./files/technologies/diagnostics/desktop/desk0001-2000.mp4"
+      />
+    </video>
+    <video
+      autoplay
+      loop
+      muted
+      v-show="items[2].showVideo"
+      :class="{videoLoading: isLoading}"
+    >
+      <source
+        src="./files/technologies/infrostucture/desktop/desk0001-2000.mp4"
+      />
+    </video>
+    <video
+      autoplay
+      loop
+      muted
+      v-show="items[3].showVideo"
+      :class="{videoLoading: isLoading}"
+    >
+      <source src="./files/technologies/scanner/desktop/desk0001-2000.mp4" />
+    </video>
+    <video
+      autoplay
+      loop
+      muted
+      v-show="items[4].showVideo"
+      :class="{videoLoading: isLoading}"
+    >
+      <source src="./files/technologies/drones/desktop/desk0001-2000.mp4" />
+    </video>
+    <video
+      autoplay
+      loop
+      muted
+      v-show="defaultVideo"
+      :class="{videoLoading: isLoading}"
+    >
+      <source src="./files/technologies/general/desktop/desk0001-2000.mp4" />
+    </video>
+    <div class="main_red-block-clone" v-show="clonActive">
+      <img src="./img/devices/mac_bg.png" alt="mac_bg" />
+      <div class="main_red-block-clone__video">
+        <video autoplay loop muted :class="{videoLoading: isLoading}">
+          <source
+            src="./files/technologies/general/desktop/desk0001-2000.mp4"
+          />
         </video>
-        <button 
-          v-if="!terminal.clonActive"
-          class="button button__feedback main_red-block__img--back main_red-block__img--clon"
-        >Цифровой двойник</button>
-        <div 
-          class="main_red-block__img--button-container"
-          :class="{
-            hidden: !terminal.showPLus
-          }"
+        <div
+          class="main_red-block-clone__tab"
+          :style="isLoading ?'z-index: 5': 'z-index: 15'"
         >
-            <button 
-                v-for="item in terminal.items"
-                :key="item.id"
-                :style="{ left: item.left + '%', top: item.top + '%' }"
-                :class="{
+          <div class="main_red-block__img--tabs-item-header">
+            Цифровые двойники <br />
+            площадок
+            <div
+              class="main_red-block-clone__close"
+              @click="closeCloneHandler"
+            ></div>
+          </div>
+          <ul class="main_red-block__img--tabs-item-body">
+            <li>
+              <span></span>
+              <p>
+                Поддержка «What-If» сценариев для анализа необходимой площади
+                объекта, количества и типа оборудования и систем хранения
+              </p>
+            </li>
+            <li>
+              <span></span>
+              <p>Выбор оптимальных решений по прибыли, времени и ресурсам</p>
+            </li>
+            <li>
+              <span></span>
+              <p>Визуализация гипотез</p>
+            </li>
+            <li>
+              <span></span>
+              <p>Детальное воссоздание процессов и объектов склада в 3D и 2D</p>
+            </li>
+            <li>
+              <span></span>
+              <p>
+                Поиск «узких мест» — выявление критичных зон, неэффективных
+                процессов и предложения по решению существующих проблем
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button
+      v-if="showCloneButton"
+      class="button button__feedback main_red-block__img--back main_red-block__img--clon"
+      @click="cloneHandler"
+    >
+      Цифровой двойник
+    </button>
+    <div
+      class="main_red-block__img--button-container"
+      :class="{
+            hidden: !showPLus
+          }"
+    >
+      <button
+        v-for="item in items"
+        :key="item.id"
+        :style="{ left: item.left + '%', top: item.top + '%' }"
+        :class="{
                   open: item.open,
                   'plus-btn': !item.open
                 }"
-                style="position: absolute;"
-                class=" main_red-block-plus"
-                @click="terminal.activeItems(item.id)"
-            >
-              <div v-if="!item.open" >
-                <img src="./img/plus.png" alt="">
-              </div>
-              <div v-if="item.open" class="main_red-block-plus-container">
-                <span>{{ item.name }}</span>
-                <div @click="terminal.showTabs(item)">
-                  <img src="./img/eye.png" alt="">
-                </div>
-              </div>
-            </button>
+        style="position: absolute"
+        class="main_red-block-plus"
+        @click="activeItems(item.id)"
+      >
+        <div v-if="!item.open">
+          <img src="./img/plus.png" alt="" />
         </div>
-        <div class="main_red-block__img--tabs">
-            <div 
-                v-for="(item, ind) in terminal.tabs"
-                :key="item.name"
-                class="main_red-block__img--tabs-item"
-                :class="{
+        <div v-if="item.open" class="main_red-block-plus-container">
+          <span>{{ item.name }}</span>
+          <div @click="showTabs(item)">
+            <img src="./img/eye.png" alt="" />
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="main_red-block__img--tabs">
+      <div
+        v-for="(item, ind) in tabs"
+        :key="item.name"
+        class="main_red-block__img--tabs-item"
+        :class="{
                   open: item.open
                 }"
-                @click="terminal.activeTab(ind)"
+        @click="activeTab(ind)"
+      >
+        <div class="main_red-block__img--tabs-item-header">
+          {{ item.name }}
+          <div v-if="item.open  && (isMobile || isTablet)">
+            <img src="./img/arrow-secondary.png" alt="" />
+          </div>
+          <div v-if="!item.open">
+            <img src="./img/arrow-perimery.png" alt="" />
+          </div>
+          <div v-else>
+            <img src="./img/arrow-perimery.png" alt="" />
+          </div>
+        </div>
+        <ul class="main_red-block__img--tabs-item-body">
+          <li v-for="listItem in item.list" :key="listItem">
+            <span></span>
+            <p>{{ listItem }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <button
+        v-if="tabs.length"
+        class="button button__feedback main_red-block__img--tabs-back"
+        @click="clearTabsRool()"
+      >
+        Вернуться назад
+      </button>
+    </div>
+  </div>
+  <div v-else class="main_red-block__slider main_red-glide-js">
+    <div data-glide-el="track" class="glide__track">
+      <ul class="glide__slides">
+        <li>
+          <!-- VR_AR -->
+          <div class="main_red-block__img">
+            <div class="main_red-block__top">
+              <div class="main_red-block__name">{{this.items[0].name}}</div>
+            </div>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_album'"
             >
+              <source
+                src="./files/technologies/VR_AR/planshet_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_book'"
+            >
+              <source
+                src="./files/technologies/VR_AR/planshet_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_album'"
+            >
+              <source
+                src="./files/technologies/VR_AR/mobile_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_book'"
+            >
+              <source
+                src="./files/technologies/VR_AR/mobile_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <div class="main_red-block__img--tabs">
+              <div
+                class="main_red-block__img--tabs-item"
+                v-for="tab in items[0].tabs"
+              >
                 <div class="main_red-block__img--tabs-item-header">
-                    {{ item.name }}
-                    <div v-if="item.open  && (isMobile || isTablet)" >
-                        <img src="./img/arrow-secondary.png" alt="">
-                    </div>
-                    <div v-if="!item.open" >
-                        <img src="./img/arrow-perimery.png" alt="">
-                    </div>
-                    <div v-else >
-                        <img src="./img/arrow-perimery.png" alt="">
-                    </div>
+                  {{tab.name}}
+                  <div>
+                    <picture
+                      ><source
+                        srcset="./img/arrow-perimery.webp"
+                        type="image/webp" />
+                      <img src="./img/arrow-perimery.png" alt=""
+                    /></picture>
+                  </div>
                 </div>
                 <ul class="main_red-block__img--tabs-item-body">
-                    <li v-for="listItem in item.list" :key="listItem">
-                        <span></span>
-                        <p>{{ listItem }}</p>
-                    </li>
+                  <li v-for="listItem in tab.list" :key="listItem">
+                    <span></span>
+                    <p>{{ listItem }}</p>
+                  </li>
                 </ul>
+              </div>
             </div>
-
-            <button 
-              v-if="terminal.tabs.length"
-              class="button button__feedback main_red-block__img--tabs-back"
-              @click="terminal.clearTabsRool()"
-            >Вернуться назад</button>
-        </div>
+          </div>
+        </li>
+        <li>
+          <!-- diagnostics -->
+          <div class="main_red-block__img">
+            <div class="main_red-block__top">
+              <div class="main_red-block__name">{{this.items[1].name}}</div>
+            </div>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_album'"
+            >
+              <source
+                src="./files/technologies/diagnostics/planshet_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_book'"
+            >
+              <source
+                src="./files/technologies/diagnostics/planshet_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_album'"
+            >
+              <source
+                src="./files/technologies/diagnostics/mobile_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_book'"
+            >
+              <source
+                src="./files/technologies/diagnostics/mobile_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <div class="main_red-block__img--tabs">
+              <div
+                class="main_red-block__img--tabs-item"
+                v-for="tab in items[1].tabs"
+              >
+                <div class="main_red-block__img--tabs-item-header">
+                  {{tab.name}}
+                  <div>
+                    <picture
+                      ><source
+                        srcset="./img/arrow-perimery.webp"
+                        type="image/webp" />
+                      <img src="./img/arrow-perimery.png" alt=""
+                    /></picture>
+                  </div>
+                </div>
+                <ul class="main_red-block__img--tabs-item-body">
+                  <li v-for="listItem in tab.list" :key="listItem">
+                    <span></span>
+                    <p>{{ listItem }}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!-- infrostucture -->
+          <div class="main_red-block__img">
+            <div class="main_red-block__top">
+              <div class="main_red-block__name">{{this.items[2].name}}</div>
+            </div>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_album'"
+            >
+              <source
+                src="./files/technologies/infrostucture/planshet_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_book'"
+            >
+              <source
+                src="./files/technologies/infrostucture/planshet_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_album'"
+            >
+              <source
+                src="./files/technologies/infrostucture/mobile_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_book'"
+            >
+              <source
+                src="./files/technologies/infrostucture/mobile_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <div class="main_red-block__img--tabs">
+              <div
+                class="main_red-block__img--tabs-item"
+                v-for="tab in items[2].tabs"
+              >
+                <div class="main_red-block__img--tabs-item-header">
+                  {{tab.name}}
+                  <div>
+                    <picture
+                      ><source
+                        srcset="./img/arrow-perimery.webp"
+                        type="image/webp" />
+                      <img src="./img/arrow-perimery.png" alt=""
+                    /></picture>
+                  </div>
+                </div>
+                <ul class="main_red-block__img--tabs-item-body">
+                  <li v-for="listItem in tab.list" :key="listItem">
+                    <span></span>
+                    <p>{{ listItem }}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!-- scanner -->
+          <div class="main_red-block__img">
+            <div class="main_red-block__top">
+              <div class="main_red-block__name">{{this.items[3].name}}</div>
+            </div>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_album'"
+            >
+              <source
+                src="./files/technologies/scanner/planshet_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_book'"
+            >
+              <source
+                src="./files/technologies/scanner/planshet_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_album'"
+            >
+              <source
+                src="./files/technologies/scanner/mobile_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_book'"
+            >
+              <source
+                src="./files/technologies/scanner/mobile_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <div class="main_red-block__img--tabs">
+              <div
+                class="main_red-block__img--tabs-item"
+                v-for="tab in items[3].tabs"
+              >
+                <div class="main_red-block__img--tabs-item-header">
+                  {{tab.name}}
+                  <div>
+                    <picture
+                      ><source
+                        srcset="./img/arrow-perimery.webp"
+                        type="image/webp" />
+                      <img src="./img/arrow-perimery.png" alt=""
+                    /></picture>
+                  </div>
+                </div>
+                <ul class="main_red-block__img--tabs-item-body">
+                  <li v-for="listItem in tab.list" :key="listItem">
+                    <span></span>
+                    <p>{{ listItem }}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!-- drones -->
+          <div class="main_red-block__img">
+            <div class="main_red-block__top">
+              <div class="main_red-block__name">{{this.items[4].name}}</div>
+            </div>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_album'"
+            >
+              <source
+                src="./files/technologies/drones/planshet_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_book'"
+            >
+              <source
+                src="./files/technologies/drones/planshet_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_album'"
+            >
+              <source
+                src="./files/technologies/drones/mobile_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_book'"
+            >
+              <source
+                src="./files/technologies/drones/mobile_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <div class="main_red-block__img--tabs">
+              <div
+                class="main_red-block__img--tabs-item"
+                v-for="tab in items[4].tabs"
+              >
+                <div class="main_red-block__img--tabs-item-header">
+                  {{tab.name}}
+                  <div>
+                    <picture
+                      ><source
+                        srcset="./img/arrow-perimery.webp"
+                        type="image/webp" />
+                      <img src="./img/arrow-perimery.png" alt=""
+                    /></picture>
+                  </div>
+                </div>
+                <ul class="main_red-block__img--tabs-item-body">
+                  <li v-for="listItem in tab.list" :key="listItem">
+                    <span></span>
+                    <p>{{ listItem }}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!-- general -->
+          <div class="main_red-block__img">
+            <img
+              class="side_img"
+              src="./img/devices/ipad_album.png"
+              alt="ipad_album"
+              v-show="videoScreenSize === 'planshet_album'"
+            />
+            <img
+              class="side_img"
+              src="./img/devices/ipad_book.png"
+              alt="ipad_album"
+              v-show="videoScreenSize === 'planshet_book'"
+            />
+            <img
+              class="side_img"
+              src="./img/devices/iphone_album.png"
+              alt="ipad_album"
+              v-show="videoScreenSize === 'mobile_album'"
+            />
+            <img
+              class="side_img"
+              src="./img/devices/iphone_book.png"
+              alt="ipad_album"
+              v-show="videoScreenSize === 'mobile_book'"
+            />
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_album'"
+            >
+              <source
+                src="./files/technologies/general/planshet_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'planshet_book'"
+            >
+              <source
+                src="./files/technologies/general/planshet_book/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_album'"
+            >
+              <source
+                src="./files/technologies/general/mobile_album/mobile0001-2000.mp4"
+              />
+            </video>
+            <video
+              autoplay
+              loop
+              muted
+              v-show="videoScreenSize === 'mobile_book'"
+            >
+              <source
+                src="./files/technologies/general/mobile_book/mobile0001-2000.mp4"
+              />
+            </video>
+          </div>
+        </li>
+      </ul>
     </div>
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+        <img src="./img/svg/main-red__arrow.svg" alt="red__arrow" />
+      </button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+        <img src="./img/svg/main-red__arrow.svg" alt="red__arrow" />
+      </button>
+    </div>
+  </div>
 </div>
