@@ -1,0 +1,28 @@
+.plus-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: vw(50);
+  width: 100%;
+  height: vw(50);
+
+  border: none;
+  background: $secondary-color;
+  cursor: pointer;
+
+  img,
+  picture {
+    width: vw(21);
+    height: vw(21);
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width:vw(50);
+    width: 100%;
+    height: vw(50);
+  }
+}

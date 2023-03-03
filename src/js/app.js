@@ -17,10 +17,12 @@ import Modals from '../blocks/modules/modals/modals.js';
 import MainForm from '../blocks/modules/main_form/main_form.js';
 import MainForm2 from '../blocks/modules/header/header.js';
 import Value from '../blocks/modules/main__value/main__value.js';
+import {terminalPresentMixin} from '../blocks/modules/main_red-block/main_red-block.js'
 
 
 window.app = new Vue({
     el: '#app',
+    mixins: [terminalPresentMixin],
     data: () => ({
         isMounted: false,
         sizes: {
@@ -104,7 +106,7 @@ window.app = new Vue({
             }
         }),
         value: new Value(),
-        headerHeight: 0
+        headerHeight: 0,
     }),
     beforeCreate() {        
         window.addEventListener('resize', () => {
