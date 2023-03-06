@@ -142,6 +142,7 @@ export const terminalPresentMixin = {
     return {
       isLoading: false,
       showPLus: true,
+      tab_active: false,
       sliderOptions: {
         type: "slider",
         perView: 1,
@@ -255,7 +256,6 @@ export const terminalPresentMixin = {
   },
   watch: {
     windowSize(val) {
-      console.clear();
       if (val < 1024) {
         this.initSlider();
       }

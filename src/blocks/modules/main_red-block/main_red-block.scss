@@ -303,8 +303,6 @@
         height: 625px;
       }
       .side_img {
-        position: absolute;
-        bottom: -2px;
         display: block;
       }
     }
@@ -461,4 +459,136 @@
 .main_red-block__img--clon {
   cursor: pointer;
   z-index: 15;
+}
+
+.general-video {
+  position: relative;
+  height: fit-content !important;
+  min-height: unset !important;
+  margin-bottom: 0 !important;
+  .tab_open {
+    position: absolute;
+    bottom: 2%;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    width: 36px;
+    height: 36px;
+    @include _768-block {
+      right: 12%;
+    }
+    @include _667-block {
+      right: 10%;
+    }
+    @include _450-block {
+      right: 14%;
+    }
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+  video {
+    position: absolute;
+  }
+  .video-planshet_album {
+    left: 8.4%;
+    width: 83.5%;
+    top: 5.3%;
+  }
+  .video-planshet_book {
+    top: 9.5%;
+    left: 9%;
+    width: 82%;
+  }
+  .video-mobile_album {
+    top: 7.6%;
+    left: 12%;
+    width: 80%;
+  }
+  .video-mobile_book {
+    top: 13.5%;
+    left: 10%;
+    width: 79.8%;
+  }
+  .main_red-block-clone__tab {
+    z-index: 15;
+    padding-top: 0;
+    max-width: 447px;
+    width: 100%;
+    bottom: -100%;
+    transition: all 0.3s;
+    @include _667-block {
+      bottom: -150%;
+    }
+    @include _450-block {
+      bottom: -100%;
+    }
+    &.tab_active {
+      bottom: 0%;
+      @include _667-block {
+        bottom: -60%;
+      }
+      @include _450-block {
+        bottom: 0%;
+      }
+    }
+    @include _1024-block {
+      left: 8.2%;
+    }
+    @include _768-block {
+      left: 8.9%;
+    }
+    @include _667-block {
+      width: 81%;
+      left: 11.8%;
+    }
+    @include _450-block {
+      left: 9.5%;
+      width: 80%;
+    }
+    .main_red-block__img--tabs-item-body {
+      padding: 0 30px 30px 30px;
+      li {
+        p {
+          max-width: 100%;
+          font-size: 16px;
+          white-space: initial;
+          @include _667-block {
+            font-size: 14px;
+          }
+        }
+        &:last-child {
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .main_red-block__img--tabs-item-header {
+    padding: 30px 30px 0 30px;
+    font-size: 25px;
+    margin-bottom: 16px;
+    @include _667-block {
+      padding: 20px 23px 0 23px;
+      font-size: 16px;
+      min-height: auto;
+      br {
+        display: none;
+      }
+    }
+    .main_red-block-clone__close {
+      width: 28px;
+      height: 28px;
+      @include _667-block {
+        margin-top: -15%;
+      }
+      @include _450-block {
+        margin-top: -20%;
+      }
+    }
+  }
 }

@@ -556,7 +556,7 @@
         </li>
         <li>
           <!-- general -->
-          <div class="main_red-block__img">
+          <div class="main_red-block__img general-video">
             <img
               class="side_img"
               src="./img/devices/ipad_album.png"
@@ -586,6 +586,7 @@
               loop
               muted
               v-show="videoScreenSize === 'planshet_album'"
+              class="video-planshet_album"
             >
               <source
                 src="./files/technologies/general/planshet_album/mobile0001-2000.mp4"
@@ -596,6 +597,7 @@
               loop
               muted
               v-show="videoScreenSize === 'planshet_book'"
+              class="video-planshet_book"
             >
               <source
                 src="./files/technologies/general/planshet_book/mobile0001-2000.mp4"
@@ -606,6 +608,7 @@
               loop
               muted
               v-show="videoScreenSize === 'mobile_album'"
+              class="video-mobile_album"
             >
               <source
                 src="./files/technologies/general/mobile_album/mobile0001-2000.mp4"
@@ -616,11 +619,90 @@
               loop
               muted
               v-show="videoScreenSize === 'mobile_book'"
+              class="video-mobile_book"
             >
               <source
                 src="./files/technologies/general/mobile_book/mobile0001-2000.mp4"
               />
             </video>
+            <div
+              class="main_red-block-clone__tab"
+              :class="{tab_active: tab_active}"
+            >
+              <div class="main_red-block__img--tabs-item-header">
+                Цифровые двойники <br />
+                площадок
+                <div
+                  class="main_red-block-clone__close"
+                  @click="tab_active = false"
+                ></div>
+              </div>
+              <ul class="main_red-block__img--tabs-item-body">
+                <li>
+                  <span></span>
+                  <p>
+                    Поддержка «What-If» сценариев для анализа необходимой
+                    площади объекта, количества и типа оборудования и систем
+                    хранения
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Выбор оптимальных решений по прибыли, времени и ресурсам
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>Визуализация гипотез</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Детальное воссоздание процессов и объектов склада в 3D и 2D
+                  </p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>
+                    Поиск «узких мест» — выявление критичных зон, неэффективных
+                    процессов и предложения по решению существующих проблем
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="main_red-block-clone__close tab_open"
+              @click="tab_active = !tab_active"
+              v-if="!tab_active"
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1950_1518)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.6456 9.08232C11.8702 8.97748 11.9827 8.80639 11.9843 8.56709C11.9851 8.45532 11.9715 8.38667 11.9333 8.30928C11.893 8.22753 11.2641 7.619 9.13568 5.60225C7.6256 4.17139 6.34833 2.97221 6.2973 2.9374C6.12832 2.82216 5.86596 2.82216 5.69697 2.9374C5.64595 2.97221 4.36868 4.17139 2.8586 5.60225C0.730192 7.619 0.101294 8.22753 0.060934 8.30928C-0.00958922 8.45211 -0.00942518 8.68044 0.061286 8.81541C0.210466 9.10018 0.576302 9.21181 0.843395 9.05408C0.894794 9.02372 2.07206 7.9235 3.45956 6.60917C4.84704 5.29482 5.98896 4.21943 5.99714 4.21943C6.00532 4.21943 7.14724 5.29482 8.53472 6.60917C9.92222 7.9235 11.1004 9.02426 11.1529 9.05527C11.2898 9.13611 11.505 9.14792 11.6456 9.08232Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1950_1518">
+                    <rect
+                      width="12"
+                      height="12"
+                      fill="white"
+                      transform="translate(0 12) rotate(-90)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
           </div>
         </li>
       </ul>
