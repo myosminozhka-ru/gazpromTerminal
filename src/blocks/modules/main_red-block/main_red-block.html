@@ -152,7 +152,7 @@
         </div>
       </button>
     </div>
-    <div class="main_red-block__img--tabs">
+    <div class="main_red-block__img--tabs" v-if="isTabsOpen">
       <div
         v-for="(item, ind) in tabs"
         :key="item.name"

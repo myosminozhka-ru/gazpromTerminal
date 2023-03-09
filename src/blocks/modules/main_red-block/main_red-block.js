@@ -158,6 +158,7 @@ export const terminalPresentMixin = {
       clonActive: false,
       defaultVideo: true,
       showCloneButton: true,
+      isTabsOpen: true,
       terminal: {
         items: [],
         tabs: [],
@@ -206,9 +207,14 @@ export const terminalPresentMixin = {
           open: false,
         };
       });
-      this.defaultVideo = false;
-      this.showPLus = false;
-      item.showVideo = true;
+      setTimeout(() => {
+        this.defaultVideo = false;
+        this.showPLus = false;
+      }, 500);
+
+      setTimeout(() => {
+        item.showVideo = true;
+      }, 1300);
       this.showCloneButton = false;
     },
 
@@ -216,17 +222,25 @@ export const terminalPresentMixin = {
       this.items = this.items.map((el) => {
         return { ...el, open: false, showVideo: false };
       });
-      this.addLoading();
-
-      this.defaultVideo = true;
       this.tabs = [];
-      this.showPLus = true;
-      this.showCloneButton = true;
+      this.isLoading = false;
+      setTimeout(() => {
+        this.defaultVideo = true;
+        this.showPLus = true;
+        this.showCloneButton = true;
+      }, 1000);
     },
     addLoading() {
-      this.isLoading = true;
+      this.showCloneButton = false;
+      this.showPLus = false;
+      this.isTabsOpen = false;
+      setTimeout(() => {
+        this.isLoading = true;
+      }, 500);
+
       setTimeout(() => {
         this.isLoading = false;
+        this.isTabsOpen = true;
       }, 1000);
     },
     initSlider() {

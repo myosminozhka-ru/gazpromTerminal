@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20230306174710">
+    <link rel="stylesheet" href="css/style.css?_v=20230309154648">
 </head>
 <body>
     <div class="preloader">
@@ -344,7 +344,7 @@
         </div>
       </button>
     </div>
-    <div class="main_red-block__img--tabs">
+    <div class="main_red-block__img--tabs" v-if="isTabsOpen">
       <div
         v-for="(item, ind) in tabs"
         :key="item.name"
@@ -1479,6 +1479,6 @@
 </div>
         </div>
     </div>
-    <script src="js/app.min.js?_v=20230306174710"></script>
+    <script src="js/app.min.js?_v=20230309154648"></script>
 </body>
 </html>
