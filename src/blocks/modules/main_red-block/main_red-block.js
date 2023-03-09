@@ -226,9 +226,11 @@ export const terminalPresentMixin = {
       this.isLoading = false;
       setTimeout(() => {
         this.defaultVideo = true;
+      }, 800);
+      setTimeout(() => {
         this.showPLus = true;
         this.showCloneButton = true;
-      }, 1000);
+      }, 1300);
     },
     addLoading() {
       this.showCloneButton = false;

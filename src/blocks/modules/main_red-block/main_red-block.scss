@@ -9,7 +9,7 @@
   }
 }
 @mixin _667-block {
-  @media (max-width: 666.98px) {
+  @media (max-width: 667.98px) {
     @content;
   }
 }
@@ -24,7 +24,10 @@
     font-family: "PT", Arial;
   }
   position: relative;
-
+  padding-top: vw(130);
+  @include _1024-block {
+    padding-top: 50px;
+  }
   &__title {
     font-family: "texgyreheros", Arial;
     font-style: normal;
@@ -122,7 +125,8 @@
         display: flex;
         scroll-snap-type: x mandatory;
         overflow-x: scroll;
-        width: 100%;
+        width: 95%;
+        left: 15px;
         &::-webkit-scrollbar {
           height: 0;
         }
@@ -160,6 +164,12 @@
         &:hover {
           transition: all 1s;
           max-height: vw(700);
+          .main_red-block__img--tabs-item-header svg {
+            transform: rotate(-85deg);
+            path {
+              fill: #ff5f05;
+            }
+          }
           @include _1024-block {
             max-height: 700px;
           }
@@ -176,6 +186,16 @@
           font-size: vw(16);
           line-height: vw(22.4);
           color: #001635;
+          box-shadow: inset 0px -1px 0px #dfdfdf;
+          div {
+            width: vw(18);
+            height: vw(18);
+            margin-left: vw(10);
+            svg {
+              width: vw(18);
+              display: block;
+            }
+          }
           @include _1024-block {
             padding: 0 20px;
             font-weight: 400;
@@ -184,12 +204,12 @@
             min-height: 66px;
             white-space: initial;
             div {
-              width: 15px;
-              height: 15px;
-              picture {
-                width: 15px;
-                height: 15px;
+              width: 18px;
+              height: 18px;
+              svg {
                 display: block;
+                width: 18px;
+                height: 18px;
               }
             }
           }
@@ -197,10 +217,10 @@
 
         &-body {
           list-style-type: none;
-          padding: 0 vw(30);
+          padding: vw(16) vw(30) 0;
           margin: 0;
           @include _1024-block {
-            padding: 0 20px 20px 20px;
+            padding: 20px;
           }
           li {
             display: flex;
@@ -256,7 +276,7 @@
       border: none;
       box-shadow: unset;
       border-radius: unset;
-      top: 5px;
+      top: 55px;
       padding: 0;
       width: fit-content;
       transform: unset;
@@ -309,6 +329,13 @@
   }
   &__top {
     width: 100%;
+    .main_red-block__name{
+      left: vw(40);
+      @include _1024-block{
+        top: 17px;
+        left: 15px;
+      }
+    }
     .button {
       padding: 23px 20px;
     }
@@ -358,7 +385,7 @@
       bottom: 0;
       left: 0;
       background: #fff;
-      padding-top: vw(10);
+      padding-top: vw(30);
       .main_red-block__img--tabs-item-header {
         font-weight: 700;
         font-size: vw(25);
@@ -366,11 +393,15 @@
         color: #001635;
         font-family: "Arial", sans-serif;
         align-items: flex-start;
+        box-shadow: unset;
+      }
+      .main_red-block__img--tabs-item-body{
+        padding-top: 0;
       }
     }
     &__close {
-      width: vw(28);
-      height: vw(28);
+      width: vw(28) !important;
+      height: vw(28) !important;
       background: #1301ca;
       margin-top: vw(5);
       position: relative;
@@ -402,16 +433,20 @@
 
 .main_red-block-plus {
   transition: all 0.2s;
+  .plus-open {
+    font-size: vw(50);
+    color: #fff;
+    margin-top: vw(2);
+  }
   &.open {
     max-width: vw(290);
     min-width: vw(50);
     width: 100%;
     height: vw(50);
+    padding: 0;
 
     border: none;
     background: $secondary-color;
-    cursor: pointer;
-
     div {
       transform: translateY(0);
       transition-delay: 0.3s;
@@ -438,11 +473,23 @@
     }
 
     div {
-      border-left: vw(1) solid #fff;
+      padding-top: vw(3);
+      &:before {
+        content: "";
+        width: vw(1);
+        height: 70%;
+        display: block;
+        background: #ffaf82;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
       padding-left: vw(16);
-
+      margin-left: vw(10);
       img,
       picture {
+        cursor: pointer;
         width: vw(36);
         height: vw(36);
         flex-shrink: 0;
@@ -451,12 +498,7 @@
   }
 }
 
-// .isMobile .main_red-block__img--back,
-// .isMobile .main_red-block__img--button-container {
-//   display: none;
-// }
-
-.main_red-block__img--clon {
+.main_red-block__img--clone {
   cursor: pointer;
   z-index: 15;
 }
@@ -474,8 +516,8 @@
     justify-content: center;
     align-items: center;
     z-index: 15;
-    width: 36px;
-    height: 36px;
+    width: 36px !important;
+    height: 36px !important;
     @include _768-block {
       right: 12%;
     }
@@ -542,12 +584,24 @@
       left: 8.9%;
     }
     @include _667-block {
-      width: 81%;
+      width: 80.5%;
       left: 11.8%;
+      border-radius: 12px 12px 0px 0px;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 4px;
+        background: #EBEBED;
+        border-radius: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 8px;      
+      }
     }
     @include _450-block {
       left: 9.5%;
-      width: 80%;
+      width: 80.5%;
     }
     .main_red-block__img--tabs-item-body {
       padding: 0 30px 30px 30px;
@@ -581,10 +635,12 @@
       }
     }
     .main_red-block-clone__close {
-      width: 28px;
-      height: 28px;
+      max-width: 28px !important;
+      height: 28px !important;
+      width: 100% !important;
       @include _667-block {
         margin-top: -15%;
+        margin-right: -5%;
       }
       @include _450-block {
         margin-top: -20%;

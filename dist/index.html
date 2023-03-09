@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20230309154648">
+    <link rel="stylesheet" href="css/style.css?_v=20230309183411">
 </head>
 <body>
     <div class="preloader">
@@ -310,7 +310,7 @@
 
     <button
       v-if="showCloneButton"
-      class="button button__feedback main_red-block__img--back main_red-block__img--clon"
+      class="button button__feedback main_red-block__img--back main_red-block__img--clone"
       @click="cloneHandler"
     >
       Цифровой двойник
@@ -333,9 +333,7 @@
         class="main_red-block-plus"
         @click="activeItems(item.id)"
       >
-        <div v-if="!item.open">
-          <picture><source srcset="./img/plus.webp" type="image/webp"><img src="./img/plus.png" alt="" /></picture>
-        </div>
+        <div v-if="!item.open" class="plus-open">+</div>
         <div v-if="item.open" class="main_red-block-plus-container">
           <span>{{ item.name }}</span>
           <div @click="showTabs(item)">
@@ -356,14 +354,19 @@
       >
         <div class="main_red-block__img--tabs-item-header">
           {{ item.name }}
-          <div v-if="item.open  && (isMobile || isTablet)">
-            <picture><source srcset="./img/arrow-secondary.webp" type="image/webp"><img src="./img/arrow-secondary.png" alt="" /></picture>
-          </div>
           <div v-if="!item.open">
-            <picture><source srcset="./img/arrow-perimery.webp" type="image/webp"><img src="./img/arrow-perimery.png" alt="" /></picture>
-          </div>
-          <div v-else>
-            <picture><source srcset="./img/arrow-perimery.webp" type="image/webp"><img src="./img/arrow-perimery.png" alt="" /></picture>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
+                fill="#1400DC"
+              />
+            </svg>
           </div>
         </div>
         <ul class="main_red-block__img--tabs-item-body">
@@ -440,12 +443,18 @@
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <picture
-                      ><source
-                        srcset="./img/arrow-perimery.webp"
-                        type="image/webp" />
-                      <img src="./img/arrow-perimery.png" alt=""
-                    /></picture>
+                    <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
+                      fill="#1400DC"
+                    />
+                  </svg>
                   </div>
                 </div>
                 <ul class="main_red-block__img--tabs-item-body">
@@ -512,12 +521,18 @@
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <picture
-                      ><source
-                        srcset="./img/arrow-perimery.webp"
-                        type="image/webp" />
-                      <img src="./img/arrow-perimery.png" alt=""
-                    /></picture>
+                    <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
+                      fill="#1400DC"
+                    />
+                  </svg>
                   </div>
                 </div>
                 <ul class="main_red-block__img--tabs-item-body">
@@ -584,12 +599,18 @@
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <picture
-                      ><source
-                        srcset="./img/arrow-perimery.webp"
-                        type="image/webp" />
-                      <img src="./img/arrow-perimery.png" alt=""
-                    /></picture>
+                    <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
+                      fill="#1400DC"
+                    />
+                  </svg>
                   </div>
                 </div>
                 <ul class="main_red-block__img--tabs-item-body">
@@ -656,12 +677,18 @@
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <picture
-                      ><source
-                        srcset="./img/arrow-perimery.webp"
-                        type="image/webp" />
-                      <img src="./img/arrow-perimery.png" alt=""
-                    /></picture>
+                    <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
+                      fill="#1400DC"
+                    />
+                  </svg>
                   </div>
                 </div>
                 <ul class="main_red-block__img--tabs-item-body">
@@ -728,12 +755,18 @@
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <picture
-                      ><source
-                        srcset="./img/arrow-perimery.webp"
-                        type="image/webp" />
-                      <img src="./img/arrow-perimery.png" alt=""
-                    /></picture>
+                    <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
+                      fill="#1400DC"
+                    />
+                  </svg>
                   </div>
                 </div>
                 <ul class="main_red-block__img--tabs-item-body">
@@ -1479,6 +1512,6 @@
 </div>
         </div>
     </div>
-    <script src="js/app.min.js?_v=20230309154648"></script>
+    <script src="js/app.min.js?_v=20230309183411"></script>
 </body>
 </html>

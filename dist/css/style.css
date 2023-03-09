@@ -1617,8 +1617,7 @@ textarea {
   margin-left: 3.125vw;
   margin-right: 3.125vw;
   padding-bottom: 5.2083333333vw;
-  margin-bottom: 6.7708333333vw;
-  border-bottom: 1px solid #CFCFCF;
+  border-bottom: 1px solid #cfcfcf;
 }
 
 .main_video video {
@@ -1634,7 +1633,6 @@ textarea {
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 50px;
-  margin-bottom: 50px;
 }
 
 .isMobile .main_video video {
@@ -1643,6 +1641,7 @@ textarea {
 
 .main_red-block {
   position: relative;
+  padding-top: 6.7708333333vw;
 }
 
 .main_red-block * {
@@ -1749,6 +1748,14 @@ textarea {
   max-height: 36.4583333333vw;
 }
 
+.main_red-block__img--tabs-item:hover .main_red-block__img--tabs-item-header svg {
+  transform: rotate(-85deg);
+}
+
+.main_red-block__img--tabs-item:hover .main_red-block__img--tabs-item-header svg path {
+  fill: #ff5f05;
+}
+
 .main_red-block__img--tabs-item-header {
   display: flex;
   align-items: center;
@@ -1760,11 +1767,23 @@ textarea {
   font-size: 0.8333333333vw;
   line-height: 1.1666666667vw;
   color: #001635;
+  box-shadow: inset 0px -1px 0px #dfdfdf;
+}
+
+.main_red-block__img--tabs-item-header div {
+  width: 0.9375vw;
+  height: 0.9375vw;
+  margin-left: 0.5208333333vw;
+}
+
+.main_red-block__img--tabs-item-header div svg {
+  width: 0.9375vw;
+  display: block;
 }
 
 .main_red-block__img--tabs-item-body {
   list-style-type: none;
-  padding: 0 1.5625vw;
+  padding: 0.8333333333vw 1.5625vw 0;
   margin: 0;
 }
 
@@ -1803,7 +1822,7 @@ textarea {
   border: none;
   box-shadow: unset;
   border-radius: unset;
-  top: 5px;
+  top: 55px;
   padding: 0;
   width: -moz-fit-content;
   width: fit-content;
@@ -1847,6 +1866,10 @@ textarea {
 
 .main_red-block__top {
   width: 100%;
+}
+
+.main_red-block__top .main_red-block__name {
+  left: 2.0833333333vw;
 }
 
 .main_red-block__top .button {
@@ -1906,7 +1929,7 @@ textarea {
   bottom: 0;
   left: 0;
   background: #fff;
-  padding-top: 0.5208333333vw;
+  padding-top: 1.5625vw;
 }
 
 .main_red-block-clone__tab .main_red-block__img--tabs-item-header {
@@ -1916,11 +1939,16 @@ textarea {
   color: #001635;
   font-family: "Arial", sans-serif;
   align-items: flex-start;
+  box-shadow: unset;
+}
+
+.main_red-block-clone__tab .main_red-block__img--tabs-item-body {
+  padding-top: 0;
 }
 
 .main_red-block-clone__close {
-  width: 1.4583333333vw;
-  height: 1.4583333333vw;
+  width: 1.4583333333vw !important;
+  height: 1.4583333333vw !important;
   background: #1301ca;
   margin-top: 0.2604166667vw;
   position: relative;
@@ -1954,14 +1982,20 @@ textarea {
   transition: all 0.2s;
 }
 
+.main_red-block-plus .plus-open {
+  font-size: 2.6041666667vw;
+  color: #fff;
+  margin-top: 0.1041666667vw;
+}
+
 .main_red-block-plus.open {
   max-width: 15.1041666667vw;
   min-width: 2.6041666667vw;
   width: 100%;
   height: 2.6041666667vw;
+  padding: 0;
   border: none;
   background: #FF5F05;
-  cursor: pointer;
 }
 
 .main_red-block-plus.open div {
@@ -1988,18 +2022,32 @@ textarea {
 }
 
 .main_red-block-plus-container div {
-  border-left: 0.0520833333vw solid #fff;
+  padding-top: 0.15625vw;
   padding-left: 0.8333333333vw;
+  margin-left: 0.5208333333vw;
+}
+
+.main_red-block-plus-container div:before {
+  content: "";
+  width: 0.0520833333vw;
+  height: 70%;
+  display: block;
+  background: #ffaf82;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
 }
 
 .main_red-block-plus-container div img,
 .main_red-block-plus-container div picture {
+  cursor: pointer;
   width: 1.875vw;
   height: 1.875vw;
   flex-shrink: 0;
 }
 
-.main_red-block__img--clon {
+.main_red-block__img--clone {
   cursor: pointer;
   z-index: 15;
 }
@@ -2020,8 +2068,8 @@ textarea {
   justify-content: center;
   align-items: center;
   z-index: 15;
-  width: 36px;
-  height: 36px;
+  width: 36px !important;
+  height: 36px !important;
 }
 
 .general-video .tab_open::after,
@@ -2091,8 +2139,9 @@ textarea {
 }
 
 .general-video .main_red-block__img--tabs-item-header .main_red-block-clone__close {
-  width: 28px;
-  height: 28px;
+  max-width: 28px !important;
+  height: 28px !important;
+  width: 100% !important;
 }
 
 .main_ques {
@@ -4897,6 +4946,10 @@ textarea {
 }
 
 @media (max-width: 1023.98px) {
+  .main_red-block {
+    padding-top: 50px;
+  }
+
   .main_red-block__title {
     font-size: 30px;
     padding-left: 32px;
@@ -4908,7 +4961,8 @@ textarea {
     display: flex;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
-    width: 100%;
+    width: 95%;
+    left: 15px;
   }
 
   .main_red-block__img--tabs::-webkit-scrollbar {
@@ -4950,18 +5004,18 @@ textarea {
   }
 
   .main_red-block__img--tabs-item-header div {
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
   }
 
-  .main_red-block__img--tabs-item-header div picture {
-    width: 15px;
-    height: 15px;
+  .main_red-block__img--tabs-item-header div svg {
     display: block;
+    width: 18px;
+    height: 18px;
   }
 
   .main_red-block__img--tabs-item-body {
-    padding: 0 20px 20px 20px;
+    padding: 20px;
   }
 
   .main_red-block__img--tabs-item-body li span {
@@ -4983,6 +5037,11 @@ textarea {
     overflow: hidden;
   }
 
+  .main_red-block__top .main_red-block__name {
+    top: 17px;
+    left: 15px;
+  }
+
   .general-video .main_red-block-clone__tab {
     left: 8.2%;
   }
@@ -5002,7 +5061,7 @@ textarea {
   }
 }
 
-@media (max-width: 666.98px) {
+@media (max-width: 667.98px) {
   .main_red-block__title {
     padding-right: 15px;
     padding-left: 15px;
@@ -5033,8 +5092,21 @@ textarea {
   }
 
   .general-video .main_red-block-clone__tab {
-    width: 81%;
+    width: 80.5%;
     left: 11.8%;
+    border-radius: 12px 12px 0px 0px;
+  }
+
+  .general-video .main_red-block-clone__tab:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background: #EBEBED;
+    border-radius: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
   }
 
   .general-video .main_red-block-clone__tab .main_red-block__img--tabs-item-body li p {
@@ -5053,6 +5125,7 @@ textarea {
 
   .general-video .main_red-block__img--tabs-item-header .main_red-block-clone__close {
     margin-top: -15%;
+    margin-right: -5%;
   }
 }
 
@@ -5075,7 +5148,7 @@ textarea {
 
   .general-video .main_red-block-clone__tab {
     left: 9.5%;
-    width: 80%;
+    width: 80.5%;
   }
 
   .general-video .main_red-block__img--tabs-item-header .main_red-block-clone__close {
