@@ -2144,6 +2144,20 @@ textarea {
   width: 100% !important;
 }
 
+.terminal_logo {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.terminal_logo img,
+.terminal_logo picture {
+  display: block;
+  width: 21.7708333333vw;
+}
+
 .main_ques {
   display: flex;
 }
@@ -5102,7 +5116,7 @@ textarea {
     position: absolute;
     width: 25px;
     height: 4px;
-    background: #EBEBED;
+    background: #ebebed;
     border-radius: 70px;
     left: 50%;
     transform: translateX(-50%);

@@ -167,18 +167,25 @@ export const terminalPresentMixin = {
   },
   methods: {
     cloneHandler() {
-      this.addLoading();
-      this.clonActive = true;
-      this.defaultVideo = false;
+      this.isLoading = true;
       this.showPLus = false;
+      this.defaultVideo = false;
       this.showCloneButton = false;
+
+      setTimeout(() => {
+        this.isLoading = false;
+        this.clonActive = true;
+      }, 1000);
     },
     closeCloneHandler() {
-      this.addLoading();
-      this.clonActive = false;
-      this.defaultVideo = true;
-      this.showPLus = true;
-      this.showCloneButton = true;
+      this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+        this.clonActive = false;
+        this.defaultVideo = true;
+        this.showPLus = true;
+        this.showCloneButton = true;
+      }, 1000);
     },
     activeTab(index) {
       this.terminal.tabs = this.tabs.map((el, ind) => {
@@ -219,12 +226,13 @@ export const terminalPresentMixin = {
     },
 
     clearTabsRool() {
+      this.isLoading = true;
       this.items = this.items.map((el) => {
         return { ...el, open: false, showVideo: false };
       });
       this.tabs = [];
-      this.isLoading = false;
       setTimeout(() => {
+        this.isLoading = false;
         this.defaultVideo = true;
       }, 800);
       setTimeout(() => {
