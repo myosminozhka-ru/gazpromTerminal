@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png" />
-    <link rel="stylesheet" href="css/style.css?_v=20230310193237">
+    <link rel="stylesheet" href="css/style.css?_v=20230313141645">
 </head>
 <body>
     <div class="preloader">
@@ -29,28 +29,28 @@
     </div>
 </div>
             <div class="header">
-    <div class="header__logo">
-        <a href="/gazpromTerminal/dist/">
-            <object type="image/svg+xml" data="./img/svg/logo.svg">
-              <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="" /></picture>
-            </object>
-        </a>
-    </div>
-    <nav class="header__menu">
-        <ul>
-            <li><a href="/#link1">Наши услуги</a></li>
-            <li><a href="/#link2">Как работает Terminal</a></li>
-            <li><a href="/#link3">Технологии</a></li>
-            <li><a href="/#link4">Часто задаваемые вопросы</a></li>
-            <li><a href="/#link5">Кейсы</a></li>
-            <li><a href="/#link6">Новости</a></li>
-            <li><a href="/#link7">Экосистема Isource</a></li>
-        </ul>
-    </nav>
-    <div class="header__button">
-        <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
-    </div>
-    <div class="menu_burger" v-if="isTablet || isMobile" :class="{'isOpened': burger.isMobileMenuOpened}">
+  <div class="header__logo">
+    <a href="/gazpromTerminal/dist/">
+      <object type="image/png" data="./img/logo.png">
+        <picture><source srcset="./img/logo.webp" type="image/webp"><img src="./img/logo.png" alt="" /></picture>
+      </object>
+    </a>
+  </div>
+  <nav class="header__menu">
+    <ul>
+      <li><a href="/#link1">Наши услуги</a></li>
+      <li><a href="/#link2">Как работает Terminal</a></li>
+      <li><a href="/#link3">Технологии</a></li>
+      <li><a href="/#link4">Часто задаваемые вопросы</a></li>
+      <li><a href="/#link5">Кейсы</a></li>
+      <li><a href="/#link6">Новости</a></li>
+      <li><a href="/#link7">Экосистема Isource</a></li>
+    </ul>
+  </nav>
+  <div class="header__button">
+    <button class="button button__feedback" data-modal-id="1">Оставить заявку</button>
+  </div>
+  <div class="menu_burger" v-if="isTablet || isMobile" :class="{'isOpened': burger.isMobileMenuOpened}">
     <div class="menu_burger__icon" @click.prevent="burger.toogleMobileMenu.apply(burger)">
         <svg width="30" height="19" viewBox="0 0 30 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="30" height="3" fill="black"/>
@@ -90,6 +90,7 @@
     </div>
 </div>
 </div>
+
             <main id="link1">
                 <div class="main_first">
     <picture><source srcset="./img/bg_first.webp" type="image/webp"><img class="main_first__bg" src="./img/bg_first.png" alt=""></picture>
@@ -193,98 +194,46 @@
                 <div class="main_red-block" id="link3">
   <div class="main_red-block__title">Технологии</div>
   <div class="main_red-block-background"></div>
-  <div
-    class="main_red-block__img"
-    :class="{loading: isLoading}"
-    v-if="windowSize > 1024"
-  >
+  <div class="main_red-block__img" :class="{loading: isLoading}" v-if="windowSize > 1024">
     <div v-show="isLoading" class="terminal_logo">
       <picture><source srcset="./img/terminal_logo.webp" type="image/webp"><img src="./img/terminal_logo.png" alt="terminal_logo" /></picture>
     </div>
-    <video
-      autoplay
-      loop
-      muted
-      v-show="items[0].showVideo"
-      :class="{videoLoading: isLoading}"
-    >
+    <video autoplay loop muted v-show="items[0].showVideo" :class="{videoLoading: isLoading}">
       <source src="./files/technologies/VR_AR/desktop/desk0001-2000.mp4" />
     </video>
-    <video
-      autoplay
-      loop
-      muted
-      v-show="items[1].showVideo"
-      :class="{videoLoading: isLoading}"
-    >
-      <source
-        src="./files/technologies/diagnostics/desktop/desk0001-2000.mp4"
-      />
+    <video autoplay loop muted v-show="items[1].showVideo" :class="{videoLoading: isLoading}">
+      <source src="./files/technologies/diagnostics/desktop/desk0001-2000.mp4" />
     </video>
-    <video
-      autoplay
-      loop
-      muted
-      v-show="items[2].showVideo"
-      :class="{videoLoading: isLoading}"
-    >
-      <source
-        src="./files/technologies/infrostucture/desktop/desk0001-2000.mp4"
-      />
+    <video autoplay loop muted v-show="items[2].showVideo" :class="{videoLoading: isLoading}">
+      <source src="./files/technologies/infrostucture/desktop/desk0001-2000.mp4" />
     </video>
-    <video
-      autoplay
-      loop
-      muted
-      v-show="items[3].showVideo"
-      :class="{videoLoading: isLoading}"
-    >
+    <video autoplay loop muted v-show="items[3].showVideo" :class="{videoLoading: isLoading}">
       <source src="./files/technologies/scanner/desktop/desk0001-2000.mp4" />
     </video>
-    <video
-      autoplay
-      loop
-      muted
-      v-show="items[4].showVideo"
-      :class="{videoLoading: isLoading}"
-    >
+    <video autoplay loop muted v-show="items[4].showVideo" :class="{videoLoading: isLoading}">
       <source src="./files/technologies/drones/desktop/desk0001-2000.mp4" />
     </video>
-    <video
-      autoplay
-      loop
-      muted
-      v-show="defaultVideo"
-      :class="{videoLoading: isLoading}"
-    >
+    <video autoplay loop muted v-show="defaultVideo" :class="{videoLoading: isLoading}">
       <source src="./files/technologies/general/desktop/desk0001-2000.mp4" />
     </video>
     <div class="main_red-block-clone" v-show="clonActive">
       <picture><source srcset="./img/devices/mac_bg.webp" type="image/webp"><img src="./img/devices/mac_bg.png" alt="mac_bg" /></picture>
       <div class="main_red-block-clone__video">
         <video autoplay loop muted :class="{videoLoading: isLoading}">
-          <source
-            src="./files/technologies/general/desktop/desk0001-2000.mp4"
-          />
+          <source src="./files/technologies/general/desktop/desk0001-2000.mp4" />
         </video>
-        <div
-          class="main_red-block-clone__tab"
-          :style="isLoading ?'z-index: 5': 'z-index: 15'"
-        >
+        <div class="main_red-block-clone__tab" :style="isLoading ?'z-index: 5': 'z-index: 15'">
           <div class="main_red-block__img--tabs-item-header">
             Цифровые двойники <br />
             площадок
-            <div
-              class="main_red-block-clone__close"
-              @click="closeCloneHandler"
-            ></div>
+            <div class="main_red-block-clone__close" @click="closeCloneHandler"></div>
           </div>
           <ul class="main_red-block__img--tabs-item-body">
             <li>
               <span></span>
               <p>
-                Поддержка «What-If» сценариев для анализа необходимой площади
-                объекта, количества и типа оборудования и систем хранения
+                Поддержка «What-If» сценариев для анализа необходимой площади объекта, количества и типа оборудования и
+                систем хранения
               </p>
             </li>
             <li>
@@ -302,8 +251,8 @@
             <li>
               <span></span>
               <p>
-                Поиск «узких мест» — выявление критичных зон, неэффективных
-                процессов и предложения по решению существующих проблем
+                Поиск «узких мест» — выявление критичных зон, неэффективных процессов и предложения по решению
+                существующих проблем
               </p>
             </li>
           </ul>
@@ -358,13 +307,7 @@
         <div class="main_red-block__img--tabs-item-header">
           {{ item.name }}
           <div v-if="!item.open">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
                 fill="#1400DC"
@@ -398,61 +341,24 @@
             <div class="main_red-block__top">
               <div class="main_red-block__name">{{this.items[0].name}}</div>
             </div>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_album'"
-            >
-              <source
-                src="./files/technologies/VR_AR/planshet_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_album'">
+              <source src="./files/technologies/VR_AR/planshet_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_book'"
-            >
-              <source
-                src="./files/technologies/VR_AR/planshet_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_book'">
+              <source src="./files/technologies/VR_AR/planshet_book/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_album'"
-            >
-              <source
-                src="./files/technologies/VR_AR/mobile_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_album'">
+              <source src="./files/technologies/VR_AR/mobile_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_book'"
-            >
-              <source
-                src="./files/technologies/VR_AR/mobile_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_book'">
+              <source src="./files/technologies/VR_AR/mobile_book/mobile0001-2000.mp4" />
             </video>
             <div class="main_red-block__img--tabs">
-              <div
-                class="main_red-block__img--tabs-item"
-                v-for="tab in items[0].tabs"
-              >
+              <div class="main_red-block__img--tabs-item" v-for="tab in items[0].tabs">
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
                         fill="#1400DC"
@@ -476,61 +382,24 @@
             <div class="main_red-block__top">
               <div class="main_red-block__name">{{this.items[1].name}}</div>
             </div>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_album'"
-            >
-              <source
-                src="./files/technologies/diagnostics/planshet_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_album'">
+              <source src="./files/technologies/diagnostics/planshet_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_book'"
-            >
-              <source
-                src="./files/technologies/diagnostics/planshet_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_book'">
+              <source src="./files/technologies/diagnostics/planshet_book/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_album'"
-            >
-              <source
-                src="./files/technologies/diagnostics/mobile_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_album'">
+              <source src="./files/technologies/diagnostics/mobile_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_book'"
-            >
-              <source
-                src="./files/technologies/diagnostics/mobile_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_book'">
+              <source src="./files/technologies/diagnostics/mobile_book/mobile0001-2000.mp4" />
             </video>
             <div class="main_red-block__img--tabs">
-              <div
-                class="main_red-block__img--tabs-item"
-                v-for="tab in items[1].tabs"
-              >
+              <div class="main_red-block__img--tabs-item" v-for="tab in items[1].tabs">
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
                         fill="#1400DC"
@@ -554,61 +423,24 @@
             <div class="main_red-block__top">
               <div class="main_red-block__name">{{this.items[2].name}}</div>
             </div>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_album'"
-            >
-              <source
-                src="./files/technologies/infrostucture/planshet_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_album'">
+              <source src="./files/technologies/infrostucture/planshet_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_book'"
-            >
-              <source
-                src="./files/technologies/infrostucture/planshet_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_book'">
+              <source src="./files/technologies/infrostucture/planshet_book/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_album'"
-            >
-              <source
-                src="./files/technologies/infrostucture/mobile_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_album'">
+              <source src="./files/technologies/infrostucture/mobile_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_book'"
-            >
-              <source
-                src="./files/technologies/infrostucture/mobile_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_book'">
+              <source src="./files/technologies/infrostucture/mobile_book/mobile0001-2000.mp4" />
             </video>
             <div class="main_red-block__img--tabs">
-              <div
-                class="main_red-block__img--tabs-item"
-                v-for="tab in items[2].tabs"
-              >
+              <div class="main_red-block__img--tabs-item" v-for="tab in items[2].tabs">
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
                         fill="#1400DC"
@@ -632,61 +464,24 @@
             <div class="main_red-block__top">
               <div class="main_red-block__name">{{this.items[3].name}}</div>
             </div>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_album'"
-            >
-              <source
-                src="./files/technologies/scanner/planshet_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_album'">
+              <source src="./files/technologies/scanner/planshet_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_book'"
-            >
-              <source
-                src="./files/technologies/scanner/planshet_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_book'">
+              <source src="./files/technologies/scanner/planshet_book/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_album'"
-            >
-              <source
-                src="./files/technologies/scanner/mobile_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_album'">
+              <source src="./files/technologies/scanner/mobile_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_book'"
-            >
-              <source
-                src="./files/technologies/scanner/mobile_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_book'">
+              <source src="./files/technologies/scanner/mobile_book/mobile0001-2000.mp4" />
             </video>
             <div class="main_red-block__img--tabs">
-              <div
-                class="main_red-block__img--tabs-item"
-                v-for="tab in items[3].tabs"
-              >
+              <div class="main_red-block__img--tabs-item" v-for="tab in items[3].tabs">
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
                         fill="#1400DC"
@@ -710,61 +505,24 @@
             <div class="main_red-block__top">
               <div class="main_red-block__name">{{this.items[4].name}}</div>
             </div>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_album'"
-            >
-              <source
-                src="./files/technologies/drones/planshet_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_album'">
+              <source src="./files/technologies/drones/planshet_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_book'"
-            >
-              <source
-                src="./files/technologies/drones/planshet_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_book'">
+              <source src="./files/technologies/drones/planshet_book/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_album'"
-            >
-              <source
-                src="./files/technologies/drones/mobile_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_album'">
+              <source src="./files/technologies/drones/mobile_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_book'"
-            >
-              <source
-                src="./files/technologies/drones/mobile_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_book'">
+              <source src="./files/technologies/drones/mobile_book/mobile0001-2000.mp4" />
             </video>
             <div class="main_red-block__img--tabs">
-              <div
-                class="main_red-block__img--tabs-item"
-                v-for="tab in items[4].tabs"
-              >
+              <div class="main_red-block__img--tabs-item" v-for="tab in items[4].tabs">
                 <div class="main_red-block__img--tabs-item-header">
                   {{tab.name}}
                   <div>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M15.035 1.93965L14.1145 1.93965L14.1145 6.91692C14.1145 10.8578 14.0941 11.8942 14.0259 11.8942C13.985 11.8942 11.5032 9.45328 8.52362 6.47374L3.10316 1.05328L2.47589 1.68056L1.8418 2.31465L7.29634 7.76919C10.2963 10.7692 12.7509 13.2578 12.7509 13.2919C12.7509 13.3396 11.0191 13.3601 7.72589 13.3601L2.69407 13.3601L2.67361 14.2669L2.65316 15.1669L8.84407 15.1669L15.0418 15.1669L15.4986 14.7033L15.9554 14.2396L15.9554 8.08965L15.9554 1.93965L15.035 1.93965Z"
                         fill="#1400DC"
@@ -809,76 +567,35 @@
               alt="ipad_album"
               v-show="videoScreenSize === 'mobile_book'"
             />
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_album'"
-              class="video-planshet_album"
-            >
-              <source
-                src="./files/technologies/general/planshet_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_album'" class="video-planshet_album">
+              <source src="./files/technologies/general/planshet_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'planshet_book'"
-              class="video-planshet_book"
-            >
-              <source
-                src="./files/technologies/general/planshet_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'planshet_book'" class="video-planshet_book">
+              <source src="./files/technologies/general/planshet_book/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_album'"
-              class="video-mobile_album"
-            >
-              <source
-                src="./files/technologies/general/mobile_album/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_album'" class="video-mobile_album">
+              <source src="./files/technologies/general/mobile_album/mobile0001-2000.mp4" />
             </video>
-            <video
-              autoplay
-              loop
-              muted
-              v-show="videoScreenSize === 'mobile_book'"
-              class="video-mobile_book"
-            >
-              <source
-                src="./files/technologies/general/mobile_book/mobile0001-2000.mp4"
-              />
+            <video autoplay loop muted v-show="videoScreenSize === 'mobile_book'" class="video-mobile_book">
+              <source src="./files/technologies/general/mobile_book/mobile0001-2000.mp4" />
             </video>
-            <div
-              class="main_red-block-clone__tab"
-              :class="{tab_active: tab_active}"
-            >
+            <div class="main_red-block-clone__tab" :class="{tab_active: tab_active}">
               <div class="main_red-block__img--tabs-item-header">
                 Цифровые двойники <br />
                 площадок
-                <div
-                  class="main_red-block-clone__close"
-                  @click="tab_active = false"
-                ></div>
+                <div class="main_red-block-clone__close" @click="tab_active = false"></div>
               </div>
               <ul class="main_red-block__img--tabs-item-body">
                 <li>
                   <span></span>
                   <p>
-                    Поддержка «What-If» сценариев для анализа необходимой
-                    площади объекта, количества и типа оборудования и систем
-                    хранения
+                    Поддержка «What-If» сценариев для анализа необходимой площади объекта, количества и типа
+                    оборудования и систем хранения
                   </p>
                 </li>
                 <li>
                   <span></span>
-                  <p>
-                    Выбор оптимальных решений по прибыли, времени и ресурсам
-                  </p>
+                  <p>Выбор оптимальных решений по прибыли, времени и ресурсам</p>
                 </li>
                 <li>
                   <span></span>
@@ -886,31 +603,19 @@
                 </li>
                 <li>
                   <span></span>
-                  <p>
-                    Детальное воссоздание процессов и объектов склада в 3D и 2D
-                  </p>
+                  <p>Детальное воссоздание процессов и объектов склада в 3D и 2D</p>
                 </li>
                 <li>
                   <span></span>
                   <p>
-                    Поиск «узких мест» — выявление критичных зон, неэффективных
-                    процессов и предложения по решению существующих проблем
+                    Поиск «узких мест» — выявление критичных зон, неэффективных процессов и предложения по решению
+                    существующих проблем
                   </p>
                 </li>
               </ul>
             </div>
-            <div
-              class="main_red-block-clone__close tab_open"
-              @click="tab_active = !tab_active"
-              v-if="!tab_active"
-            >
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+            <div class="main_red-block-clone__close tab_open" @click="tab_active = !tab_active" v-if="!tab_active">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1950_1518)">
                   <path
                     fill-rule="evenodd"
@@ -921,12 +626,7 @@
                 </g>
                 <defs>
                   <clipPath id="clip0_1950_1518">
-                    <rect
-                      width="12"
-                      height="12"
-                      fill="white"
-                      transform="translate(0 12) rotate(-90)"
-                    />
+                    <rect width="12" height="12" fill="white" transform="translate(0 12) rotate(-90)" />
                   </clipPath>
                 </defs>
               </svg>
@@ -1515,6 +1215,6 @@
 </div>
         </div>
     </div>
-    <script src="js/app.min.js?_v=20230310193237"></script>
+    <script src="js/app.min.js?_v=20230313141645"></script>
 </body>
 </html>
