@@ -1,27 +1,24 @@
 <div class="header">
-    <div class="header__logo">
-        <a href="/gazpromTerminal/dist/">
-            <object type="image/svg+xml" data="./img/svg/logo.svg">
-              <img src="./img/logo.png" alt="" />
-            </object>
-        </a>
-    </div>
-    <nav class="header__menu">
-        <ul>
-            <li><a href="/#link1">Наши услуги</a></li>
-            <li><a href="/#link2">Как работает Terminal</a></li>
-            <li><a href="/#link3">Технологии</a></li>
-            <li><a href="/#link4">Часто задаваемые вопросы</a></li>
-            <li><a href="/#link5">Кейсы</a></li>
-            <li><a href="/#link6">Новости</a></li>
-            <li><a href="/#link7">Экосистема Isource</a></li>
-        </ul>
-    </nav>
-    <div class="header__button">
-        @@include('../../components/button/button.html', {
-            "text" : "Оставить заявку",
-            "type" : "feedback"
-        })
-    </div>
-    @@include('../../components/burger/burger.html', {})
+  <div class="header__logo">
+    <a href="/gazpromTerminal/dist/">
+      <object type="image/png" data="./img/logo.png">
+        <img src="./img/logo.png" alt="" />
+      </object>
+    </a>
+  </div>
+  <nav class="header__menu">
+    <ul>
+      <li><a href="/#link1">Наши услуги</a></li>
+      <li><a href="/#link2">Как работает Terminal</a></li>
+      <li><a href="/#link3">Технологии</a></li>
+      <li><a href="/#link4">Часто задаваемые вопросы</a></li>
+      <li><a href="/#link5">Кейсы</a></li>
+      <li><a href="/#link6">Новости</a></li>
+      <li><a href="/#link7">Экосистема Isource</a></li>
+    </ul>
+  </nav>
+  <div class="header__button">
+    @@include('../../components/button/button.html', { "text" : "Оставить заявку", "type" : "feedback" })
+  </div>
+  @@include('../../components/burger/burger.html', {})
 </div>
